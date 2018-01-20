@@ -1,0 +1,85 @@
+/*****************************************/
+/************* MAIN SETTINGS *************/
+/*****************************************/
+
+html, body {
+    height: 100%;
+}
+html {
+    padding-top: 45px;
+    padding-bottom: 0;
+    /* overflow: hidden;*/
+}
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+body.bg-1 {
+    padding: 0;
+ /*   background: url('../Images/bj.jpg');*/
+ background: rgba(180,180,180,0.1);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover;
+    background-attachment: fixed;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto Slab", serif;
+    -webkit-font-smoothing: antialiased;
+}
+.Obtn {
+    background: rgba(180, 180, 180, 0.5);
+    padding: 3px 7px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.Otext {
+    margin-top: 6px;
+    width: 25px;
+}
+.Chead {
+    border-bottom: 2px solid rgba(111, 140, 109, 0.9);
+}
+.Chead h1 {
+    margin: 10px 0 0 0;
+    font-size:2rem;
+}
+.contain {
+    width: 90%;
+    margin: 0 auto;
+}
+.Cgroup {
+    width: 80%;
+    float: right;
+    right: 0;
+}
+.am-input-group-label {
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.am-u-sm-10{
+    padding: 0;
+    font-size: 1.5rem;
+}
+.am-u-sm-2{
+    padding:0 20px 0 20px;
+    font-size: 1.5rem;
+}
+.Cbtn {
+    width: 50px;
+    margin: 0;
+    color: rgba(111, 142, 109, 1);
+    font-size: 15px;
+    font-weight: bold;
+}
+.Bsure {
+    font-size: 15px;
+    width: 100px;
+    background: rgba(111, 140, 109, 0.9);
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}

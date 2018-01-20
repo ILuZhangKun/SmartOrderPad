@@ -1,0 +1,37 @@
+body{font-size:12px;}
+
+ul{padding:0;margin:0;}
+
+.star_rating {list-style:none;margin:-1px 0 0 -1px; padding:0; width:70px; height:12px; position:relative; background:url(../Images/rating_stars.gif) 0 0 repeat-x; overflow:hidden;font-size:0;}
+
+.star_rating li{padding:0;margin:0;float:left;}
+
+.star_rating li a{display:block;width:14px;height:12px;text-decoration:none;text-indent:-9000px;z-index:20;position:absolute;padding:0;margin:0;}
+
+.star_rating li a:hover{background:url(../Images/rating_stars.gif) 0 12px;z-index:2;left:0;}
+
+.star_rating a.one_star{left:0;}
+
+.star_rating a.one_star:hover{width:14px;}
+
+.star_rating a.two_stars{left:14px;}
+
+.star_rating a.two_stars:hover{width:28px;}
+
+.star_rating a.three_stars{left:28px;}
+
+.star_rating a.three_stars:hover{width:42px;}
+
+.star_rating a.four_stars{left:42px;}
+
+.star_rating a.four_stars:hover{width:56px;}
+
+.star_rating a.five_stars{left:56px;}
+
+.star_rating a.five_stars:hover{width:70px;}
+
+.star_rating li.current_rating{background:url(../Images/rating_stars.gif) 0 24px;position:absolute;height:12px;display:block;text-indent:-9000px;z-index:1;left:0;}
+
+#www_zzjs_net{margin:0 0 10px 20px;}
+
+#www_zzjs_net p{margin:5px 0 5px 0;}

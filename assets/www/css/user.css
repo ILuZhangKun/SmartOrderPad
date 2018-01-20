@@ -1,0 +1,718 @@
+/*
+html, body {
+    height: 100%;
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}*/
+
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+body.bg-1 {
+    padding: 0;
+    background: url('../Images/bj.jpg');
+  /*  background: rgba(180,180,180,0.1);*/
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover;
+    background-attachment: fixed;
+}
+body.modal-open {
+    overflow: auto;
+    margin-right: 0;
+}
+/*body.bg-1 {
+    background: url('../Images/bj.jpg');
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover;
+    background-attachment: fixed;
+}*/
+body.no-bg {
+    background: none;
+}
+
+
+
+
+/********Fit to screen***********/
+
+@media screen and (min-width: 960px) and (max-width: 1500px) {
+    .mynav {
+        font-size: 30px;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 959px) {
+    .mynav {
+        font-size: 30px;
+    }
+}
+@media screen and (max-width: 479px) {
+    .mynav {
+        font-size: 20px;
+    }
+}
+/**********!Fit to screen***********/
+/******** topbar ***********/
+
+.mynav {
+  
+    background: rgba(51, 102, 51, 0.7);
+    /* 一些不支持背景渐变的浏览器 */
+    
+    background: -moz-linear-gradient(left, rgba(0, 13, 0, 0.7), rgba(51, 102, 51, 0.7), rgba(0, 0, 0, 0.7));
+    background: -webkit-gradient(linear, left top, right top, from(rgba(0, 20, 0, 0.7)),color-stop(0.7, #5C7B5B), to(rgba(0, 13, 0, 0.7)));
+    background: -o-linear-gradient(left, rgba(0, 13, 0, 0.7), rgba(51, 102, 51, 0.7), rgba(0, 0, 0, 0.7));
+    height: 55px;
+    margin: 0;
+    display: table-cell;
+    padding:10px;
+    text-align: center;
+    color: white;
+    font-family: Arial;
+ /*   line-height: 55px;*/
+}
+.mynav>strong {
+    vertical-align: middle;
+}
+/******** !topbar **********/
+
+.leftNav {
+/*    margin-top:50px; */
+    position: fixed;
+    height: 100%;
+    background: rgba(153, 255, 153, 0.1);
+}
+.rightContent {
+    top: 53px;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: -10px 0 10px rgba(51, 51, 51, 0.2);
+    right: 0;
+    position: fixed;
+
+}
+.leftNav .am-form-field {
+    background-color: rgba(255, 255, 255, 0.5);
+    margin-top: 30px;
+}
+.leftNav .am-nav li {
+    font-family: Arial;
+    font-size: 25px;
+}
+.rightContent .recommend {
+    margin-top: 30px;
+    height: 30%;
+    width: 100%;
+}
+@media screen and (min-width: 1200px) {
+    .am-slider .am-slides img {
+        height: 300px;
+    }
+   .am-thumbnail img {
+    margin:7px;    
+    height: 230px; 
+      width: 465px; 
+      border-radius: 7px; 
+}
+}
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .am-slider .am-slides img {
+     height:300px;
+    }
+    .am-thumbnail img {
+    height: 230px;
+   width: 445px;
+   border-radius: 7px; 
+}
+}
+
+.am-slider .am-slides img {
+    margin: 0 auto;   
+    width: 95%;
+    border-radius: 7px; 
+}
+.am-slider .am-slides .am-slider-desc {
+    width: 95%;
+    margin: 0 auto;
+}
+.am-thumbnail-caption {
+    padding: 0;
+    margin-top: 5px;
+}
+.am-thumbnail-caption h2 {
+    margin: 0;
+}
+.am-thumbnail-caption p {
+    margin: 0;
+    color: #FF3300;
+}
+
+.am-slider-desc {
+    padding-left: 10px 0;
+    border-radius: 0 0 7px 7px;
+}
+.am-nav {
+    height: 74%;
+}
+.seat {
+    position: absolute;
+        z-index: 2000;
+
+}
+@media screen and (min-width: 1200px) {
+    .seat {
+        bottom: 20%;
+        left: 16%;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .seat {
+        bottom: 12%;
+        left: 10.5%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .seat {
+        bottom: 12%;
+        left: 10%;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .seat {
+        bottom: 12%;
+        left: 6.5%;
+    }
+}
+@media screen and (max-width: 479px) {
+    .seat {
+        bottom: 20%;
+        left: 6%;
+    }
+}
+.seatNum {
+    position: absolute;
+    left: 56px;
+    top: 35px;
+    color: white;
+    font-size: 95px;
+    line-height:120%;
+    font-family: Britannic;
+}
+.Ishopcart {
+  height: 40px;
+  width: 65px;     
+
+        
+}
+.Obtn {
+    background: rgba(180, 180, 180, 0.5);
+    padding: 3px 8.5px;
+    -webkit-border-radius: 16px;
+    -moz-border-radius: 16px;
+    border-radius: 16px;
+}
+.Rebtn {
+    width:45px;
+    margin:0;
+    color: rgba(111, 142, 109, 1);
+    font-size: 15px;
+    font-weight: bold;
+    padding:0;
+    text-align: center; 
+    background: rgba(245,255,245,0.2);
+
+}
+.require{
+    width: 120px;
+}
+.cookName{
+    width: 90px;
+}
+.price{
+    width: 60px;
+}
+.num{
+    width: 85px;
+}
+.photo{
+    width: 85px; 
+}
+.SCsure {
+    font-size: 15px;
+    width: 70px;
+    background: rgba(111, 140, 109, 0.9);
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+
+}
+.doneOrder{display: none;}
+.radiu{
+        -moz-border-radius: 15px;      /* Gecko browsers */
+    -webkit-border-radius: 15px;   /* Webkit browsers */
+    border-radius:15px; 
+}
+/***************************/
+/********twoStyle***********/
+/***************************/
+.order{
+    margin-top:40px;
+    margin-left:8px;
+    display: none;
+
+}
+.image{
+    width: 72%;
+    height: 300px;
+    display: inline-block;
+    border-radius: 15px;
+}
+.twoStyle{
+   position: relative; 
+   width: 26%;
+   height: 300px;
+   display: inline-block;
+}
+.newImage{
+    width: 100%;
+    height: 300px;
+    opacity: 0.3;
+    border-radius: 12px;
+}
+.myWord{
+  position: absolute; 
+  bottom: 60px; 
+  left: 0;
+
+  color: black;
+  display: block;
+  margin-left:15px; 
+ 
+}
+.myWord2{
+  position: absolute; 
+  top: 70px; 
+
+  right: 25px;
+  color: black;
+  display: block;
+  margin-left:15px; 
+  float: right;
+  text-align: right;
+ 
+}
+.Nword{
+    font-size:30px;
+    font-family:verdana;
+    margin: 0;
+}
+.Pword{
+    font-size:20px;
+    font-family:verdana;
+}
+
+
+/********!twoStyle***********/
+
+
+/***************************/
+/********threeStyle***********/
+/***************************/
+.threeImage{
+    width: 100%;
+    height: 590px;
+    border-radius: 10px;
+}
+.threeImage2{
+    width: 100%;
+    height: 270px;
+    border-radius: 5px;
+}
+.threeWord1{
+  position: absolute;
+  right: 0;
+  left:0;
+  bottom:12;
+  color: black; 
+  font-size:2.5em;
+  margin-left:20px; 
+  font-family:verdana;
+
+}
+.leftContainer{
+    float:left;
+    width:50%;
+/*    position:relative;*/
+    height:600px;
+}
+.rightContainer{
+    float:right;
+
+    width:48%;
+}
+.topfood{
+    width:85%; 
+    display:inline-block;
+}
+.bgThree{
+    height:240px;
+    width:13%;
+    top:38px;
+    opacity: 0.3;
+
+}
+/********!threeStyle***********/
+
+/***************************/
+/********fourStyle***********/
+/***************************/
+.leftCon{
+    width: 49%;
+    height: 500px;
+    float: left;
+    display: inline-block;
+}
+.RigCon{
+ 
+    width: 49%;
+    height: 500px;
+    display: inline-block;
+    margin-left:10px; 
+}
+.fourImage{
+    width: 100%;
+    height: 430px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    border-radius: 7px;
+}
+.fourWord{
+  text-align: center;
+}
+.bgfour{
+    height:60px;
+    width:84%;
+    margin-left:7.7%;
+    opacity:0.4;
+    margin-top:5px;
+
+}
+/********!fourStyle***********/
+
+/***************************/
+/********各标签位置***********/
+/***************************/
+.abc{
+
+}
+@media screen and (min-width: 1200px) {
+   .abc{
+    left:800px;
+}
+}
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+   .abc{
+    left:643px;
+}
+}
+.introductionPosi{
+    top:26px;
+}
+.callPosi
+{
+    margin: 0 auto;
+    top:135px;
+}
+/********！各标签位置***********/
+
+.Cgroup input{
+     width:33px;
+     height: 23px;
+     text-align:center;
+     margin:0 3px 0 4px;
+}
+
+/**************************************/
+/*********** shopping cart ************/
+/**************************************/
+
+.container {
+    background: rgba(255, 255, 255, 0.7);
+    overflow: auto;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    height: 97%;
+}
+.Cname {
+    height: 40px;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+@media screen and (min-width: 1200px) {
+    .Ishoppingcart {
+        width: 55%;
+        margin-left: 16%;
+        height: 60px;
+        /*margin-top:3px;*/
+    }
+    .Nshoppingcart, .Pshoppingcart, .piece {
+        line-height: 70px;
+    }
+    .container {
+        width: 80%;
+    }
+}
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .Ishoppingcart {
+        width: 65%;
+        margin-left: 16%;
+        height: 60px;
+        /* margin-top:3px;*/
+    }
+    .Nshoppingcart, .Pshoppingcart, .piece {
+        line-height: 70px;
+    }
+    .container {
+        width: 98%;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 959px) {
+    .Ishoppingcart {
+        width: 65%;
+        margin-left: 16%;
+        height: 60px;
+        /* margin-top:3px;*/
+    }
+    .Nshoppingcart, .Pshoppingcart, .piece {
+        line-height: 70px;
+    }
+    .container {
+        width: 98%;
+    }
+}
+@media screen and (min-width: 480px) and (max-width: 767px) {
+    .Ishoppingcart {
+        width: 100%;
+        margin-left: 16%;
+        height: 65px;
+        /*margin-top:3px;*/
+    }
+    .Nshoppingcart, .Pshoppingcart, .piece {
+        line-height: 35px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+@media screen and (max-width: 479px) {
+    .Ishoppingcart {
+        width: 100%;
+        height: 45px;
+    
+    }
+    .Nshoppingcart, .Pshoppingcart, .piece {
+        line-height: 35px;
+    }
+    .container {
+        width: 100%;
+    }
+}
+.Dshoppingcart, .Imag {
+    line-height: 72px;
+}
+.Ishoppingcart {
+    padding: 0;
+    margin-top: 3px;
+    margin-bottom: 3px;
+}
+.Cbtn {
+    width: 50px;
+    margin: 0;
+    color: rgba(111, 142, 109, 1);
+    font-size: 15px;
+    font-weight: bold;
+}
+.Ffont {
+    font-size: 20px;
+    font-family: Arial;
+    ver
+}
+.tag {
+    color: rgba(255, 255, 255, 0.8);
+}
+.tagL {
+    padding-left: 10px;
+}
+.Chead {
+    border-bottom: 1px solid rgba(172, 172, 172, 0.7);
+    height: 43px;
+    line-height: 43px;
+}
+.headB {
+    font-size: 20px;
+    line-height: 43px;
+    padding: 0;
+}
+.headB2 {
+    font-size: 20px;
+    line-height: 43px;
+    padding: 0;
+    text-align: center;
+}
+.containTable {
+    border-bottom: 1px solid rgba(172, 172, 172, 0.7);
+    height: 72px;
+}
+.Obtn {
+    background: rgba(180, 180, 180, 0.5);
+    padding: 3px 7px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+}
+.Otext {
+    margin-top: 6px;
+    width: 25px;
+}
+.Bsure {
+    font-size: 15px;
+    width: 100px;
+    background: rgba(111, 140, 109, 0.9);
+    color: rgba(255, 255, 255, 1);
+    font-weight: bold;
+}
+.Cbtn {
+    width: 50px;
+    margin: 0;
+    color: rgba(111, 142, 109, 1);
+    font-size: 15px;
+    font-weight: bold;
+    padding:0;
+    text-align: center; 
+}
+/*桌号*/
+
+.tableNum {
+    width: 100%;
+    margin: 0 auto; 
+    /*display: none;*/ 
+}
+.menu2 {
+    height: 45px;
+    display: block;
+    /*width: 330px;*/
+   /* width: 1000px;*/
+    /*margin-top:100px;*/   
+   /* margin-left: 10px;*/
+}
+.menu2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.menu2 ul li {
+    float: left;
+    /* 菜单子元素的内容超出不可见 */
+    
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+.menu2 ul li a {
+    /* 必须是相对定位  */
+    
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 45px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+.menu2 ul li a span {
+    /* 所有层将使用绝对定位 */
+    
+    position: absolute;
+    left: 0;
+    width: 110px;
+}
+.menu2 ul li a span.out {
+    top: 0px;
+}
+.menu2 ul li a span.over, .menu ul li a span.bg {
+    /* 起初.over层和.bg层相对a元素-45px以达到隐藏 */
+    
+    top: -45px;
+}
+#menu2 {
+    background: #45A8DF;
+}
+#menu2 ul li a {
+    color: #FFF;
+}
+#menu2 ul li a span.over {
+    background: #A6DD00;
+    color: #333;
+}
+/*#menu2 ul li.nav1 a span.over { background: #fea274; }*/
+/*#menu2 ul li.nav2 a span.over { background: #b0bbba; }*/
+
+#menu2 ul li.nav3 a span.over {
+    background: #a3f091;
+}
+#menu2 ul li.nav4 a span.over {
+    background: #86dbf9;
+}
+#menu2 ul li.nav5 a span.over {
+    background: #e0caf0;
+}
+/*#menu2 ul li.nav6 a span.over { background: #9dace9; }*/
+
+.numBoard {
+    /*height: 530px;*/
+    
+    background: rgba(204, 204, 204, 0.2);
+    /*margin-left: 40px;*/
+    padding: 35px 40px;
+    overflow-y: scroll;
+}
+
+.numBoard button{
+/* padding:0 5px; */
+    /* width: 125px;height: 55px;*/
+    
+    line-height: 40px;
+    text-align: center;
+/*    background: rgba(0, 153, 255, 0.7);*/
+    list-style: none;
+    /*  margin: 20px 25px;*/
+    
+   /* font-size: 20px;*/
+    color: white;
+    border-radius: 8px;
+}
+.numBoard .nomal{background: rgba(0, 153, 255, 0.7);}
+.numBoard .lock{background: rgba(255, 51, 102, 0.7);}
+.numBoard .book{background: rgba(51, 204, 153, 0.9);position: relative;}
+.mm{position: relative;float: left;}
+#bookHint{ position: absolute;top:45px;left:15px;font-size: 12px;color: black; /*display: none;*/}
+
+
+#TablePrompt{
+    width:500px;
+    height: 400px;
+}
