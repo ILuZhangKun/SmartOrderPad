@@ -1,0 +1,29 @@
+<extend name="Public/base"/>
+    <block name="body">
+        <!-- 数据列表 -->
+        <div class="data-table table-striped">
+    	<table class="">
+                <thead>
+                    <tr>
+            		<th class="">ID</th>
+            		<th class="">菜系名称</th>
+            		<th class="">所含菜品数量</th>
+            		<th class="">操作</th>
+            		</tr>
+                </thead>
+        <tbody>
+            <foreach name="CookStyle" item='v'>
+            <tr>
+            <td>{$v.id}</td>
+            <td>{$v.stylename}</td>
+            <td>{$v.id|getStyleCount}</td>
+            <td name={$id = $v.id}><a href="{:U('/MenuManage/ModifyCookStyle/styleid/'.$id,'','')}">修改</a> | 
+            <a href="{:U('/MenuManage/DelCookStyle/id/'.$id,'','')}">删除</a></td>
+            </tr>
+            </foreach>
+        </tbody>
+        </table>
+	    </div>
+    </div>
+</div>
+    </block>

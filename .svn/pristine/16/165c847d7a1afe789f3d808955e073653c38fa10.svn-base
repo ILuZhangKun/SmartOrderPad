@@ -1,0 +1,168 @@
+<extend name="Public:base"/>
+<block name="body">
+	<div class="main-title">
+		<h2>座位管理</h2>
+	</div>
+	<!-- 表格列表 -->
+	<div class="tb-unit posr">
+		<div class="tb-unit-bar">
+			<a class="btn" href="{:U('add?type=hall')}">新 增</a>
+		</div>
+		<div class="category">
+			<div class="hd cf">
+				<div class="fold">折叠</div> 
+				<div class="name">名称</div>
+			</div>
+			<volist name="degreeInfo" id="v" >
+				<div id="{$v.id}">
+					<div class="cf">
+						<div  class="btn-toolbar opt-btn cf"> 
+							<a class="confirm ajax-get" href="{:U('del',array('id'=>$v['id'],'type'=>'hall'))}" title="删除">删除</a>
+						</div>
+						<div class="fold">
+							<i class="icon-unfold"></i>
+						</div> 
+						<div class="name">
+							<span class=""></span> 
+							<input class="text" type="text" id="{$v.id}" value="{$v.name}" name="title">
+							<i class="icon-add"></i>
+							<span class="help-inline msg"></span>
+						</div>
+					</div>
+					<if condition="$v.table eq null "> 
+                        <div class="cf" style="display:none">
+							<div class="btn-toolbar opt-btn cf"> 
+								<a class="confirm ajax-get" href="{:U('del',array('id'=>$table['id'],'type'=>'table'))}" title="删除">删除</a> 
+							</div>
+							<div class="fold">
+								<i></i>
+							</div> 
+							<div class="name">
+								<span class="tab-sign"></span> 
+								<input class="text" type="text" cid="{$v.id}" id="{$table.id}" value="{$table.table_name}" name="title"> 
+								<span class="help-inline msg"></span>
+							</div>
+						</div>
+                    <else/> 
+                        <volist name="v.table" id="table">
+							<div class="cf">
+								<div class="btn-toolbar opt-btn cf"> 
+									<a class="confirm ajax-get" href="{:U('del',array('id'=>$table['id'],'type'=>'table'))}" title="删除">删除</a> 
+								</div>
+								<div class="fold">
+									<i></i>
+								</div> 
+								<div class="name">
+									<span class="tab-sign"></span> 
+									<input class="text" type="text" cid="{$v.id}" id="{$table.id}" value="{$table.table_name}" name="title"> 
+									<span class="help-inline msg"></span>
+								</div>
+							</div>
+						</volist>
+                    </if>
+					
+					
+				</div>
+			</volist>  
+		</div>
+	</div>
+	<!-- /表格列表 -->
+</block>
+
+<block name="script">
+	<script>
+		(function($){
+			// $(".msg").hide();
+			$(".icon-add").click(function(){
+				//得到本次要添加桌位的大厅id
+				var cid = $(this).parent().parent().parent().attr("id");
+				console.log(cid);
+				var parent = $("#"+cid);
+				//获得该厅的座位数+1
+				var chiNum = parent.children().length;
+				$(this).parent().parent().nextAll().show();
+				$(this).parent().prev().find("i").attr("class","icon-unfold"); 
+				//得到最后一个元素的克隆值
+				var Element = parent.children().last().clone(true); 
+				//将可通过来的相关信息置空
+				// Element.find("input[name='sort']").val(chiNum);
+				Element.removeAttr("style");
+				var title = Element.find("input[name='title']");
+				if(title.val()!=""){
+					title.attr("value","");
+					title.val("");
+					title.attr("id","");
+					title.attr("cid",cid);
+					Element.find(".opt-btn").hide();
+					parent.append(Element);
+				}
+				
+			});
+			//文本框失去焦点则录入信息
+			$("[name='title']").change(function(){ 
+				var val = $(this).val();
+				var thisId = $(this).attr("id");
+				var thisCid = $(this).attr("cid"); 
+				// console.log("name:"+val+"id:"+thisId+"cid:"+thisCid);
+				if(val==""||val==" "){
+					alert("请输入名称");
+				}else if(thisId==""&&thisCid!=undefined&&thisCid!=""){
+					//id为空并且cid不是undifined也不是空说明这是新增的桌号。
+					//将cid与value录入数据库得到返回的id，将id填充 
+					var data={"table_name":val,"hall_id":thisCid,"status":"table"}; 
+					var result = yysAjaxRequest("POST",data,"add"); 
+					var msg = $(this).siblings("span.msg");
+					if(result!="error"){
+						$(this).attr("id",result);
+						msg.attr("style","color:green;");
+						msg.html("添加成功！");
+						$(this).parent().siblings(".opt-btn").show();
+						$(this).parent().siblings(".opt-btn").attr("href","/SmartOrder/Admin.php/Table/del/id/"+result+"/type/table.html");
+					} 
+					else {
+						msg.attr("style","color:red;"); 
+						msg.html("添加失败！");
+					}
+					setTimeout(function(){
+						msg.hide();
+					},3000);
+				}else if(thisCid==undefined){
+					//cid=undefined说明是修改的hall
+					var hallName=$(this).val();
+					var hallId=$(this).attr("id");
+					var msg = $(this).siblings("span.msg");
+					edit_name(hallName,hallId,"hall",msg);
+
+				}else if(thisId!=""&&thisCid!=undefined&&thisCid!=""){
+					//修改的桌号 
+					var name = $(this).val();
+					var id = $(this).attr("id");
+					var msg = $(this).siblings("span.msg");
+					edit_name(name,id,"table",msg);
+				} 
+			});
+			//点击折叠icon-fold  
+			$(".fold i").click(function(){
+				 $(this).parent().parent().nextAll().toggle();
+				 if($(this).hasClass("icon-unfold")) $(this).attr("class","icon-fold");
+				  else $(this).attr("class","icon-unfold");
+			});
+		})(jQuery);
+		function edit_name(name,id,type,msg){
+			var data={"name":name,"id":id,"type":type}; 
+			var result = yysAjaxRequest("POST",data,"edit");
+			
+			if(result == "success") {
+				msg.attr("style","color:green;");
+				msg.html("修改成功！");
+			}
+			else{
+				msg.attr("style","color:red;"); 
+				msg.html("修改失败！");
+			}
+			setTimeout(function(){
+				msg.hide();
+			},3000);
+		}
+	</script>	
+</block>

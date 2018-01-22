@@ -1,0 +1,45 @@
+[ 2018-01-22T12:48:49+08:00 ] ::1 /smartorder/pad/table/dealtable?uuId=a6b7a37d0115365a&tableId=9&action=%27remove%27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000634s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000870s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000914s ]
+
+[ 2018-01-22T12:50:00+08:00 ] ::1 /smartorder/pad/table/dealtable?uuId=a6b7a37d0115365a&tableId=9&action=%27remove%27
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000404s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000533s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000565s ]
+
+[ 2018-01-22T12:50:19+08:00 ] ::1 /smartorder/pad/table/dealtable?uuId=a6b7a37d0115365a&tableId=9&action=remove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000501s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+
+[ 2018-01-22T12:50:36+08:00 ] ::1 /smartorder/pad/table/dealtable?uuId=a6b7a37d0115365a&tableId=9&action=remove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000548s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000582s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0031s ]
+SQL: SELECT * FROM `so_table` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `so_table` SET `uuid`='',`is_lock`='0' WHERE `id` = 9 [ RunTime:0.0429s ]
+
+[ 2018-01-22T12:51:36+08:00 ] ::1 /smartorder/pad/table/dealtable?uuId=a6b7a37d0115365a&tableId=9&action=remove
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000034s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000502s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000739s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000805s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `so_table` WHERE `id` = 9 LIMIT 1   [ RunTime:0.0002s ]
+

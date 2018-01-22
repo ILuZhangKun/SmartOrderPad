@@ -1,0 +1,164 @@
+<extend name="Public/base" />
+<block name="body">
+	<!-- 数据列表 -->
+	<div class="data-table table-striped">
+		<label style="font-size: 18px;margin-top: 3px;">富贵厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 1">
+						<tr>
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td><div style="margin: 0 auto; width: 40px;line-height: 25px; height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></div></td>
+						</tr>
+					</if>
+				</foreach>
+			</tbody>
+		</table>
+		<label style="font-size: 18px;">迎宾厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 2">
+						<tr>
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td><div style="margin: 0 auto; width: 40px;line-height: 25px; height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></div></td>
+						</tr>
+					</if>
+				</foreach>
+			</tbody>
+		</table>
+		<label style="font-size: 18px;">清风厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 3">
+						<tr>
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td><div style="margin: 0 auto; width: 40px;line-height: 25px; height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></div></button></td>
+						</tr>
+					</if>
+				</foreach>
+			</tbody>
+		</table>
+		<label style="font-size: 18px;">复古厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 4">
+						<tr>
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td><div style="margin: 0 auto; width: 40px;line-height: 25px; height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></div></td>
+						</tr>
+					</if>
+				</foreach>
+			</tbody>
+		</table>
+		<label style="font-size: 18px;">怀旧厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 5">
+						<tr>
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td><div style="margin: 0 auto; width: 40px;line-height: 25px; height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></div></td>
+						</tr>
+					</if>
+				</foreach>
+			</tbody>
+		</table>
+
+	</div>
+
+</block>
+</extend>

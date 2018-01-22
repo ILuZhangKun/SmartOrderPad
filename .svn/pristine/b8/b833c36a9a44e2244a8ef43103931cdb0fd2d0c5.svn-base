@@ -1,0 +1,104 @@
+<extend name="Base/base" />
+<block name="content">
+    <!-- 预约 -->
+    <div class="reservation">
+        <div class="inputRedervation">
+            <form class="form-inline" id="book_info"> 
+                <input type="text" class="time-start" id="RVday" name="RVday" placeholder="请输入查询日期" required /> 
+                <select class="orderTime" name="bookHour">
+                    <option value="早饭">早饭</option>
+                    <option value="午饭">午饭</option>
+                    <option value="晚饭">晚饭</option> 
+                </select>  
+                <input type="text" placeholder="预约人数" id="RVnum" name="RVnum" />
+                <input type="text" placeholder="客户姓名" id="RVdname" name="RVdname" />
+                <input type="text" placeholder="客户电话" id="RVtel" name="RVtel" />
+                
+                <select class="orderTable" name="RVtable"> 
+                    <volist name="tableTree" id="cate">
+                        <optgroup label="{$cate.name}">
+                            <volist name="cate.table" id="val">
+                                <if condition="$val.id eq I('tableid') "> 
+                                    <option value="{$val.id}" selected="true">{$val.table_name}</option> 
+                                <else/> 
+                                    <option value="{$val.id}">{$val.table_name}</option>
+                                </if>
+                                
+                            </volist>
+                        </optgroup>
+                    </volist>
+                </select>
+                <input type="text" placeholder="预约要求" id="RVdemand" name="RVdemand" />
+                <a href="javascript:;" class="btn btn-success" id="RVsubmit" url="{:U('book/makeBook')}" />确定预定</a>
+                <a href="javascript:;" class="btn btn-warning" id="RVsearch" url="{:U('book/searchBook')}" />查询预定</a>
+                <!-- <a type="button" class="btn btn-warning" id="searchTable" url="{:U('book/searchTable')}" />查询空位</a> -->
+            </form>
+        </div>
+        <div> 
+                <table class="table table-hover abc">
+                    <thead>
+                        <tr>
+                            <th class="RVday">预约日期</th>
+                            <th class="RVtime">预约时间</th>
+                            <th class="RVnum">人数</th>
+                            <th class="RVdname">客户姓名</th>
+                            <th class="RVtel">客户手机号</th>
+                            <th class="RVtable">餐台</th>
+                            <th class="RVdemand">要求</th>
+                            <th class="RVstatus">状态</th>
+                        </tr>
+                    </thead>
+                    <volist name="bookInfo" id="book">
+                        <tr class="mytr">
+                        <td>{$book.book_day}</td>
+                        <td>{$book.book_time}</td>
+                        <td>{$book.book_num}</td>
+                        <td>{$book.book_name}</td>
+                        <td>{$book.book_tel}</td>
+                        <td>{$book.table}</td>
+                        <td>{$book.book_demand}</td>
+                        <td>
+                            <button type="button" class="btn btn-default cancelBook {$book.book_time} {$book.book_name}" id="{$book.book_day}" >取消</button>
+                        </td>
+                    </tr>
+                    </volist> 
+                </table> 
+            <!--div class="reservationOther">
+                <div class="coBorder">
+                    <h4>预约未到</h4>
+                    <div id="scrollDiv3">
+                        <ul>
+                            <li>这是公告标题的第二行</li>
+                            <li>这是公告标题的第三行</li>
+                            <li>这是公告标题的第四行</li>
+                            <li>这是公告标题的第五行</li>
+                            <li>这是公告标题的第六行</li>
+                            <li>这是公告标题的第七行</li>
+                            <li>这是公告标题的第八行</li>
+                            <li>这是公告标题的第9行</li>
+                            <li>这是公告标题的第10行</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="coBorder">
+                    <h4>空置座位</h4>
+                    <div id="scrollDiv4">
+                        <ul>
+                            <li>这是公告标题的第二行</li>
+                            <li>这是公告标题的第三行</li>
+                            <li>这是公告标题的第四行</li>
+                            <li>这是公告标题的第五行</li>
+                            <li>这是公告标题的第六行</li>
+                            <li>这是公告标题的第七行</li>
+                            <li>这是公告标题的第八行</li>
+                            <li>这是公告标题的第9行</li>
+                            <li>这是公告标题的第10行</li>
+                        </ul>
+                    </div>
+                </div>
+            </div-->
+        </div>
+    </div>
+    <!-- /预约 -->
+    
+</block>

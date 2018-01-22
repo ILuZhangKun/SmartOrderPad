@@ -1,0 +1,241 @@
+<extend name="Public/base" />
+<block name="body">
+	<!-- 数据列表 -->
+	<div class="data-table table-striped">
+		<label style="font-size: 18px;margin-top: 3px;">富贵厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>实收金额</th>
+					<!--<th>是否支付</th>-->
+					<th>支付类型</th>
+					<th>支付时间</th>
+					<!--<th>操作</th>-->
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 1">
+						<td>
+							<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+							<p>{$v.table_name}</p>
+							
+						</td>
+						<td>{$v.order_time}</td>
+						<td>{$v.add_time}</td>
+						<td>{$v.total_money}</td>
+						<td>0</td>
+						<td>{$v.real_money}</td>
+						<!--<td>
+								<if condition="$v.is_pay eq '1'">
+									已支付
+								<else />
+									未支付
+								</if>									
+							</td>	-->
+						<td>{$v.pay_type}</td>
+						<td>{$v.pay_time}</td>
+						<!--<td><button style="width: 40px;height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></button>
+							<a href="{:U('del')}?">删除</a>
+
+						</td>-->
+						</tr>
+				</if>
+				</foreach>
+
+			</tbody>
+		</table>
+		<label style="font-size: 18px;margin-top: 3px;">迎宾厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>实收金额</th>
+					<!--<th>是否支付</th>-->
+					<th>支付类型</th>
+					<th>支付时间</th>
+					<!--<th>操作</th>-->
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 2">
+						<tr>
+							<!--<td></td>-->
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+								<div id="paydiv" class="paydiv">
+								</div>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td>{$v.real_money}</td>
+							
+							<td>{$v.pay_type}</td>
+							<td>{$v.pay_time}</td>
+							<!--<td><button style="width: 40px;height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></button>
+							<a href="{:U('del')}?">删除</a>
+
+						</td>-->
+						</tr>
+					</if>
+				</foreach>
+
+			</tbody>
+		</table>
+		<label style="font-size: 18px;margin-top: 3px;">清风厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>实收金额</th>
+					<!--<th>是否支付</th>-->
+					<th>支付类型</th>
+					<th>支付时间</th>
+					<!--<th>操作</th>-->
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 3">
+						<tr>
+							<!--<td></td>-->
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+								<div id="paydiv" class="paydiv">
+								</div>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td>{$v.real_money}</td>
+							
+							<td>{$v.pay_type}</td>
+							<td>{$v.pay_time}</td>
+							<!--<td><button style="width: 40px;height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></button>
+							<a href="{:U('del')}?">删除</a>
+
+						</td>-->
+						</tr>
+					</if>
+				</foreach>
+			</tbody>
+		</table>
+		<label style="font-size: 18px;margin-top: 3px;">复古厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>实收金额</th>
+					<!--<th>是否支付</th>-->
+					<th>支付类型</th>
+					<th>支付时间</th>
+					<!--<th>操作</th>-->
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 4">
+						<tr>
+							<!--<td></td>-->
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+								<div id="paydiv" class="paydiv">
+								</div>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td>{$v.real_money}</td>
+							
+							<td>{$v.pay_type}</td>
+							<td>{$v.pay_time}</td>
+							<!--<td><button style="width: 40px;height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></button>
+							<a href="{:U('del')}?">删除</a>
+
+						</td>-->
+						</tr>
+					</if>
+				</foreach>
+				
+			</tbody>
+		</table>
+		<label style="font-size: 18px;margin-top: 3px;">怀旧厅</label>
+		<table class="order-table">
+			<thead>
+				<tr>
+					<!--<th>厅号</th>-->
+					<th>桌号</th>
+					<th>下单时间</th>
+					<th>追加订单时间</th>
+					<th>总金额</th>
+					<th>折扣</th>
+					<th>实收金额</th>
+					<!--<th>是否支付</th>-->
+					<th>支付类型</th>
+					<th>支付时间</th>
+					<!--<th>操作</th>-->
+				</tr>
+			</thead>
+			<tbody>
+				<foreach name="order" item="v">
+					<if condition="$v.id eq 5">
+						<tr>
+							<!--<td></td>-->
+							<td>
+								<!--<a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}">{$v.table_id}</a>-->
+								<p>{$v.table_name}</p>
+								<div id="paydiv" class="paydiv">
+								</div>
+							</td>
+							<td>{$v.order_time}</td>
+							<td>{$v.add_time}</td>
+							<td>{$v.total_money}</td>
+							<td>0</td>
+							<td>{$v.real_money}</td>
+							
+							<td>{$v.pay_type}</td>
+							<td>{$v.pay_time}</td>
+							<!--<td><button style="width: 40px;height: 25px;border: 0px;background-color: darkgreen;"><a href="{:U('orderList')}?oid={$v.oid}&tid={$v.table_id}" style="color: white;">结账</a></button>
+							<a href="{:U('del')}?">删除</a>
+
+						</td>-->
+						</tr>
+					</if>
+				</foreach>
+				
+			</tbody>
+		</table>
+
+	</div>
+
+</block>
+</extend>

@@ -1,0 +1,31 @@
+<extend name ="Public/base"/>
+    <block name="body">
+        <div class="main-title">
+            <h2>您现在添加图片的菜名为：{$info.cookname}</h2>
+        </div>
+        <div class="tab-wrap">
+            <form action="{:U('/MenuManage/upload','','')}" method="post" class="form-horizontal" enctype="multipart/form-data">
+                        <!-- 隐藏input用于存放的菜名ID -->
+                        <input type="text"  name="id" style="display:none" value={$info.id}>
+                <if condition="info.picture neq 'null'">
+                <div class="form-item">
+                <label class="item-label">图片<span class="check-tips"></span></label>
+                    <div class="controls" style="hight:300px;width:300px;">
+                        <img src="{$info.picture}" alt="">
+                    </div>
+                </div>
+                </if>
+
+                <div class="form-item">
+                <label class="item-label">上传图片<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <input type="file" class="text input" name="cookname" value=""/>
+                    </div>
+                </div>
+               <div class="form-item">
+                <button class="btn submit-btn"  type="submit" >确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+                </div>
+            </form>
+        </div>
+    </block>

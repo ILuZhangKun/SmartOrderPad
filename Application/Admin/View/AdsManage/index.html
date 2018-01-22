@@ -1,0 +1,31 @@
+<extend name="Public/base"/>
+	<block name="body">
+		<!-- 数据列表 -->
+		<div class="data-table table-striped">
+		<table class="">
+			<thead>
+				<tr>
+					<th>ID</th>
+					<th>类型名称</th>
+					<th>备注</th>
+					<th>操作</th>
+				</tr>
+			</thead>
+		<tbody>
+			<foreach name="Ads_type" item="v">
+				<tr>
+					<td>{$v.typenum}</td>
+					<td>{$v.typename}</td>
+					<td>{$v.remark}</td>	
+					<td><a href="{:U('edit')}?typenum={$v.typenum}">编辑</a>|
+						<a href="{:U('del')}?typenum={$v.typenum}">删除</a>
+					</td>
+				</tr>
+			</foreach>
+		</tbody>
+	</table>
+        </div>
+    </div>
+</div>
+</block>
+</extend>

@@ -1,0 +1,159 @@
+<extend name ="Public:base"/>
+<block name="style">
+    <style>body{padding: 40px}</style>
+</block>
+	<block name="body">
+	<label>桌号：{$tid}</label>
+		<!-- 数据列表 -->
+		
+		<div id="outputDiv" style="display:none;position:absolute;left:0px;top:0px;width:15%;height:20%;background:white;">
+      <div style="margin-left:-20px;font-size:10px;">
+      &emsp;&emsp;&emsp;&emsp;欢迎您的光临</br>
+      -------------------------------------------------</br>
+      &emsp;&emsp;&emsp;&emsp;北京工业大学</br>
+      店名：&emsp;&emsp;&emsp;天天餐厅</br>
+      桌号：&emsp;&emsp;&emsp;{$tableId}</br>
+      收银员：&emsp;&emsp;S201525082</br>
+      打印时间：&emsp;</br>
+      机器号：&emsp;&emsp;01</br>
+      会员号：&emsp;&emsp;25082</br>
+      -------------------------------------------------</br>
+      <table >
+          <thead>
+              <tr>
+                  <th>菜名</th>
+                  <th>&emsp;单价/元</th>
+                  <th>&emsp;份数/份</th>
+                  <th>&emsp;小计</th>
+              </tr>
+          </thead>
+          <volist name ="orderList" id="item">
+              <tr >
+                 <td>{$item.name}</td>
+                  <td>&emsp;{$item.price}</td>
+                  <td>&emsp;&emsp;{$item.num}</td>
+                  <td>&emsp;{$item.total}</td>
+              </tr>
+          </volist>
+      </table>
+      -------------------------------------------------</br>
+      总计：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{$total_money}</br>
+      优惠：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0</br>
+      实收：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{$total_money}</br>
+      -------------------------------------------------</br>
+    &emsp;&emsp;&emsp;谢谢回顾，欢迎下次光临！</br>
+    &emsp;&emsp;欢迎来电咨询：13888888888</br>
+    &emsp;地址：北京市朝阳区平乐园100号</br>
+    </div>
+    </div>
+		
+		<div class="data-table table-striped" style="top: 40px;">
+			<table class="">
+				<thead>
+					<tr>					
+						<th>菜品名称</th>
+						<th>单价</th>
+						<th>数量</th>
+						<th>小结</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="orderList" item="v">
+						<tr>					
+							<td>{$v.name}</td>
+							<td>{$v.price}</td>	
+							<td>{$v.num}</td>
+							<td>{$v.total}</td>
+							
+							<td><a href="{:U('edit')}?">编辑</a>|
+								<a href="{:U('del')}?">删除</a>
+							</td>
+						</tr>
+					</foreach>
+				</tbody>
+			</table>
+        
+</div>
+        <br/>
+        <lable>总计金额：{$total_money}元</lable>
+        <br/>
+        <br/>
+        <form method="post" action="{:U('pay')}">
+        	<input type="hidden" name="oid" value="{$oid}">
+        	<input type="hidden" name="tid" value="{$tid}">
+            <label>支付方式：</label>
+            </br>
+            <!--<input type="radio" id="money" class="cash-button" name="pay_type" value="现金" onclick="cashPay()"/>现金
+             <input type="radio" id="card" class="cash-button" name="pay_type" value="刷卡" onclick="posPay()">刷卡
+            <input type="radio" id="weixin" class="cash-button" name="pay_type" value="微信/支付宝" onclick="mobilePay()">微信/支付宝-->
+            
+            <input type="button" id="money" class="cash-button" name="pay_type" value="现金" onclick="cashPay()">
+            <input type="button" id="card" class="cash-button" name="pay_type" value="刷卡" onclick="posPay()">
+            <input type="button" id="weixin" class="cash-button" name="pay_type" value="微信/支付宝" onclick="mobilePay()">
+            </br>
+           <input id="cash" name="cash" style="display: none;margin-left: 10px;" type="text">
+            </br>
+            </br>
+            <br />
+            <br />
+            <button class="cash-submit" type="submit">结账</button>
+            <button class="cash-submit" type="submit" id="print">打印小票</button>
+        </form>
+
+</br>
+</br>
+<input type="button" class="cash-back" onclick="history.back();" value="返回上一级">
+<script>
+	$(document).ready(function(){
+		$(".sidebar").css("display","none");
+	});
+</script>
+<script type="text/javascript">
+	$("#print").click(function(){
+		var bodyHTML=window.document.body.innerHTML;
+		window.document.body.innerHTML=$('#outputDiv').html();
+		window.print();
+		// window.document.body.innerHTML=bodyHTML;
+	});
+</script>
+<script type="text/javascript">
+	function cashPay()
+	{
+		var inputshow=document.getElementById('money').value;
+		console.log(inputshow);
+		if (inputshow == "现金") {
+			document.getElementById('cash').style.display="block";
+		}
+		
+//		document.getElementById('money').style.backgroundColor="forestgreen";
+//		document.getElementById('money').style.color="black";
+		alert("请在文本框中输入金额！");
+	}
+	function posPay()
+	{
+		var inputshow=document.getElementById('card').value;
+		console.log(inputshow);
+		if (inputshow != "现金") {
+			document.getElementById('cash').style.display="none";
+		}
+//		document.getElementById('card').style.backgroundColor="forestgreen";
+//		document.getElementById('card').style.color="black";
+		alert("请使用POS机结账！");
+
+	}
+	function mobilePay()
+	{
+		var inputshow=document.getElementById('weixin').value;
+		console.log(inputshow);
+		if (inputshow != "现金") {
+			document.getElementById('cash').style.display="none";
+		}
+//		document.getElementById('weixin').style.backgroundColor="forestgreen";
+//		document.getElementById('weixin').style.color="black";
+		alert("请打开手机支付二维码界面！");
+
+	}
+</script>
+</block>
+</extend>

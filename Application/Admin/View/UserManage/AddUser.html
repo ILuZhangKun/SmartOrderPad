@@ -1,0 +1,56 @@
+<extend name="Public/base"/>
+<!-- 边栏 -->
+    <block name="body">
+        <form action="{:U("/UserManage/AddUser")}" method="post" class="form-horizontal">
+            <div class="form-item">
+                <label class="item-label">用户名<span class="check-tips">（用户名会作为默认的昵称）</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="UserName" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">密码<span class="check-tips">（用户密码不能少于6位）</span></label>
+                <div class="controls">
+                    <input type="password" class="text input-large" name="Password" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">真实姓名<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="RealName" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">员工编号<span class="check-tips">（可以为空）</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="WorkId" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">身份证号码<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="IdCardNum" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">家庭住址<span class="check-tips">(XX省XX市)</span></label>
+                <div class="controls">
+                    <input type="text" class="text input-large" name="Address" value="">
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">职位<span class="check-tips"></span></label>
+                <div class="controls">
+                    <select name="Position">
+                    <foreach name="Position" item="v">
+                    <option value="{$v.id}" >{$v.position}</option>
+                    </foreach>      
+                </select>  
+                </div>
+            </div>
+            <div class="form-item">
+                <button class="btn submit-btn"  type="submit" >确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </form>
+    </block>

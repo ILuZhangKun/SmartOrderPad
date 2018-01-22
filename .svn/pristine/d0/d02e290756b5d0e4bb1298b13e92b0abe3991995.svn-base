@@ -1,0 +1,175 @@
+<extend name="Base/base"/>
+<block name="content">
+    <!-- 结账 -->
+    <div class="checkout">
+        <div class="checkoutBoard form-inline">
+            <form class="form-inline" action="getSearch">
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label> 
+                    <select class="form-control" name="tableid"> 
+                        <volist name="tableTree" id="cate">
+                            <optgroup label="{$cate.name}">
+                                <volist name="cate.table" id="val">
+                                    <if condition="$val.id eq I('tableid') "> 
+                                        <option value="{$val.id}" selected="true">{$val.table_name}</option> 
+                                    <else/> 
+                                        <option value="{$val.id}">{$val.table_name}</option>
+                                    </if> 
+                                </volist>
+                            </optgroup>
+                        </volist>
+                    </select>
+                </div>
+                <button type="submit" class="btn btn-default" id="searchTableId">查询</button>
+            <!-- </form>
+            <form class="form-inline" action="order/getSearch"> -->
+                <div class="form-group">
+                    <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                    <input type="text" class="form-control" placeholder="请输入会员号">
+                </div>
+                <button type="submit" class="btn btn-default" id="alone">确认</button>
+            </form>
+            <table class="table table-hover coTable">
+                <thead>
+                    <tr>
+                        <th>菜名</th>
+                        <th>单价/元</th>
+                        <th>份数/份</th>
+                        <th>小计</th>
+                    </tr>
+                </thead>
+                <volist name ="payInfo" id="item">
+                    <tr class="payTable {$item.id}">
+                       <td>{$item.name}</td>
+                        <td>{$item.price}</td>
+                        <td>{$item.num}</td>
+                        <td>{$item.totle}</td>
+                    </tr>
+                </volist> 
+            </table>
+            <div class="row">
+                <div class="col-md-5 col-sm-5"></div>
+                <div class="col-md-7 col-sm-7">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-4">
+                            <strong>总计：</strong>{$totle}
+                        </div>
+                        <div class="col-md-4 col-sm-4">
+                            <strong>折扣：</strong>0.0
+                        </div>
+                        <div class="col-md-4 col-sm-5" id="totleMoney">
+                            <strong>应付：</strong>{$totle}
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="tableOther">
+
+            </div>
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-8">
+                    <div class="row coOther">
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-default" id="inputCash">现金结账</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-default">信用卡结账</button>
+                        </div>
+                        <div class="col-md-4">
+                            <button type="submit" class="btn btn-default">打印小票</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="row inputCash">
+                    <div class="col-md-4"></div>
+                    <div class="col-md-5" style="padding:0;"> 
+                        <div class="form-group">
+                            <label class="sr-only" for="exampleInputEmail3">Email address</label>
+                            <input type="text" class="form-control" id="realMoney" placeholder="请输入实收金额">
+                        </div>
+                        <button type="button" class="btn btn-default submitMoney">确认</button> 
+                    </div>
+                    <div class="col-md-3 takeChange"><strong></strong></div>
+                </div>
+            </div>
+        </div>
+        <div class="checkoutOther">
+            <div class="coBorder">
+                <h4>呼叫服务员</h4>
+                <div id="scrollDiv">
+                    <ul>
+                    <volist name="holdInfo" id="info"> 
+                        <empty name="info">
+                            <li>暂时无人呼叫</li> 
+                        <else /> 
+                            <volist name="info.holding" id="val">
+                            <li>{$info.table_name} {$val}</li>
+                            </volist>
+                        </empty>  
+                    </volist> 
+                    </ul>
+                </div>
+            </div>
+            <div class="coBorder">
+                <h4>长时间未结账餐台</h4>
+                <div id="scrollDiv2">
+                    <ul> 
+                        <volist name="longTime" id="val">
+                            <li>{$val.table_name}  {$val.start_time}</li>
+                        </volist> 
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /结账 -->
+    <!-- 小票 -->
+    <div class="note">
+        <h4>雨之林餐厅</h4>
+        <div class="noteOther">
+            <div class="noteOtherLeft">&nbsp;会员号:32655629</div>
+            <div class="noteOtherright">桌号:10</div>
+        </div>
+        <div class="noteBody">
+            <table class="table noteTable">
+                <tr>
+                    <th id="t1">菜名</th>
+                    <th id="t2">单价*份数</th>
+                    <th id="t3">小计</th>
+                </tr>
+                <tr>
+                    <td id="t1">宫保鸡丁</td>
+                    <td id="t2">36*1</td>
+                    <td id="t3">36.0</td>
+                </tr>
+                <tr>
+                    <td id="t1">宫保鸡丁</td>
+                    <td id="t2">36*1</td>
+                    <td id="t3">36.0</td>
+                </tr>
+                <tr>
+                    <td id="t1">宫保鸡丁</td>
+                    <td id="t2">36*1</td>
+                    <td id="t3">36.0</td>
+                </tr>
+            </table>
+        </div>
+        <div class="noteAccount">
+            <div><strong>总计:</strong>124.0</div>
+            <div><strong>折扣:</strong>0.0</div>
+            <div><strong>应付:</strong>124.0</div>
+        </div>
+        <div class="noteAccount2">
+            <div><strong>&nbsp;现金:</strong>200.0</div>
+            <div><strong>找零:</strong>76.0</div>
+        </div>
+        <div class="noteAccount2">
+            <div><strong>&nbsp;银行卡:</strong>5444*********3165</div>
+        </div>
+        <div class="notefooter">
+            <div><strong>打印时间：</strong>2015-05-02&nbsp;19:47:00</div>
+        </div>
+    </div>
+    <!-- /小票 -->
+</block> 

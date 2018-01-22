@@ -1,0 +1,946 @@
+﻿html,
+body {
+    margin: 0;
+    padding: 0;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    width: 100%;
+    height: 45px;
+    background-color: #09f;
+    position: fixed;
+    top: 0;
+    left: 0;
+    font-size: 14px;
+}
+
+.menu {
+    width: 400px;
+    height: 35px;
+    margin: 0 auto;
+}
+
+.menu ul {
+    width: 100%;
+    height: 100%;
+    margin-top: 10px;
+}
+
+.menu li {
+    width: 90px;
+    height: 35px;
+    line-height: 35px;
+    float: left;
+    margin-right: 5px;
+    text-align: center;
+    color: #fff;
+    position: relative;
+    cursor: pointer;
+}
+
+.active {
+    background-color: #fff;
+    color: #000!important;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.active .cricle {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    position: relative;
+}
+
+.active .left .cricle div {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #09f;
+}
+
+.active .left {
+    position: absolute;
+    bottom: 0;
+    left: -10px;
+}
+
+.active .right {
+    position: absolute;
+    bottom: 0;
+    right: -10px;
+}
+
+.active .right .cricle div {
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    border-radius: 10px;
+    background-color: #09f;
+}
+
+.exit {
+    position: absolute;
+    right: 20px;
+    width: 50px;
+    height: 45px;
+    line-height: 45px;
+    text-align: center;
+    top: 0;
+    right: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+
+/*************桌号模块**************/
+
+.tableSearch {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 130px;
+    padding-left: 40px;
+}
+
+.nana {
+    width: 300px;
+}
+
+.tableSearch input[type="text"] {
+    width: 200px;
+    padding: 5px;
+    /* background: rgba(221,221,221,0.1);*/
+}
+
+.tableSearch button {
+    background: #45a8df;
+    padding: 4px 12px;
+    color: white;
+    margin-left: 10px;
+}
+
+.tableNum {
+    width: 80%;
+    margin: 0 auto;
+    /*display: none;*/
+}
+
+.menu2 {
+    height: 45px;
+    display: block;
+    /*width: 330px;*/
+    /* width: 1000px;*/
+    /*margin-top:100px;*/
+    margin-left: 40px;
+}
+
+.menu2 ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.menu2 ul li {
+    float: left;
+    /* 菜单子元素的内容超出不可见 */
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    line-height: 45px;
+}
+
+.menu2 ul li a {
+    /* 必须是相对定位  */
+    position: relative;
+    display: block;
+    width: 110px;
+    height: 45px;
+    font-family: Arial;
+    font-size: 15px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.menu2 ul li a span {
+    /* 所有层将使用绝对定位 */
+    position: absolute;
+    left: 0;
+    width: 110px;
+}
+
+.menu2 ul li a span.out {
+    top: 0px;
+}
+
+.menu2 ul li a span.over,
+.menu ul li a span.bg {
+    /* 起初.over层和.bg层相对a元素-45px以达到隐藏 */
+    top: -45px;
+}
+
+#menu2 {
+    background: #45A8DF;
+}
+
+#menu2 ul li a {
+    color: #FFF;
+}
+
+#menu2 ul li a span.over {
+    background: #A6DD00;
+    color: #333;
+}
+
+
+/*#menu2 ul li.nav1 a span.over { background: #fea274; }*/
+
+
+/*#menu2 ul li.nav2 a span.over { background: #b0bbba; }*/
+
+#menu2 ul li.nav3 a span.over {
+    background: #a3f091;
+}
+
+#menu2 ul li.nav4 a span.over {
+    background: #86dbf9;
+}
+
+#menu2 ul li.nav5 a span.over {
+    background: #e0caf0;
+}
+
+
+/*#menu2 ul li.nav6 a span.over { background: #9dace9; }*/
+
+.numBoard {
+    /*height: 530px;*/
+    background: rgba(204, 204, 204, 0.2);
+    margin-left: 40px;
+    padding: 35px 40px;
+    overflow-y: scroll;
+}
+
+.numBoard button {
+    /* padding:0 5px; */
+    /* width: 125px;height: 55px;*/
+    line-height: 40px;
+    text-align: center;
+    /*    background: rgba(0, 153, 255, 0.7);*/
+    list-style: none;
+    /*	margin: 20px 25px;*/
+    /* font-size: 20px;*/
+    color: white;
+    border-radius: 8px;
+}
+
+.numBoard .nomal {
+    background: rgba(0, 153, 255, 0.7);
+}
+
+.numBoard .lock {
+    background: rgba(255, 51, 102, 0.7);
+}
+
+.numBoard .book {
+    background: rgba(51, 204, 153, 0.9);
+    position: relative;
+}
+
+.mm {
+    position: relative;
+    float: left;
+}
+
+#bookHint {
+    position: absolute;
+    top: 45px;
+    left: 15px;
+    font-size: 12px;
+    color: black;
+    /*display: none;*/
+}
+
+@media screen and (min-width: 1200px) {
+    .numBoard {
+        width: 1000px;
+        /*height: 530px;*/
+    }
+    .menu2 {
+        width: 1000px;
+    }
+    .numBoard button {
+        width: 125px;
+        height: 55px;
+        margin: 20px 25px;
+        font-size: 20px;
+    }
+    .menu2 {
+        margin-top: 33px;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .numBoard {
+        width: 800px;
+        /*height: 370px;*/
+    }
+    .menu2 {
+        width: 800px;
+    }
+    .numBoard button {
+        width: 100px;
+        height: 50px;
+        margin: 15px 17px;
+        font-size: 20px;
+    }
+    .menu2 {
+        margin-top: 33px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .numBoard {
+        width: 600px;
+        /* height: 330px;*/
+    }
+    .menu2 {
+        width: 600px;
+    }
+    .numBoard button {
+        width: 90px;
+        /* height: 40px;*/
+        margin: 10px 15px;
+        font-size: 17px;
+        padding: 0 5px;
+    }
+    .menu2 {
+        margin-top: 30px;
+    }
+}
+
+
+/*************！桌号模块**************/
+
+
+/*************结账模块**************/
+
+.checkout {
+    /*   width:1200px;*/
+    margin: 0 auto;
+    /*display: none;*/
+    /*	width: 80%;*/
+}
+
+@media screen and (min-width: 1200px) {
+    .checkout {
+        width: 1200px;
+    }
+    .checkoutBoard {
+        width: 70%;
+    }
+    .coBorder {
+        width: 230px;
+    }
+    .checkoutOther {
+        margin-left: 100px;
+    }
+    .coOther button {
+        width: 150px;
+    }
+}
+
+@media screen and (min-width: 960px) and (max-width: 1199px) {
+    .checkout {
+        width: 960px;
+    }
+    .checkoutBoard {
+        width: 70%;
+    }
+    .coBorder {
+        width: 220px;
+    }
+    .checkoutOther {
+        margin-left: 40px;
+    }
+    .coOther button {
+        width: 100px;
+    }
+}
+
+@media screen and (max-width: 959px) {
+    .checkout {
+        width: 800px;
+    }
+    .checkoutBoard {
+        width: 70%;
+    }
+    .coBorder {
+        width: 200px;
+    }
+    .checkoutOther {
+        margin-left: 10px;
+    }
+    .coOther button {
+        width: 150px;
+    }
+}
+
+.checkoutBoard {
+    margin-top: 90px;
+    /*	width: 850px;*/
+    float: left;
+}
+
+.form-inline button {
+    background: #09f;
+    border-color: #09f;
+    margin-left: 10px;
+    margin-right: 40px;
+    color: white;
+}
+
+.checkout table {
+    width: 100%;
+    margin-top: 50px;
+    border: 1px solid #ddd;
+    border-top: 2px solid #ddd;
+    margin-bottom: 35px;
+}
+
+.coOther button {
+    background: #09f;
+    border-color: #09f;
+    color: white;
+    /*	width: 150px;*/
+    height: 35px;
+    margin: 25px 0;
+}
+
+.inputCash {
+    padding-left: 31px;
+}
+
+.takeChange {
+    margin-top: 7px;
+}
+
+
+/*.inputCash input[type="text"]{
+	width: 225px;
+}*/
+
+.checkoutOther {
+    float: left;
+    height: 900px;
+    width: 230px;
+    margin-top: 65px;
+    /* margin-left:50px;*/
+}
+
+.coBorder {
+    height: 230px;
+    /*	width: 230px;*/
+    border: 1px solid #999;
+    border-radius: 10px;
+    padding: 15px 20px;
+    overflow: auto;
+    margin-top: 25px;
+}
+
+.coBorder h4 {
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.left {
+    float: left;
+}
+
+.right {
+    float: right;
+}
+
+#alone {
+    margin-right: 0;
+}
+
+
+/*************！结账模块**************/
+
+
+/*************预约模块**************/
+
+.reservation {
+    margin-top: 90px;
+    /*display: none;*/
+}
+
+.inputRedervation {
+    margin: 0 auto;
+    /* width: 90%;*/
+}
+
+.inputRedervation input[type="text"] {
+    height: 35px;
+    line-height: 35px;
+    margin: 0px;
+    /*width: 12%;*/
+}
+
+.inputRedervation select {
+    height: 35px;
+    line-height: 35px
+}
+
+.inputRedervation .orderTable {
+    width: 12%;
+}
+
+.inputRedervation .orderTime {
+    /* width: 70px;*/
+    width: 6%;
+}
+
+
+/*.inputRedervation .Rdefault{
+    color: red;
+}*/
+
+option[selected="true"] {
+    color: #AAA;
+}
+
+#Rdefault {
+    color: red;
+}
+
+.inputRedervation button {
+    margin-left: 0.5%;
+    background: #09f;
+    border-color: #09f;
+    color: white;
+    /*width:4%;*/
+}
+
+
+/*@media screen and (max-width: 900px) {
+    .inputRedervation input[type="text"] {
+        width: 80px;
+    }
+    .inputRedervation button {
+        width: 50px;
+    }
+    .inputRedervation {
+        width: 700px;
+    }
+
+
+}
+@media screen and (min-width: 901px) {
+    .inputRedervation input[type="text"] {
+        width: 12%;
+    }
+    .inputRedervation button {
+        width: 5.2%;
+    }
+    .inputRedervation {
+        width: 90%;
+    }
+
+}*/
+
+@media screen and (min-width: 1200px) {
+    .abc .RVday {
+        width: 15%;
+    }
+    .abc .RVtime {
+        width: 12%
+    }
+    .abc .RVnum {
+        width: 8%
+    }
+    .abc .RVdname {
+        width: 10%
+    }
+    .abc .RVtel {
+        width: 14%
+    }
+    .abc .RVtable {
+        width: 9%
+    }
+    .abc .RVdemand {
+        width: 22%
+    }
+    .abc .RVstatus {
+        width: 10%
+    }
+    .reservation table {
+        width: 63%;
+    }
+    .reservationOther {
+        margin-left: 75%;
+    }
+    .inputRedervation input[type="text"] {
+        width: 12%;
+    }
+    .inputRedervation button {
+        width: 5.2%;
+    }
+    .inputRedervation {
+        width: 88%;
+        margin-left: 5%
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .abc .RVday {
+        width: 100px;
+    }
+    .abc .RVtime {
+        width: 80px;
+    }
+    .abc .RVnum {
+        width: 45px;
+    }
+    .abc .RVdname {
+        width: 75px;
+    }
+    .abc .RVtel {
+        width: 100px;
+    }
+    .abc .RVtable {
+        width: 75px;
+    }
+    .abc .RVdemand {
+        width: 160px;
+    }
+    .abc .RVstatus {
+        width: 75px;
+    }
+    .reservation table {
+        width: 710px;
+    }
+    .reservationOther {
+        margin-left: 800px;
+    }
+    .inputRedervation input[type="text"] {
+        width: 117px;
+    }
+    .inputRedervation button {
+        width: 50px;
+    }
+    .inputRedervation {
+        width: 1100px;
+        margin-left: 5%;
+    }
+}
+
+.abc {
+    float: left;
+}
+
+.reservation table {
+    /*float: left;*/
+    /*width: 63%;*/
+    margin-left: 5%;
+    margin-top: 45px;
+    border: 1px solid #ddd;
+    border-top: 2px solid #ddd;
+}
+
+
+/*.abc tr{
+	line-height: 50px;
+}*/
+
+.mytr button {
+    background: #09f;
+    border-color: #09f;
+    color: white;
+}
+
+.abc td {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.abc th {
+    text-align: center;
+    white-space: nowrap;
+    /*white-space: nowrap;*/
+}
+
+.reservationOther {
+    /*margin-left:1000px;*/
+    margin-top: 20px;
+    position: fixed;
+}
+
+
+/*************！预约模块**************/
+
+
+/*************其他模块**************/
+
+.other {
+    margin: 0 auto;
+    /* display: none;*/
+}
+
+.income {
+    margin-top: 80px;
+    float: left;
+    margin-left: 0;
+}
+
+.membership {
+    margin-top: 80px;
+    float: left;
+}
+
+.otherHeader {
+    background: #09f;
+    color: white;
+    height: 35px;
+    line-height: 35px;
+    text-align: center;
+    font-size: 17px;
+}
+
+.otherBody {
+    background: rgba(204, 204, 204, 0.2);
+}
+
+.other button {
+    background: #09f;
+    border-color: #09f;
+    color: white;
+}
+
+.incomeBody button {
+    padding: 1px 7px;
+    margin-left: 10px;
+}
+
+.incomeBody input {
+    height: 28px;
+    line-height: 28px;
+}
+
+.incomeTable {
+    margin-top: 22px;
+    border: 1px solid #ddd;
+    border-top: 2px solid #ddd;
+}
+
+.membership button {
+    background: rgba(0, 153, 255, 0.9);
+    font-size: 15px;
+}
+
+@media screen and (min-width: 1200px) {
+    .other {
+        width: 80%;
+    }
+    .income {
+        width: 58%;
+    }
+    .membership {
+        width: 34%;
+        margin-left: 7%;
+    }
+    .otherBody {
+        padding: 30px 6%;
+    }
+    .membership button {
+        padding: 6.5px 8%;
+        margin: 10px 3.6%;
+    }
+    .memberBody {
+        height: 240px;
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .other {
+        width: 900px;
+    }
+    .income {
+        width: 545px;
+    }
+    .membership {
+        width: 315px;
+        margin-left: 40px;
+    }
+    .otherBody {
+        padding: 25px 6%;
+    }
+    .membership button {
+        padding: 5.5px 6.5%;
+        margin: 10px 10px;
+    }
+    .memberBody {
+        height: 225px;
+    }
+}
+
+
+/*************！其他模块**************/
+
+
+/*************小票**************/
+
+.note {
+    margin-top: 100px;
+    margin-left: 100px;
+    width: 200px;
+    padding: 20px 1%;
+    display: none;
+}
+
+.note h4 {
+    text-align: center;
+}
+
+.noteOther {
+    border-bottom: 1px dashed black;
+    font-size: 10px;
+    height: 17px;
+    margin-top: 15px;
+}
+
+.noteOtherLeft {
+    float: left;
+}
+
+.noteOtherright {
+    float: right;
+}
+
+.noteTable {
+    font-size: 12px;
+    margin-top: 12px;
+    margin-bottom: 7px;
+}
+
+#t1 {
+    width: 42%;
+    border: none;
+}
+
+#t2 {
+    width: 42%;
+    border: none;
+}
+
+#t3 {
+    width: 18%;
+    border: none;
+}
+
+.noteAccount {
+    padding-top: 8px;
+    border-top: 1px dashed black;
+}
+
+.noteAccount div {
+    float: left;
+    margin: 0 1.5%;
+    font-size: 12px;
+}
+
+.noteAccount2 div {
+    float: left;
+    font-size: 12px;
+    margin-top: 5px;
+}
+
+.notefooter {
+    margin-top: 90px;
+    text-align: center;
+    font-size: 12px;
+}
+
+
+/*************！小票**************/
+
+
+/*************会员卡模块弹出框**************/
+
+#test {
+    margin-top: 100px;
+}
+
+.founding label {
+    width: 20%;
+    margin-left: 2%
+}
+
+.founding select,
+input[type='text'],
+input[type='password'] {
+    width: 75%;
+}
+
+.founding input[type='radio'] {
+    margin: 0 7px 0 0;
+}
+
+.foundingPersonal {
+    border: 1px dashed #ddd;
+}
+
+.foundingOther {
+    padding-top: 15px;
+}
+
+.foundingOther label {
+    width: 16%;
+    margin-left: 3.5%
+}
+
+.foundingOther select,
+input[type='text'],
+input[type='password'] {
+    width: 75%;
+}
+
+
+/*************！会员卡模块弹出框**************/
+
+
+/*************！滚动框设置**************/
+
+#scrollDiv {
+    height: 150px;
+    overflow: hidden;
+}
+
+#scrollDiv2 {
+    height: 150px;
+    overflow: hidden;
+}
+
+#scrollDiv3 {
+    height: 150px;
+    overflow: hidden;
+}
+
+#scrollDiv4 {
+    height: 150px;
+    overflow: hidden;
+}

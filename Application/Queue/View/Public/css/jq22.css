@@ -1,0 +1,370 @@
+@charset "utf-8";
+
+/*PHY*/
+
+table {
+    text-align: center;
+    color: black;
+    position: relative;
+    font-size: auto;
+    width: 100%;
+}
+
+tr {
+    height: 20%;
+}
+
+table tbody {
+    display: block;
+    overflow-y: scroll;
+    height: 80%;
+}
+
+table thead,
+tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+tbody tr {
+    border-left: 1px solid #999;
+    border-right: 1px solid #999;
+    border-bottom: 1px solid #999;
+}
+
+table thead {
+    width: 100%;
+    table-layout: fixed;
+}
+
+table thead th {
+    background: #ccc;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    font-family: Arial, Helvetica;
+    font-size: auto;
+    background-color: #FFF;
+    background-image: url("../img/2.jpg");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+#tabs {
+    overflow: hidden;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+#tabs li {
+    float: left;
+    /* margin: 0 .8em 0 0;*/
+    margin-right: 1%;
+}
+
+#tabs a {
+    position: relative;
+    background-color: rgba(255, 255, 255, .7);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#ddd));
+    background-image: -webkit-linear-gradient(top, #337ab7, #ddd);
+    background-image: -moz-linear-gradient(top, #337ab7, #ddd);
+    background-image: -ms-linear-gradient(top, #337ab7, #ddd);
+    background-image: -o-linear-gradient(top, #337ab7, #ddd);
+    background-image: linear-gradient(to bottom, #337ab7, #ddd);
+    /*padding: 10px 20px 10px 20px;*/
+    padding: 5% 10px 5% 10px;
+    /* padding:4% 10% 4% 10%;
+  	padding:auto;*/
+    width: 100%;
+    float: left;
+    text-decoration: none;
+    color: black;
+    line-height: 25px;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, .8);
+    -webkit-border-radius: 5px 0 0 0;
+    -moz-border-radius: 5px 0 0 0;
+    border-radius: 5px 0 0 0;
+    -moz-box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+    box-shadow: 0 2px 2px rgba(0, 0, 0, .4);
+}
+
+#tabs a:hover,
+#tabs a:hover::after,
+#tabs a:focus,
+#tabs a:focus::after {
+    background: #ddd;
+}
+
+#tabs a:focus {
+    outline: 0;
+}
+
+#tabs a::after {
+    content: '';
+    position: absolute;
+    z-index: 1;
+    top: 0;
+    /*right: -.5em;*/
+    right: -.5em;
+    bottom: 0;
+    /*width: 1em;*/
+    width: 13%;
+    background: rgba(255, 255, 255, .7);
+    background-image: -webkit-gradient(linear, left top, left bottom, from(#337ab7), to(#ddd));
+    background-image: -webkit-linear-gradient(top, #337ab7, #ddd);
+    background-image: -moz-linear-gradient(top, #337ab7, #ddd);
+    background-image: -ms-linear-gradient(top, #337ab7, #ddd);
+    background-image: -o-linear-gradient(top, #337ab7, #ddd);
+    background-image: linear-gradient(to bottom, #337ab7, #ddd);
+    -moz-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    -webkit-box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, .4);
+    -webkit-transform: skew(10deg);
+    -moz-transform: skew(10deg);
+    -ms-transform: skew(10deg);
+    -o-transform: skew(10deg);
+    transform: skew(10deg);
+    -webkit-border-radius: 0 5px 0 0;
+    -moz-border-radius: 0 5px 0 0;
+    border-radius: 0 5px 0 0;
+}
+
+#tabs #current a,
+#tabs #current a::after {
+    background-color: #ddd;
+    z-index: 3;
+}
+
+.bs {
+    margin-top: 40px;
+    height: 14%;
+    position: relative;
+}
+
+#custQueneTab {
+    background: #fff;
+    padding: 40px 40px;
+    height: 45%;
+    position: relative;
+    z-index: 2;
+    -moz-border-radius: 0 5px 5px 5px;
+    -webkit-border-radius: 0 5px 5px 5px;
+    border-radius: 0 5px 5px 5px;
+    -moz-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    -webkit-box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+    box-shadow: 0 -2px 3px -2px rgba(0, 0, 0, .5);
+}
+
+#custQueneTab h2,
+#custQueneTab h3,
+#custQueneTab p {
+    margin: 0 0 15px 0;
+}
+
+#custQueneTab .tab {
+    height: 100%;
+    position: relative;
+}
+
+#about {
+    color: #999;
+}
+
+#about a {
+    color: #eee;
+}
+
+.tableDisplay {
+    height: 100%;
+    width: 60%;
+    position: relative;
+    float: left;
+    /*border: 1px solid #ccc;*/
+    display: block !important;
+    overflow-y: auto;
+    border-radius: 10px;
+}
+
+.queueDisplay {
+    width: 40%;
+    position: relative;
+    display: block!important;
+    height: 100%;
+    overflow-y: hidden;
+}
+
+
+/* 这是针对缺省样式 (必须的) */
+
+::-webkit-scrollbar {
+    width: 0px;
+}
+
+
+/* 滚动条的滑轨背景颜色 */
+
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+
+
+/* 滑块颜色 */
+
+::-webkit-scrollbar-thumb {
+    /*background-color: rgba(0, 0, 0, 0.2);*/
+    background-color: transparent;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+
+/* 滑轨两头的监听按钮颜色 */
+
+::-webkit-scrollbar-button {
+    background-color: transparent;
+    height: 3px;
+    border-radius: 10px;
+}
+
+
+/* 横向滚动条和纵向滚动条相交处尖角的颜色 */
+
+::-webkit-scrollbar-corner {
+    background-color: transparent;
+}
+
+.tabTable {
+    line-height: 50px;
+    height: 50px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    position: relative;
+    /*border: 1px solid #999;*/
+    z-index: 1;
+}
+
+table tr td button {
+    margin-right: 5px;
+    width: 50px;
+    height: 30px;
+    line-height: 30px;
+    background-color: rgb(113, 123, 136);
+    color: white;
+}
+
+
+/*别加空格！*/
+
+table tr td button:disabled {
+    background-color: rgb(118, 180, 247);
+}
+
+.table {
+    width: 9%;
+    height: auto;
+    line-height: 350%;
+    text-align: center;
+    /*font-size: 18px;*/
+    font-size: 120%;
+    border-radius: 6px;
+    float: left;
+    margin: 10px;
+    background-color: #ee4242;
+}
+
+@media screen and (max-width:1366px) {
+    table {
+        font-size: 100%;
+        float: right;
+        margin-bottom: 45px;
+    }
+    .table {
+        font-size: 110%;
+        width: 100px;
+        float: left;
+    }
+    /*table tbody {
+        height: 720px;
+    }*/
+}
+
+@media screen and (max-width:1024px) {
+    table {
+        font-size: 80%;
+    }
+    .table {
+        font-size: 80%;
+    }
+    /*table tbody {
+        height: 530px;
+    }*/
+}
+
+@media screen and (max-width:1000px) {
+    .mybtn {
+        margin-left: 60%;
+    }
+    .table {
+        font-size: 80%;
+    }
+    /*table tbody {
+        height: 520px;
+    }*/
+}
+
+.bluetable {
+    background-color: rgb(118, 180, 247);
+}
+
+.redtable {
+    background-color: #FF4040;
+}
+
+.table a {
+    list-style: none;
+    text-decoration: none;
+    color: white;
+}
+
+td a {
+    margin-right: 5px;
+}
+
+.table a :hover {
+    color: #7A7A7A;
+}
+
+.titleTable {
+    background-color: #6C7B8B !important;
+    line-height: 50px;
+    height: 50px!important;
+}
+
+.titletable td {
+    height: 50px;
+    color: white;
+}
+
+.circle {
+    display: block;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    line-height: 20px;
+    text-align: center;
+    position: relative;
+    /*margin-left: 90px;*/
+    margin-left: 70%;
+    margin-top: -30px;
+    z-index: 100;
+}
+
+tr:nth-child(even) {
+    background-color: #ccc;
+}

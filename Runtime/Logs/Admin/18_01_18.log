@@ -1,0 +1,1620 @@
+[ 2018-01-18T11:07:56+08:00 ] ::1 /smartorder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.006924s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000832s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000883s ]
+
+[ 2018-01-18T11:07:56+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000178s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000531s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000561s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000614s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000055s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000104s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005827s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005871s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000478s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000504s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000523s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.019746s ]
+INFO: [ app_end ] --END-- [ RunTime:0.020329s ]
+
+[ 2018-01-18T11:07:56+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000481s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000442s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000485s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000677s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.012580s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013371s ]
+
+[ 2018-01-18T11:08:02+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000424s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000543s ]
+NOTIC: [8] Undefined index: lite D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `so_member` [ RunTime:0.0098s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `so_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_action` [ RunTime:0.0076s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_action_log` [ RunTime:0.0319s ]
+SQL: INSERT INTO `so_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','0','member','1','1516244882','admin在2018-01-18 11:08登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `so_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1516158482 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `so_member` [ RunTime:0.0015s ]
+SQL: UPDATE `so_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.0002s ]
+SQL: UPDATE `so_member` SET `login`=`login`+1,`last_login_time`='1516244882',`last_login_ip`='0' WHERE `uid` = 1 [ RunTime:0.0002s ]
+
+[ 2018-01-18T11:08:02+08:00 ] ::1 /smartorder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000408s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000442s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0011s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000149s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000195s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.035491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.035562s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000584s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002220s ]
+
+[ 2018-01-18T11:08:04+08:00 ] ::1 /smartorder/admin.php/Cash/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000303s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000521s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0027s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/index%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0243s ]
+SQL: SELECT so_hall.id,count(hall_id),so_hall.name FROM `so_table` INNER JOIN so_hall ON so_hall.id = so_table.hall_id  GROUP BY hall_id  [ RunTime:0.0050s ]
+SQL: SHOW COLUMNS FROM `so_temp` [ RunTime:0.0051s ]
+SQL: SELECT so_hall.name as hall_name,`holding`,`hold_time`,`table_name` FROM `so_temp` INNER JOIN so_table ON so_table.id = so_temp.table_id INNER JOIN so_hall ON so_table.hall_id = so_hall.id  WHERE ( so_temp.holding is not null ) ORDER BY hold_time asc  [ RunTime:0.0009s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010198s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000316s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000529s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001638s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002225s ]
+
+[ 2018-01-18T11:08:07+08:00 ] ::1 /smartorder/admin.php/Cash/Pay_order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000578s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/Pay_order%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT o.*,t.table_name,h.id,h.name FROM so_order as o,so_table as t,so_hall as h WHERE o.table_id=t.id AND t.hall_id=h.id AND o.is_pay=1 ORDER BY oid ASC  [ RunTime:0.0298s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.034250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.034300s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000466s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000564s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001828s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002463s ]
+
+[ 2018-01-18T11:08:09+08:00 ] ::1 /smartorder/admin.php/Cash/Nopay_order.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000418s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000508s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/Nopay_order%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT o.*,t.table_name,h.id,h.name FROM so_order as o,so_table as t,so_hall as h WHERE o.table_id=t.id AND t.hall_id=h.id AND o.is_pay=0 ORDER BY oid ASC  [ RunTime:0.0066s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000157s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000210s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.014459s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.014496s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000347s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000375s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000612s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002247s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002929s ]
+
+[ 2018-01-18T11:08:14+08:00 ] ::1 /smartorder/admin.php/Cash/Index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000467s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/Index%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0018s ]
+SQL: SELECT so_hall.id,count(hall_id),so_hall.name FROM `so_table` INNER JOIN so_hall ON so_hall.id = so_table.hall_id  GROUP BY hall_id  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_temp` [ RunTime:0.0014s ]
+SQL: SELECT so_hall.name as hall_name,`holding`,`hold_time`,`table_name` FROM `so_temp` INNER JOIN so_table ON so_table.id = so_temp.table_id INNER JOIN so_hall ON so_table.hall_id = so_hall.id  WHERE ( so_temp.holding is not null ) ORDER BY hold_time asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000127s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010456s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010505s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000394s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000596s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001877s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002596s ]
+
+[ 2018-01-18T11:08:16+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000456s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 1 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024055s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024103s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000460s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000492s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001962s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002590s ]
+
+[ 2018-01-18T11:08:18+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=29
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000499s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000538s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0357s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 29 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 29 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.066410s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.066450s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000509s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002450s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003033s ]
+
+[ 2018-01-18T11:09:05+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=31
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000430s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000473s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 31 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 31 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000141s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010127s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000343s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000506s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002220s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002802s ]
+
+[ 2018-01-18T11:10:39+08:00 ] ::1 /smartorder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000502s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000540s ]
+
+[ 2018-01-18T11:10:39+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000276s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000342s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000374s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000077s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004643s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004672s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000262s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001282s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001743s ]
+
+[ 2018-01-18T11:10:39+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000384s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000468s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000651s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001334s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002055s ]
+
+[ 2018-01-18T11:10:45+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+NOTIC: [8] Undefined index: lite D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `so_member` [ RunTime:0.0016s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `so_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_action` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_action_log` [ RunTime:0.0025s ]
+SQL: INSERT INTO `so_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','0','member','1','1516245045','admin在2018-01-18 11:10登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `so_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1516158645 LIMIT 1   [ RunTime:0.0005s ]
+SQL: UPDATE `so_member` SET `login`=`login`+1,`last_login_time`='1516245045',`last_login_ip`='0' WHERE `uid` = 1 [ RunTime:0.0002s ]
+
+[ 2018-01-18T11:10:45+08:00 ] ::1 /smartorder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000439s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000476s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000189s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000661s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010499s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010541s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000355s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000385s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000617s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002190s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002912s ]
+
+[ 2018-01-18T11:10:46+08:00 ] ::1 /smartorder/admin.php/Cash/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000417s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/index%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0025s ]
+SQL: SELECT so_hall.id,count(hall_id),so_hall.name FROM `so_table` INNER JOIN so_hall ON so_hall.id = so_table.hall_id  GROUP BY hall_id  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_temp` [ RunTime:0.0016s ]
+SQL: SELECT so_hall.name as hall_name,`holding`,`hold_time`,`table_name` FROM `so_temp` INNER JOIN so_table ON so_table.id = so_temp.table_id INNER JOIN so_hall ON so_table.hall_id = so_hall.id  WHERE ( so_temp.holding is not null ) ORDER BY hold_time asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000131s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011819s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002173s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002735s ]
+
+[ 2018-01-18T11:10:48+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000274s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000491s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0031s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 1 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010703s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010738s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000295s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000321s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000467s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002036s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002567s ]
+
+[ 2018-01-18T11:10:49+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=30
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000447s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000518s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000564s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0036s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 30 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 30 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000178s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011559s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011626s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000855s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000890s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000541s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001881s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002515s ]
+
+[ 2018-01-18T11:13:04+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000306s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000457s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000052s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000085s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004173s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004205s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000414s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.012221s ]
+INFO: [ app_end ] --END-- [ RunTime:0.012701s ]
+
+[ 2018-01-18T11:13:04+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000451s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000550s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000603s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000614s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.012460s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013192s ]
+
+[ 2018-01-18T11:13:11+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000336s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000449s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000490s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000078s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000158s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.005491s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.005528s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000417s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001420s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001906s ]
+
+[ 2018-01-18T11:13:11+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000400s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000434s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000794s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001576s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002488s ]
+
+[ 2018-01-18T11:13:16+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+NOTIC: [8] Undefined index: lite D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `so_member` [ RunTime:0.0027s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `so_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0007s ]
+SQL: SHOW COLUMNS FROM `so_action` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_action_log` [ RunTime:0.0018s ]
+SQL: INSERT INTO `so_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','0','member','1','1516245196','admin在2018-01-18 11:13登录了后台') [ RunTime:0.0102s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `so_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1516158796 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `so_member` SET `login`=`login`+1,`last_login_time`='1516245196',`last_login_ip`='0' WHERE `uid` = 1 [ RunTime:0.0002s ]
+
+[ 2018-01-18T11:13:16+08:00 ] ::1 /smartorder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000684s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001111s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000182s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010521s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010553s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000287s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000313s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001434s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001930s ]
+
+[ 2018-01-18T11:13:18+08:00 ] ::1 /smartorder/admin.php/Cash/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000279s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000550s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0017s ]
+SQL: SELECT so_hall.id,count(hall_id),so_hall.name FROM `so_table` INNER JOIN so_hall ON so_hall.id = so_table.hall_id  GROUP BY hall_id  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_temp` [ RunTime:0.0036s ]
+SQL: SELECT so_hall.name as hall_name,`holding`,`hold_time`,`table_name` FROM `so_temp` INNER JOIN so_table ON so_table.id = so_temp.table_id INNER JOIN so_hall ON so_table.hall_id = so_hall.id  WHERE ( so_temp.holding is not null ) ORDER BY hold_time asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000162s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009368s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009401s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000291s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000472s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002663s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003220s ]
+
+[ 2018-01-18T11:13:19+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=4
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000428s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000419s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0153s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0039s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 4 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000146s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008698s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000307s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000333s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000462s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001553s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002070s ]
+
+[ 2018-01-18T11:13:24+08:00 ] ::1 /smartorder/admin.php/Cash/edit.html?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000301s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000674s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0015s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0020s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/edit%' ) LIMIT 1   [ RunTime:0.0004s ]
+ERR: 非法操作:edit
+
+[ 2018-01-18T11:13:27+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000340s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0197s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 5 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000120s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000161s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010072s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010139s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000471s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000501s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000513s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001637s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002212s ]
+
+[ 2018-01-18T11:13:29+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000483s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000469s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000518s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000166s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009943s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018124s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000825s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000866s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000672s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002155s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002927s ]
+
+[ 2018-01-18T11:13:47+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000323s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000680s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000754s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000156s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000204s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013090s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013176s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000612s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000844s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003214s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004156s ]
+
+[ 2018-01-18T11:15:18+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000580s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000634s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012112s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012150s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000283s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000426s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002892s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003398s ]
+
+[ 2018-01-18T11:15:43+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0017s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000147s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000200s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011133s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011171s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000274s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000299s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000475s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001593s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002129s ]
+
+[ 2018-01-18T11:16:30+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=5
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000443s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000475s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0039s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 5 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000178s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000286s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010893s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000346s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000862s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002618s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003618s ]
+
+[ 2018-01-18T11:16:32+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000458s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 28 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0005s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\CashController.class.php 第 133 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000139s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010450s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010492s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000310s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000338s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003725s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004316s ]
+
+[ 2018-01-18T11:16:52+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000354s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000517s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0032s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 1 )  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010159s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010202s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000378s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000514s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001632s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002210s ]
+
+[ 2018-01-18T11:16:55+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000433s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000466s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000152s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010043s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010094s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000662s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000701s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000572s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002038s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004374s ]
+
+[ 2018-01-18T11:17:08+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000381s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000571s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000191s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000276s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: payInfo D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 136 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013162s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000325s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000470s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001628s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002208s ]
+
+[ 2018-01-18T11:17:44+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000309s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000416s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000185s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined index: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 140 行.
+NOTIC: [8] Undefined index: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 140 行.
+NOTIC: [8] Undefined index: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 140 行.
+NOTIC: [8] Undefined index: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 140 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013555s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013594s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000289s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000316s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000446s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001814s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002329s ]
+
+[ 2018-01-18T11:23:14+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000652s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 1 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011307s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011341s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000285s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000402s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001578s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002036s ]
+
+[ 2018-01-18T11:23:16+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000319s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000466s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000515s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000192s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010502s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010542s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000362s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000491s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002749s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003311s ]
+
+[ 2018-01-18T11:23:54+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000282s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010687s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010722s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000320s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001739s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002287s ]
+
+[ 2018-01-18T11:24:11+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000312s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000440s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0043s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000145s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000194s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013593s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013636s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000306s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000456s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001695s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002283s ]
+
+[ 2018-01-18T11:24:22+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000392s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000451s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000137s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000177s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011931s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011997s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.002151s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002206s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000590s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001884s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002614s ]
+
+[ 2018-01-18T11:25:33+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000293s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000428s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000461s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0025s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000148s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000187s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011434s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011464s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000301s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000440s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001539s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002032s ]
+
+[ 2018-01-18T11:27:35+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000413s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000447s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0034s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0008s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 1 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000163s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011270s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011318s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000374s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000416s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000709s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002770s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003583s ]
+
+[ 2018-01-18T11:27:36+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000628s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000696s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0039s ]
+ERR: SQLSTATE[42000]: Syntax error or access violation: 1064 You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near ')' at line 1
+
+[ 2018-01-18T11:27:39+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=8
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000361s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000401s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/orderList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_order` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT `detail` FROM `so_order` WHERE ( table_id = 8 AND is_pay = 0 ) LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000140s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000180s ]
+NOTIC: [8] Undefined variable: tableId D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 121 行.
+NOTIC: [8] Undefined variable: pay_time D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 123 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 144 行.
+NOTIC: [8] Undefined variable: totle D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b1853b4c255d9106cc2493d280b34423.php 第 146 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010189s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010225s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000299s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000827s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001953s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002862s ]
+
+[ 2018-01-18T11:29:48+08:00 ] ::1 /smartorder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000520s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000505s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000558s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000194s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000272s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010771s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010822s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000278s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000464s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001575s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002096s ]
+
+[ 2018-01-18T11:29:49+08:00 ] ::1 /smartorder/admin.php/Table/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000547s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000580s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Table/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 76  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 76 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号设置' AND `pid` = 76 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+NOTIC: [2048] Declaration of Admin\Model\TableModel::Add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0019s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0023s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php on line 38 and defined D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1765 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1773 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1776 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1784 行.
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 1  [ RunTime:0.0020s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 3  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 4  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 5  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000153s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000191s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010726s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010767s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000272s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000297s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000512s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002855s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003474s ]
+
+[ 2018-01-18T11:29:51+08:00 ] ::1 /smartorder/admin.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000302s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000702s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000768s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Menu/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 4 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜单设置' AND `pid` = 4 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title` FROM `so_menu`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`pid`,`sort`,`url`,`hide`,`tip`,`group`,`is_dev`,`status` FROM `so_menu` WHERE `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000332s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000459s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.013803s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.013860s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000412s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000583s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001588s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002233s ]
+
+[ 2018-01-18T13:26:13+08:00 ] ::1 /smartorder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000310s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000415s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000452s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0152s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0021s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009508s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009551s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000255s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000281s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000429s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001634s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002123s ]
+
+[ 2018-01-18T13:26:15+08:00 ] ::1 /smartorder/admin.php/Cash/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000269s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000500s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000545s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0016s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0024s ]
+SQL: SELECT so_hall.id,count(hall_id),so_hall.name FROM `so_table` INNER JOIN so_hall ON so_hall.id = so_table.hall_id  GROUP BY hall_id  [ RunTime:0.0006s ]
+SQL: SHOW COLUMNS FROM `so_temp` [ RunTime:0.0016s ]
+SQL: SELECT so_hall.name as hall_name,`holding`,`hold_time`,`table_name` FROM `so_temp` INNER JOIN so_table ON so_table.id = so_temp.table_id INNER JOIN so_hall ON so_table.hall_id = so_hall.id  WHERE ( so_temp.holding is not null ) ORDER BY hold_time asc  [ RunTime:0.0006s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000150s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011400s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011453s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000403s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000429s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001700s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002265s ]
+
+[ 2018-01-18T13:26:18+08:00 ] ::1 /smartorder/admin.php/Cash/tableList.html?hall_id=1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000031s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000741s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000543s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000600s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0044s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/tableList%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `so_table` WHERE ( hall_id = 1 )  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000126s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009719s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009770s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000370s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000832s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002319s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003265s ]
+
+[ 2018-01-18T14:34:56+08:00 ] ::1 /smartorder/admin.php/Cash/orderList.html?tid=28
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000621s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000479s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000523s ]
+
+[ 2018-01-18T14:34:56+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000280s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000452s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000489s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000072s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000133s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007291s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007331s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000425s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000457s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000521s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002172s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002761s ]
+
+[ 2018-01-18T14:34:56+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000420s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000463s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000636s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001984s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002732s ]
+
+[ 2018-01-18T15:43:07+08:00 ] ::1 /smartorder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000513s ]
+
+[ 2018-01-18T15:43:07+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000311s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000508s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000554s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000095s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004913s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004946s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000304s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000328s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000438s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002203s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002702s ]
+
+[ 2018-01-18T15:43:07+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000642s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000493s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000874s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002620s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003612s ]
+
+[ 2018-01-18T15:43:22+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000442s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000579s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000635s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000054s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000107s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006753s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006802s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000468s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003317s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003889s ]
+
+[ 2018-01-18T15:43:22+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000421s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000540s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002520s ]
+
+[ 2018-01-18T15:43:32+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000446s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000483s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000051s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000087s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.004617s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.004647s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000314s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000530s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002284s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002890s ]
+
+[ 2018-01-18T15:43:32+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000022s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000322s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000556s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000613s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001697s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002345s ]
+
+[ 2018-01-18T15:43:48+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000393s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000527s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000559s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001928s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002574s ]
+

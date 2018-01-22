@@ -1,0 +1,19 @@
+<extend name ="Public/base"/>
+    <block name="body">
+        <form action="{:U('/MenuManage/ModifyCookStyle','','')}" method="post" class="form-horizontal">
+            <div class="form-item">
+                <label class="item-label">您要将"<b color= "red">{$info.stylename}</b>"修改为：
+                <span class="check-tips" style="display:none" name = "id" value = "1"></span>
+                </label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="stylename" value="{$info.stylename}"/>
+                    <input type="text" class="text input-mid" style="display:none" name= "styleid" value = "{$info.id}">
+                </div>
+            </div>
+            
+            <div class="form-item">
+                <button class="btn submit-btn"  type="submit" >确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </form>
+    </block>

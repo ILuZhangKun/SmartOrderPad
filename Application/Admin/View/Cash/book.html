@@ -1,0 +1,55 @@
+<extend name="Public/base"/>
+	<block name="body">
+		<!-- 数据列表 -->
+		<div class="data-table table-striped">
+			<table class="">
+				<thead>
+					<tr>					
+						<th>预约编号</th>
+						<th>预约日期</th>
+						<th>预约时间</th>
+						<th>预约姓名</th>
+						<th>预约数量</th>
+						<th>预留电话</th>
+						<th>预约桌号</th>
+						<th>预约要求</th>
+						<th>截至时间</th>
+						<th>预约状态</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="book" item="v">
+						<tr>					
+							<td>{$v.id}</td>
+							<td>{$v.book_day}</td>
+							<td>{$v.book_time}</td>	
+							<td>{$v.book_name}</td>	
+							<td>{$v.book_num}</td>	
+							<td>{$v.book_tel}</td>	
+							<td>{$v.book_table}</td>	
+							<td>{$v.book_demand}</td>	
+							<td>{$v.book_deadline}</td>	
+							<td>
+								<if condition="$v.book_status eq '0'">
+									预约未到
+								<elseif condition="$v.book_status eq '1'"/>
+									就餐未开始
+								<elseif condition="$v.book_status eq '2'"/>
+									正在用餐
+								<else />
+									预约超期
+								</if>
+							</td>
+							<td><a href="{:U('edit')}?">编辑</a>|
+								<a href="{:U('del')}?">删除</a>
+							</td>
+						</tr>
+					</foreach>
+				</tbody>
+			</table>
+        
+</div>
+
+</block>
+</extend>

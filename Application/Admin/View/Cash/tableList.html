@@ -1,0 +1,46 @@
+<extend name ="Public:base"/>
+<block name="style">
+    <style>body{padding: 40px}</style>
+</block>
+
+	<block name="body">
+		<!-- 数据列表 -->
+		<div class="data-table table-striped">
+			<table class="">
+				<thead>
+					<tr>					
+						<th>桌号</th>
+						<th>绑定设备编号</th>
+						<th>是否有订单</th>
+						<th>操作</th>
+					</tr>
+				</thead>
+				<tbody>
+					<foreach name="tableList" item="v">
+						<tr>					
+							<td>{$v.table_name}</td>
+							<td>{$v.uuid}</td>	
+							<td>{$v.is_lock}</td>	
+							<td>
+								<a href="{:U('')}?">预定</a>|
+								<a href="{:U('orderList')}?tid={$v.id}">结账</a>|
+								<a href="{:U('')}?">其他</a>
+							</td>
+						</tr>
+					</foreach>
+				</tbody>
+			</table>
+        </div>
+        <br />
+
+        <input type="button" class="cash-back" value="返回上一级" onclick="history.back();">
+    </div>
+</div>
+<script>
+	$(document).ready(function(){
+		$(".sidebar").css("display","none");
+	});
+</script>
+
+</block>
+</extend>

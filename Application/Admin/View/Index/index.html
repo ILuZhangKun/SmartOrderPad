@@ -1,0 +1,150 @@
+<extend name ="Public:base"/>
+<block name="style">
+    <style>body{padding: 0}</style>
+</block>
+<!-- 内容区 -->
+<block name="body"><div id="main-content">
+        <div id="top-alert" class="fixed alert alert-error" style="display: none;">
+            <button class="close fixed" style="margin-top: 4px;">&times;</button>
+            <div class="alert-content">这是内容</div>
+        </div>
+        <div id="main" class="main">
+            <!-- 主体 -->
+            <div id="indexMain" class="index-main">
+                <!-- 插件块 -->
+                <div class="container-span">
+                    <div class="container-span top-columns cf">
+                        <dl class="show-num-mod">
+                            <dt> <i class="count-icon user-count-icon"></i>
+                            </dt>
+                            <dd> <strong>3</strong>
+                                <!-- 调用Common函数库的user_count()函数 -->
+                                <span>用户数</span>
+                            </dd>
+                        </dl>
+                        <dl class="show-num-mod">
+                            <dt> <i class="count-icon user-action-icon"></i>
+                            </dt>
+                            <dd> <strong>6</strong>
+                                <span>用户行为</span>
+                            </dd>
+                        </dl>
+                        <dl class="show-num-mod">
+                            <dt>
+                                <i class="count-icon doc-count-icon"></i>
+                            </dt>
+                            <dd>
+                                <strong>1</strong>
+                                <span>文档数</span>
+                            </dd>
+                        </dl>
+                        <dl class="show-num-mod">
+                            <dt>
+                                <i class="count-icon doc-modal-icon"></i>
+                            </dt>
+                            <dd>
+                                <strong>3</strong>
+                                <span>文档模型</span>
+                            </dd>
+                        </dl>
+                        <dl class="show-num-mod">
+                            <dt>
+                                <i class="count-icon category-count-icon"></i>
+                            </dt>
+                            <dd>
+                                <strong>2</strong>
+                                <span>分类数</span>
+                            </dd>
+                        </dl>
+                    </div>
+                    <div class="span2">
+                        <div class="columns-mod">
+                            <div class="hd cf">
+                                <h5>系统信息</h5>
+                                <div class="title-opt"></div>
+                            </div>
+                            <div class="bd">
+                                <div class="sys-info">
+                                    <table>
+                                        <tr>
+                                            <th>Original System版本</th>
+                                            <td>V1.0&nbsp;&nbsp;&nbsp;</td>
+                                        </tr>
+                                        <tr>
+                                            <th>服务器操作系统</th>
+                                            <td>WINNT</td>
+                                        </tr>
+                                        <tr>
+                                            <th>ThinkPHP版本</th>
+                                            <td>V3.2.0</td>
+                                        </tr>
+                                        <tr>
+                                            <th>运行环境</th>
+                                            <td>
+                                                Apache/2.2.21 (Win32) mod_ssl/2.2.21 OpenSSL/1.0.0e PHP/5.3.8 mod_perl/2.0.4 Perl/v5.10.1
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th>MYSQL版本</th>
+                                            <td>5.5.16</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span2">
+                        <div class="columns-mod">
+                            <div class="hd cf">
+                                <h5>产品团队</h5>
+                                <div class="title-opt"></div>
+                            </div>
+                            <div class="bd">
+                                <div class="sys-info">
+                                    <table>
+                                        <tr>
+                                            <th>指导老师</th>
+                                            <th>何泾沙</th>
+                                        </tr>
+                                        <tr>
+                                            <th>总策划</th>
+                                            <td>肖起</td>
+                                        </tr>
+                                        <tr>
+                                            <th>设计及研发团队</th>
+                                            <td>肖起  常成月 李震 武佳楠</td>
+                                        </tr>
+                                        <tr>
+                                            <th>界面及用户体验团队</th>
+                                            <td>李震 武佳楠</td>
+                                        </tr>
+                                        <tr>
+                                            <th>BUG反馈</th>
+                                            <td>QQ:574580268</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</block>
+<block name="script">
+<script type="text/javascript">
+    /* 插件块关闭操作 */
+    $(".title-opt .wm-slide").each(function(){
+        $(this).click(function(){
+            $(this).closest(".columns-mod").find(".bd").toggle();
+            $(this).find("i").toggleClass("mod-up");
+        });
+    })
+    $(function(){
+        $('#main').attr({'id': 'indexMain','class': 'index-main'});
+        $('.copyright').html('<div class="copyright">©2014  北京工业大学软件学院</div>');
+        $('.sidebar').remove();
+    })
+</script>
+</block>

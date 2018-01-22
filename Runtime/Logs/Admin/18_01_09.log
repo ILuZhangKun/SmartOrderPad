@@ -1,0 +1,774 @@
+[ 2018-01-09T14:45:31+08:00 ] ::1 /smartorder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000921s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001004s ]
+
+[ 2018-01-09T14:45:31+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000477s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000053s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000097s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.054922s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.054992s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000745s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000781s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000881s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002191s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003150s ]
+
+[ 2018-01-09T14:45:31+08:00 ] ::1 /smartorder/admin.php/Public/verify.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000335s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000639s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000611s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002223s ]
+
+[ 2018-01-09T14:45:39+08:00 ] ::1 /smartorder/admin.php/Public/login.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000339s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000521s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000553s ]
+NOTIC: [8] Undefined index: lite D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Db.class.php 第 37 行.
+SQL: SHOW COLUMNS FROM `so_member` [ RunTime:0.0039s ]
+SQL: SELECT `uid`,`nickname`,`sex`,`birthday`,`qq`,`score`,`login`,`reg_ip`,`reg_time`,`last_login_ip`,`last_login_time`,`status` FROM `so_member` WHERE `uid` = 1 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_action` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_action_log` [ RunTime:0.0019s ]
+SQL: INSERT INTO `so_action_log` (`action_id`,`user_id`,`action_ip`,`model`,`record_id`,`create_time`,`remark`) VALUES ('1','1','0','member','1','1515480339','admin在2018-01-09 14:45登录了后台') [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_action` WHERE `name` = 'user_login' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Undefined offset: 1 D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+NOTIC: [2] array_key_exists() expects parameter 2 to be array, null given D:\xampp\htdocs\SmartOrder\Application\Common\Common\function.php 第 679 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `so_action_log` WHERE `action_id` = 1 AND `user_id` = 1 AND `create_time` > 1515393939 LIMIT 1   [ RunTime:0.0293s ]
+SQL: SHOW COLUMNS FROM `so_member` [ RunTime:0.0018s ]
+SQL: UPDATE `so_member` SET `score`=score+10 WHERE ( uid=1 AND status>-1 ) [ RunTime:0.0027s ]
+SQL: UPDATE `so_member` SET `login`=`login`+1,`last_login_time`='1515480339',`last_login_ip`='0' WHERE `uid` = 1 [ RunTime:0.0004s ]
+
+[ 2018-01-09T14:45:39+08:00 ] ::1 /smartorder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000348s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000522s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000557s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000138s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000176s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012015s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012051s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000391s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000417s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000532s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001924s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002523s ]
+
+[ 2018-01-09T14:45:42+08:00 ] ::1 /smartorder/admin.php/MenuManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002173s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000566s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0218s ]
+SQL: SELECT * FROM `so_cookstyle` WHERE ( is_delete = 0 )  [ RunTime:0.0073s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000144s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 1 LIMIT 1   [ RunTime:0.0009s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 4 LIMIT 1   [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 5 LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 6 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 8 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016252s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016287s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000605s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000633s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000568s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001896s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002537s ]
+
+[ 2018-01-09T14:45:44+08:00 ] ::1 /smartorder/admin.php/MenuManage/addCookStyle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/addCookStyle%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined variable: CookStyle D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\MenuManageController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000129s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000181s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008774s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008820s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000418s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000878s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003764s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004768s ]
+
+[ 2018-01-09T14:45:46+08:00 ] ::1 /smartorder/admin.php/MenuManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000305s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000441s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000477s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0028s ]
+SQL: SELECT * FROM `so_cookstyle` WHERE ( is_delete = 0 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000112s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000151s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0020s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 1 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 5 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 6 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 7 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 8 LIMIT 1   [ RunTime:0.0002s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017804s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.017867s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000519s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000546s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000522s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001698s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002280s ]
+
+[ 2018-01-09T14:48:43+08:00 ] ::1 /smartorder/admin.php/MenuManage/addCookStyle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000337s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000706s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000775s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0019s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/addCookStyle%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined variable: CookStyle D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\MenuManageController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000106s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010712s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010764s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000436s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000470s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000599s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002133s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002797s ]
+
+[ 2018-01-09T14:48:44+08:00 ] ::1 /smartorder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000290s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000469s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0016s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.c_id  WHERE ( so_cookmenu.is_delete != 1 )  [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000121s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000167s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009713s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009759s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000359s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000389s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000504s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002287s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002858s ]
+
+[ 2018-01-09T14:48:47+08:00 ] ::1 /smartorder/admin.php/MenuManage/upImage/id/1
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000327s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000456s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000493s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0024s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/upImage%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0035s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000108s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000141s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b5ba47ee12ec98188490d26840f33891.php 第 5 行.
+NOTIC: [8] Use of undefined constant info - assumed 'info' D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b5ba47ee12ec98188490d26840f33891.php 第 115 行.
+NOTIC: [8] Use of undefined constant picture - assumed 'picture' D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\b5ba47ee12ec98188490d26840f33891.php 第 115 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008496s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008532s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000503s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001841s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002406s ]
+
+[ 2018-01-09T14:48:50+08:00 ] ::1 /smartorder/admin.php/MenuManage/addCookMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000025s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000560s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001489s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001542s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/addCookMenu%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000123s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000159s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008983s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009030s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000323s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000350s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001991s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002557s ]
+
+[ 2018-01-09T15:17:47+08:00 ] ::1 /smartorder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000456s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002264s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002337s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0021s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0013s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0007s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000133s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000169s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010035s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010126s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000329s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000484s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001795s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002348s ]
+
+[ 2018-01-09T15:17:48+08:00 ] ::1 /smartorder/admin.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000288s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000461s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Menu/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 4  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 4 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜单设置' AND `pid` = 4 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title` FROM `so_menu`  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`title`,`pid`,`sort`,`url`,`hide`,`tip`,`group`,`is_dev`,`status` FROM `so_menu` WHERE `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000143s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000183s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012832s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012870s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000339s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000373s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000550s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002054s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002670s ]
+
+[ 2018-01-09T15:18:00+08:00 ] ::1 /smartorder/admin.php/Cash/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000286s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000492s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000527s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Cash/index%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 85 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 85  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 85 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '结账管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '预约管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '会员管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '账务管理' AND `pid` = 85 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0026s ]
+SQL: SELECT so_hall.id,count(hall_id),so_hall.name FROM `so_table` INNER JOIN so_hall ON so_hall.id = so_table.hall_id  GROUP BY hall_id  [ RunTime:0.0172s ]
+SQL: SHOW COLUMNS FROM `so_temp` [ RunTime:0.0017s ]
+SQL: SELECT so_hall.name as hall_name,`holding`,`hold_time`,`table_name` FROM `so_temp` INNER JOIN so_table ON so_table.id = so_temp.table_id INNER JOIN so_hall ON so_table.hall_id = so_hall.id  WHERE ( so_temp.holding is not null ) ORDER BY hold_time asc  [ RunTime:0.0071s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000117s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000160s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010207s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010266s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000336s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000363s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000479s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001824s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002398s ]
+
+[ 2018-01-09T15:18:02+08:00 ] ::1 /smartorder/admin.php/Table/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000315s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000755s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0022s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Table/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 76  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 76 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号设置' AND `pid` = 76 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+NOTIC: [2048] Declaration of Admin\Model\TableModel::Add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0018s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0013s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php on line 38 and defined D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1765 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1773 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1776 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1784 行.
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0001s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0014s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 1  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 3  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 4  [ RunTime:0.0001s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 5  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000136s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000172s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011328s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011375s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000386s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000411s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000489s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001960s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002511s ]
+
+[ 2018-01-09T15:18:03+08:00 ] ::1 /smartorder/admin.php/UserManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000017s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000451s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_user`  [ RunTime:0.0025s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0034s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0191s ]
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000115s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000157s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\3c7f6c15843b813090faa90a45856594.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.009532s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.009570s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000321s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000347s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000478s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001752s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002295s ]
+
+[ 2018-01-09T15:18:10+08:00 ] ::1 /smartorder/admin.php/UserManage/AddUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000023s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000783s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000482s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000520s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0037s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0005s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/AddUser%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0001s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000152s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\c9719dd0d157b8e7ec17bf318fe84276.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.008747s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.008778s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000431s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000467s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000821s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003443s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004367s ]
+
+[ 2018-01-09T15:18:16+08:00 ] ::1 /smartorder/admin.php/UserManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000529s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000512s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SHOW COLUMNS FROM `so_user` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `so_user`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0003s ]
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000116s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000153s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\3c7f6c15843b813090faa90a45856594.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010950s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000334s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000359s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000502s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.004051s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004663s ]
+
+[ 2018-01-09T15:18:18+08:00 ] ::1 /smartorder/admin.php/UserManage/ModifyUser/id/1.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000330s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0032s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0009s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/ModifyUser%' ) LIMIT 1   [ RunTime:0.0005s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0015s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_user` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `so_user` WHERE `id` = 1 LIMIT 1   [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000118s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\7ae9345bbf2cbf5524044f94142bd29e.php 第 5 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\7ae9345bbf2cbf5524044f94142bd29e.php 第 144 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.010549s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.010585s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000333s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001811s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002476s ]
+
+[ 2018-01-09T15:18:24+08:00 ] ::1 /smartorder/admin.php/UserManage/AddUser.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000366s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000474s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0026s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0007s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/AddUser%' ) LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0002s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000119s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000170s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\c9719dd0d157b8e7ec17bf318fe84276.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011941s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011980s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000344s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000369s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000619s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002193s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002923s ]
+
+[ 2018-01-09T15:18:32+08:00 ] ::1 /smartorder/admin.php/UserManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000450s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000498s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0018s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0006s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/index%' ) LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0004s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0003s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_user` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_user`  [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0014s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0002s ]
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000124s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000171s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\3c7f6c15843b813090faa90a45856594.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.011911s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.011945s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000337s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000485s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001691s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002238s ]
+
+[ 2018-01-09T15:18:33+08:00 ] ::1 /smartorder/admin.php/MenuManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002027s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002082s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0017s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/index%' ) LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0002s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0004s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `so_cookstyle` WHERE ( is_delete = 0 )  [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000110s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000149s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0018s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 1 LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 2 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 3 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 4 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 5 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 6 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 7 LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 8 LIMIT 1   [ RunTime:0.0001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012438s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012470s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000626s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000666s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000883s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001860s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002845s ]
+
+[ 2018-01-09T15:28:14+08:00 ] ::1 /smartorder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000432s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000470s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0176s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0003s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0003s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000142s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000186s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.012193s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.012269s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000614s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000659s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000733s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001875s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002679s ]
+

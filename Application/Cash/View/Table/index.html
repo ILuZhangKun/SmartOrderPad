@@ -1,0 +1,55 @@
+<extend name="Base/base" />
+<block name="content">
+    <!-- 桌号 -->
+    <div class="tableSearch">
+    <div class="nana">
+        <input type="text" class="time-start" id="tableDay" placeholder="请输入查询日期" required />
+        <button class="btn" id="searchTable">查询</button>
+        </div>
+    </div>
+    <div class="tableNum"> 
+        <div id="menu2" class="menu2">
+            <ul>
+                <volist name="tableInfo" id="cate">
+                    <li class="nav4"><a href="javascript:;" class="{$cate.name}">
+                    {$cate.name}</a>
+                    </li>
+                </volist>
+            </ul>
+        </div>
+        <volist name="tableInfo" id="cate">
+            <div class="numBoard" id="{$cate.id}" type="{$cate.name}">
+                <volist name="cate.table" id="v">
+                    <button class="btn {$v.type}" id="{$v.id}" data-toggle="tooltip" data-placement="top" title="{$v.info}">
+                        {$v.table_name}
+                    </button>
+                </volist>
+            </div>
+        </volist>
+
+    </div>
+    <!-- /桌号 -->
+    <!--弹出框-->
+    <div class="modal fade in" id="tableChoose">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
+                    </button>
+                    <h3 class="modal-title" id="exampleModalLabel">选择您的操作：</h3>
+                </div>
+                <div class="modal-body">
+                    <label>您将对这个桌子进行以下操作：</label>
+                    <br>
+                    <a class="btn btn-success" type="book">预定</a>
+                    <a class="btn btn-success" type="order">结账</a>
+                    <a class="btn btn-success" type="other">其他</a>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" id="cancel">取消</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--弹出框结束-->
+</block>

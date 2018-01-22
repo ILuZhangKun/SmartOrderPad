@@ -1,0 +1,99 @@
+ <extend name ="Public/base"/>
+    <block name="body">
+        <form action="{:U('adsadd')}" method="post" class="form-horizontal" enctype="multipart/form-data">
+            <div class="form-item">
+                <!-- <label class="item-label">广告ID<span class="check-tips"></span></label> -->
+                <div class="controls">
+                    <input type="hidden" class="text input-mid" name="adnum" value=""/>
+                </div>
+                <label class="item-label">广告名称<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="adname" value=""/>
+                </div>
+                <label class="item-label">开始时间<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="date" class="text input-mid" name="starttime" value=""/>
+                </div>
+                <label class="item-label">结束时间<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="date" class="text input-mid" name="endtime" value=""/>
+                </div>
+                <label class="item-label">广告内容<span class="check-tips"></span></label>
+                <div class="controls">
+                    <!-- <input type="textarea" class="text input-mid" name="adtext" value="" />
+ -->                    <textarea name="adtext" style="width:300px;height:80px;">这里写内容</textarea>
+                </div>
+                <label class="item-label">广告备注<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="adremark" value=""/>
+                </div>
+
+                <label class="item-label">广告图片<span class="check-tips"></span></label>
+
+                <!-- <div class="controls">
+                    <input type="file" class="text input-mid" name="adpic" value=""/>
+                </div> -->
+
+                    <table>
+                        <tr>
+                            <td>
+                                <input type="file" name="test"  />
+                            </td>
+                        </tr>
+                        
+                    </table>
+
+                <label class="item-label">广告链接<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="adhref" value=""/>
+                </div>
+                <label class="item-label">广告标题<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="adtitle" value=""/>
+                </div>
+                <label class="item-label">广告类型<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="adtype" value=""/>
+                </div>
+                <label class="item-label">广告播放次数<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="adshowcount" value=""/>
+                </div>
+
+                <label class="item-label">店铺介绍<span class="check-tips"></span></label>
+                <div class="controls">
+                    <textarea name="introduction" style="width:300px;height:80px;">这里写内容</textarea>
+                </div>
+                <label class="item-label">最新活动<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="activity" value=""/>
+                </div>
+                <label class="item-label">地址<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="address" value=""/>
+                </div>
+                <label class="item-label">电话<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input-mid" name="phone" value=""/>
+                </div>
+
+                <label class="item-label">选择播放的位置<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="radio" name="vehicle" value="0">轮播广告
+                    <input type="radio" name="vehicle" value="1">滚动条广告
+                </div>
+
+                <label class="item-label">详情页展示<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="radio" name="detail" value="0">是
+                    <input type="radio" name="detail" value="1">否
+                </div>
+
+            </div>
+           
+            <div class="form-item">
+                <button class="btn submit-btn"  type="submit" >确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </form>
+    </block>
