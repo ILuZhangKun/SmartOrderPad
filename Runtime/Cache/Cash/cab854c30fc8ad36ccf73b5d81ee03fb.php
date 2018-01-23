@@ -178,51 +178,7 @@
                         <td>你的桌</td>
                         <td>100000.98</td>
                     </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
-                    <tr>
-                        <td>now</td>
-                        <td>你的桌</td>
-                        <td>100000.98</td>
-                    </tr>
+
                     <tbody>
                         <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><tr>
                                 <td><?php echo ($res["pay_time"]); ?></td>
