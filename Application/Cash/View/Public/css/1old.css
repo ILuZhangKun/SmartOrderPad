@@ -1,4 +1,4 @@
-﻿html,
+html,
 body {
     margin: 0;
     padding: 0;
@@ -21,7 +21,7 @@ ul {
 }
 
 .menu {
-    width: 400px;
+    width: 500px;
     height: 35px;
     margin: 0 auto;
 }
@@ -757,7 +757,7 @@ option[selected="true"] {
         width: 80%;
     }
     .income {
-        width: 545px;
+        width: 8%;
     }
     .membership {
         width: 34%;

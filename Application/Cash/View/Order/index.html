@@ -1,45 +1,45 @@
-<extend name="Base/base"/>
+<extend name="Base/base" />
 <block name="content">
     <!-- 结账 -->
     <div id="outputDiv" style="display:none;position:absolute;left:0px;top:0px;width:15%;height:20%;background:white;">
-      <div style="margin-left:5px;font-size:10px;">
-      &emsp;&emsp;&emsp;&emsp;欢迎您的光临</br>
-      -------------------------------------------------</br>
-      &emsp;&emsp;&emsp;&emsp;北京工业大学</br>
-      店名：&emsp;&emsp;&emsp;天天餐厅</br>
-      桌号：&emsp;&emsp;&emsp;{$tableId}</br>
-      收银员：&emsp;&emsp;S201525082</br>
-      结账时间：&emsp;{$pay_time}</br>
-      机器号：&emsp;&emsp;01</br>
-      会员号：&emsp;&emsp;25082</br>
-      -------------------------------------------------</br>
-      <table >
-          <thead>
-              <tr>
-                  <th>菜名</th>
-                  <th>&emsp;单价/元</th>
-                  <th>&emsp;份数/份</th>
-                  <th>&emsp;小计</th>
-              </tr>
-          </thead>
-          <volist name ="payInfo" id="item">
-              <tr >
-                 <td>{$item.name}</td>
-                  <td>&emsp;{$item.price}</td>
-                  <td>&emsp;&emsp;{$item.num}</td>
-                  <td>&emsp;{$item.totle}</td>
-              </tr>
-          </volist>
-      </table>
-      -------------------------------------------------</br>
-      总计：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{$totle}</br>
-      优惠：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0</br>
-      实收：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{$totle}</br>
-      -------------------------------------------------</br>
-    &emsp;&emsp;&emsp;谢谢回顾，欢迎下次光临！</br>
-    &emsp;&emsp;欢迎来电咨询：13888888888</br>
-    &emsp;地址：北京市朝阳区平乐园100号</br>
-    </div>
+        <div style="margin-left:5px;font-size:10px;">
+            &emsp;&emsp;&emsp;&emsp;欢迎您的光临</br>
+            -------------------------------------------------</br>
+            &emsp;&emsp;&emsp;&emsp;北京工业大学</br>
+            店名：&emsp;&emsp;&emsp;天天餐厅</br>
+            桌号：&emsp;&emsp;&emsp;{$tableId}</br>
+            收银员：&emsp;&emsp;S201525082</br>
+            结账时间：&emsp;{$pay_time}</br>
+            机器号：&emsp;&emsp;01</br>
+            会员号：&emsp;&emsp;25082</br>
+            -------------------------------------------------</br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>菜名</th>
+                        <th>&emsp;单价/元</th>
+                        <th>&emsp;份数/份</th>
+                        <th>&emsp;小计</th>
+                    </tr>
+                </thead>
+                <volist name="payInfo" id="item">
+                    <tr>
+                        <td>{$item.name}</td>
+                        <td>&emsp;{$item.price}</td>
+                        <td>&emsp;&emsp;{$item.num}</td>
+                        <td>&emsp;{$item.totle}</td>
+                    </tr>
+                </volist>
+            </table>
+            -------------------------------------------------</br>
+            总计：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{$totle}</br>
+            优惠：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0</br>
+            实收：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;{$totle}</br>
+            -------------------------------------------------</br>
+            &emsp;&emsp;&emsp;谢谢回顾，欢迎下次光临！</br>
+            &emsp;&emsp;欢迎来电咨询：13888888888</br>
+            &emsp;地址：北京市朝阳区平乐园100号</br>
+        </div>
     </div>
     <div class="checkout">
         <div class="checkoutBoard form-inline">
@@ -61,7 +61,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-default" id="searchTableId">查询</button>
-            <!-- </form>
+                <!-- </form>
             <form class="form-inline" action="order/getSearch"> -->
                 <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -78,9 +78,9 @@
                         <th>小计</th>
                     </tr>
                 </thead>
-                <volist name ="payInfo" id="item">
+                <volist name="payInfo" id="item">
                     <tr class="payTable {$item.id}">
-                       <td>{$item.name}</td>
+                        <td>{$item.name}</td>
                         <td>{$item.price}</td>
                         <td>{$item.num}</td>
                         <td>{$item.totle}</td>
@@ -135,32 +135,23 @@
                 </div>
             </div>
         </div>
-        <div class="checkoutOther">
-            <div class="coBorder">
-                <h4>呼叫服务员</h4>
-                <div id="scrollDiv">
-                    <ul>
-                    <volist name="holdInfo" id="info">
-                        <empty name="info">
-                            <li>暂时无人呼叫</li>
-                        <else />
-                            <volist name="info.holding" id="val">
-                            <li>{$info.table_name} {$val}</li>
-                            </volist>
-                        </empty>
-                    </volist>
-                    </ul>
-                </div>
+        <div class="membership">
+            <div class="otherHeader">
+                会员管理
             </div>
-            <div class="coBorder">
-                <h4>长时间未结账餐台</h4>
-                <div id="scrollDiv2">
-                    <ul>
-                        <volist name="longTime" id="val">
-                            <li>{$val.table_name}  {$val.start_time}</li>
-                        </volist>
-                    </ul>
-                </div>
+            <div class="otherBody memberBody">
+                <button type="submit" class="btn btn-default">办卡</button>
+                <button type="submit" class="btn btn-default">充值</button>
+                <button type="submit" class="btn btn-default">退款</button>
+
+                <button type="submit" class="btn btn-default">查询</button>
+                <button type="submit" class="btn btn-default">挂失</button>
+                <button type="submit" class="btn btn-default">解挂</button>
+
+                <button type="submit" class="btn btn-default">注销</button>
+                <button type="submit" class="btn btn-default">换卡</button>
+                <button type="submit" class="btn btn-default">积分</button>
+
             </div>
         </div>
     </div>

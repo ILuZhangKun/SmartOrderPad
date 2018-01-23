@@ -107,73 +107,68 @@
         <div class="exit"><a href="<?php echo U("Login/logout");?>">退出</a></div>
     </div>
     
-    <!-- 桌号 -->
-    <div class="tableSearch">
-        <div class="nana">
-            <input type="text" class="time-start" id="tableDay" placeholder="请输入查询日期" required />
-            <button class="btn" id="searchTable">查询</button>
-        </div>
-    </div>
-    <div class="tableNum">
-        <div id="menu2" class="menu2">
-            <ul>
-                <?php if(is_array($tableInfo)): $i = 0; $__LIST__ = $tableInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cate): $mod = ($i % 2 );++$i;?><li class="nav4"><a href="javascript:;" class="<?php echo ($cate["name"]); ?>">
-                    <?php echo ($cate["name"]); ?></a>
-                    </li><?php endforeach; endif; else: echo "" ;endif; ?>
-            </ul>
-        </div>
-        <?php if(is_array($tableInfo)): $i = 0; $__LIST__ = $tableInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$cate): $mod = ($i % 2 );++$i;?><div class="numBoard" id="<?php echo ($cate["id"]); ?>" type="<?php echo ($cate["name"]); ?>">
-                <?php if(is_array($cate["table"])): $i = 0; $__LIST__ = $cate["table"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><button class="btn <?php echo ($v["type"]); ?>" id="<?php echo ($v["id"]); ?>" data-toggle="tooltip" data-placement="top" title="<?php echo ($v["info"]); ?>">
-                        <?php echo ($v["table_name"]); ?>
-                    </button><?php endforeach; endif; else: echo "" ;endif; ?>
-            </div><?php endforeach; endif; else: echo "" ;endif; ?>
+	<div class="table-manage">
+	<div class="main-title">
+		<h2>桌号管理</h2>
+	</div>
+	<!-- 表格列表 -->
+	<div class="tb-unit posr">
+		<div class="tb-unit-bar">
+			<a class="btn" href="<?php echo U('add?type=hall');?>">新 增</a>
+		</div>
+		<div class="category">
+			<div class="hd cf">
+				<div class="fold">折叠</div>
+				<div class="name">名称</div>
+			</div>
+			<?php if(is_array($degreeInfo)): $i = 0; $__LIST__ = $degreeInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$v): $mod = ($i % 2 );++$i;?><div id="<?php echo ($v["id"]); ?>">
+					<div class="cf">
+						<div class="btn-toolbar opt-btn cf">
+							<a class="confirm ajax-get" href="<?php echo U('del',array('id'=>$v['id'],'type'=>'hall'));?>" title="删除">删除</a>
+						</div>
+						<div class="fold">
+							<i class="icon-unfold"></i>
+						</div>
+						<div class="name">
+							<span class=""></span>
+							<input class="text" type="text" id="<?php echo ($v["id"]); ?>" value="<?php echo ($v["name"]); ?>" name="title">
+							<i class="icon-add"></i>
+							<span class="help-inline msg"></span>
+						</div>
+					</div>
+					<?php if($v["table"] == null ): ?><div class="cf" style="display:none">
+							<div class="btn-toolbar opt-btn cf">
+								<a class="confirm ajax-get" href="<?php echo U('del',array('id'=>$table['id'],'type'=>'table'));?>" title="删除">删除</a>
+							</div>
+							<div class="fold">
+								<i></i>
+							</div>
+							<div class="name">
+								<span class="tab-sign"></span>
+								<input class="text" type="text" cid="<?php echo ($v["id"]); ?>" id="<?php echo ($table["id"]); ?>" value="<?php echo ($table["table_name"]); ?>" name="title">
+								<span class="help-inline msg"></span>
+							</div>
+						</div>
+						<?php else: ?>
+						<?php if(is_array($v["table"])): $i = 0; $__LIST__ = $v["table"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$table): $mod = ($i % 2 );++$i;?><div class="cf">
+								<div class="btn-toolbar opt-btn cf">
+									<a class="confirm ajax-get" href="<?php echo U('del',array('id'=>$table['id'],'type'=>'table'));?>" title="删除">删除</a>
+								</div>
+								<div class="fold">
+									<i></i>
+								</div>
+								<div class="name">
+									<span class="tab-sign"></span>
+									<input class="text" type="text" cid="<?php echo ($v["id"]); ?>" id="<?php echo ($table["id"]); ?>" value="<?php echo ($table["table_name"]); ?>" name="title">
+									<span class="help-inline msg"></span>
+								</div>
+							</div><?php endforeach; endif; else: echo "" ;endif; endif; ?>
 
-
-    </div>
-    <div class="checkoutOther">
-        <div class="coBorder">
-            <h4>呼叫服务员</h4>
-            <div id="scrollDiv">
-                <ul>
-                    <?php if(is_array($holdInfo)): $i = 0; $__LIST__ = $holdInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i; if(empty($info)): ?><li>暂时无人呼叫</li>
-                            <?php else: ?>
-                            <?php if(is_array($info["holding"])): $i = 0; $__LIST__ = $info["holding"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><?php echo ($info["table_name"]); ?> <?php echo ($val); ?></li><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-            </div>
-        </div>
-        <div class="coBorder">
-            <h4>长时间未结账餐台</h4>
-            <div id="scrollDiv2">
-                <ul>
-                    <?php if(is_array($longTime)): $i = 0; $__LIST__ = $longTime;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><?php echo ($val["table_name"]); ?> <?php echo ($val["start_time"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!-- /桌号 -->
-    <!--弹出框-->
-    <div class="modal fade in" id="tableChoose">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span>
-                    </button>
-                    <h3 class="modal-title" id="exampleModalLabel">选择您的操作：</h3>
-                </div>
-                <div class="modal-body">
-                    <label>您将对这个桌子进行以下操作：</label>
-                    <br>
-                    <a class="btn btn-success" type="book">预定</a>
-                    <a class="btn btn-success" type="order">结账</a>
-                    <a class="btn btn-success" type="other">其他</a>
-                </div>
-                <div class="modal-footer">
-                    <button type="button" class="btn btn-default" id="cancel">取消</button>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--弹出框结束-->
+				</div><?php endforeach; endif; else: echo "" ;endif; ?>
+		</div>
+	</div>
+	</div>
+	<!-- /表格列表 -->
 
     <!--弹出框--> 
     <div class="modal fade in" id="alert">

@@ -122,7 +122,7 @@
       店名：&emsp;&emsp;&emsp;天天餐厅</br>
       桌号：&emsp;&emsp;&emsp;<?php echo ($tableId); ?></br>
       收银员：&emsp;&emsp;S201525082</br>
-      打印时间：&emsp;<?php echo ($date()); ?></br>
+      打印时间：&emsp;</br>
       机器号：&emsp;&emsp;01</br>
       会员号：&emsp;&emsp;25082</br>
       -------------------------------------------------</br>

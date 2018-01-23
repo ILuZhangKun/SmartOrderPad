@@ -19,10 +19,20 @@ Class OtherController extends CommonController{
 		$end = strtotime("+1 day",$start); 
 		$res = D("other")->searchIncome($start,$end);  
 		// dump($res);die;
-		$this->assign("meta_title","杂项");
+		$this->assign("meta_title","查询");
 		$this->assign("date",$day);
 		$this->assign("result",$res);
 		$this->display("index");
+	}
+	Public function menulist(){
+		//获得桌位预定情况
+	 	$this->assign("meta_title","查询");
+		$this->display("menulist");
+	}
+	Public function adslist(){
+		//获得桌位预定情况
+	 	$this->assign("meta_title","查询");
+		$this->display("adslist");
 	}
 }
 ?>

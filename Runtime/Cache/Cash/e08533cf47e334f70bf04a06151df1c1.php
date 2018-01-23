@@ -4,6 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?php echo ($meta_title); ?></title>
     <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/1.css">
+    <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/2.css">
+    <!--<link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/module.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/style.css">-->
     <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/bootstrap.min.css">
     <link href="/SmartOrder/Application/Cash/View/Public/datetimepicker/css/datetimepicker.css" rel="stylesheet" type="text/css">
     <script src="/SmartOrder/Application/Cash/View/Public/js/jquery-1.10.2.js"></script> 
@@ -63,8 +66,31 @@
                         </div>
                     </div>
                 </li>
+                <li id="manage">
+                    <div class="text">管理</div>
+                    <div class="nav-bar">
+                    	<a href="../manage/index">桌号管理</a><br />
+                    	<a href="../manage/member">会员管理</a><br />
+                    	<a href="../manage/employee">员工管理</a>
+                    </div>
+                    <div class="left">
+                        <div class="cricle">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="cricle">
+                            <div></div>
+                        </div>
+                    </div>
+                </li>
                 <li id="other">
-                    <div class="text">杂项</div>
+                    <div class="text">查询</div>
+                    <div class="nav-bar">
+                    	<a href="../other/index">账单查看</a><br />
+                    	<a href="../other/menulist">菜单查看</a><br />
+                    	<a href="../other/adslist">广告查看</a>
+                    </div>
                     <div class="left">
                         <div class="cricle">
                             <div></div>
@@ -83,42 +109,42 @@
     
     <!-- 结账 -->
     <div id="outputDiv" style="display:none;position:absolute;left:0px;top:0px;width:15%;height:20%;background:white;">
-      <div style="margin-left:5px;font-size:10px;">
-      &emsp;&emsp;&emsp;&emsp;欢迎您的光临</br>
-      -------------------------------------------------</br>
-      &emsp;&emsp;&emsp;&emsp;北京工业大学</br>
-      店名：&emsp;&emsp;&emsp;天天餐厅</br>
-      桌号：&emsp;&emsp;&emsp;<?php echo ($tableId); ?></br>
-      收银员：&emsp;&emsp;S201525082</br>
-      结账时间：&emsp;<?php echo ($pay_time); ?></br>
-      机器号：&emsp;&emsp;01</br>
-      会员号：&emsp;&emsp;25082</br>
-      -------------------------------------------------</br>
-      <table >
-          <thead>
-              <tr>
-                  <th>菜名</th>
-                  <th>&emsp;单价/元</th>
-                  <th>&emsp;份数/份</th>
-                  <th>&emsp;小计</th>
-              </tr>
-          </thead>
-          <?php if(is_array($payInfo)): $i = 0; $__LIST__ = $payInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr >
-                 <td><?php echo ($item["name"]); ?></td>
-                  <td>&emsp;<?php echo ($item["price"]); ?></td>
-                  <td>&emsp;&emsp;<?php echo ($item["num"]); ?></td>
-                  <td>&emsp;<?php echo ($item["totle"]); ?></td>
-              </tr><?php endforeach; endif; else: echo "" ;endif; ?>
-      </table>
-      -------------------------------------------------</br>
-      总计：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo ($totle); ?></br>
-      优惠：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0</br>
-      实收：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo ($totle); ?></br>
-      -------------------------------------------------</br>
-    &emsp;&emsp;&emsp;谢谢回顾，欢迎下次光临！</br>
-    &emsp;&emsp;欢迎来电咨询：13888888888</br>
-    &emsp;地址：北京市朝阳区平乐园100号</br>
-    </div>
+        <div style="margin-left:5px;font-size:10px;">
+            &emsp;&emsp;&emsp;&emsp;欢迎您的光临</br>
+            -------------------------------------------------</br>
+            &emsp;&emsp;&emsp;&emsp;北京工业大学</br>
+            店名：&emsp;&emsp;&emsp;天天餐厅</br>
+            桌号：&emsp;&emsp;&emsp;<?php echo ($tableId); ?></br>
+            收银员：&emsp;&emsp;S201525082</br>
+            结账时间：&emsp;<?php echo ($pay_time); ?></br>
+            机器号：&emsp;&emsp;01</br>
+            会员号：&emsp;&emsp;25082</br>
+            -------------------------------------------------</br>
+            <table>
+                <thead>
+                    <tr>
+                        <th>菜名</th>
+                        <th>&emsp;单价/元</th>
+                        <th>&emsp;份数/份</th>
+                        <th>&emsp;小计</th>
+                    </tr>
+                </thead>
+                <?php if(is_array($payInfo)): $i = 0; $__LIST__ = $payInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr>
+                        <td><?php echo ($item["name"]); ?></td>
+                        <td>&emsp;<?php echo ($item["price"]); ?></td>
+                        <td>&emsp;&emsp;<?php echo ($item["num"]); ?></td>
+                        <td>&emsp;<?php echo ($item["totle"]); ?></td>
+                    </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+            </table>
+            -------------------------------------------------</br>
+            总计：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo ($totle); ?></br>
+            优惠：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;0</br>
+            实收：&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;<?php echo ($totle); ?></br>
+            -------------------------------------------------</br>
+            &emsp;&emsp;&emsp;谢谢回顾，欢迎下次光临！</br>
+            &emsp;&emsp;欢迎来电咨询：13888888888</br>
+            &emsp;地址：北京市朝阳区平乐园100号</br>
+        </div>
     </div>
     <div class="checkout">
         <div class="checkoutBoard form-inline">
@@ -134,7 +160,7 @@
                     </select>
                 </div>
                 <button type="submit" class="btn btn-default" id="searchTableId">查询</button>
-            <!-- </form>
+                <!-- </form>
             <form class="form-inline" action="order/getSearch"> -->
                 <div class="form-group">
                     <label class="sr-only" for="exampleInputEmail3">Email address</label>
@@ -152,7 +178,7 @@
                     </tr>
                 </thead>
                 <?php if(is_array($payInfo)): $i = 0; $__LIST__ = $payInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$item): $mod = ($i % 2 );++$i;?><tr class="payTable <?php echo ($item["id"]); ?>">
-                       <td><?php echo ($item["name"]); ?></td>
+                        <td><?php echo ($item["name"]); ?></td>
                         <td><?php echo ($item["price"]); ?></td>
                         <td><?php echo ($item["num"]); ?></td>
                         <td><?php echo ($item["totle"]); ?></td>
@@ -206,24 +232,23 @@
                 </div>
             </div>
         </div>
-        <div class="checkoutOther">
-            <div class="coBorder">
-                <h4>呼叫服务员</h4>
-                <div id="scrollDiv">
-                    <ul>
-                    <?php if(is_array($holdInfo)): $i = 0; $__LIST__ = $holdInfo;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$info): $mod = ($i % 2 );++$i; if(empty($info)): ?><li>暂时无人呼叫</li>
-                        <?php else: ?>
-                            <?php if(is_array($info["holding"])): $i = 0; $__LIST__ = $info["holding"];if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><?php echo ($info["table_name"]); ?> <?php echo ($val); ?></li><?php endforeach; endif; else: echo "" ;endif; endif; endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </div>
+        <div class="membership">
+            <div class="otherHeader">
+                会员管理
             </div>
-            <div class="coBorder">
-                <h4>长时间未结账餐台</h4>
-                <div id="scrollDiv2">
-                    <ul>
-                        <?php if(is_array($longTime)): $i = 0; $__LIST__ = $longTime;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$val): $mod = ($i % 2 );++$i;?><li><?php echo ($val["table_name"]); ?>  <?php echo ($val["start_time"]); ?></li><?php endforeach; endif; else: echo "" ;endif; ?>
-                    </ul>
-                </div>
+            <div class="otherBody memberBody">
+                <button type="submit" class="btn btn-default">办卡</button>
+                <button type="submit" class="btn btn-default">充值</button>
+                <button type="submit" class="btn btn-default">退款</button>
+
+                <button type="submit" class="btn btn-default">查询</button>
+                <button type="submit" class="btn btn-default">挂失</button>
+                <button type="submit" class="btn btn-default">解挂</button>
+
+                <button type="submit" class="btn btn-default">注销</button>
+                <button type="submit" class="btn btn-default">换卡</button>
+                <button type="submit" class="btn btn-default">积分</button>
+
             </div>
         </div>
     </div>

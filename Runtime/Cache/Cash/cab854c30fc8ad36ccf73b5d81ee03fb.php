@@ -4,6 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?php echo ($meta_title); ?></title>
     <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/1.css">
+    <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/2.css">
+    <!--<link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/module.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/style.css">-->
     <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/bootstrap.min.css">
     <link href="/SmartOrder/Application/Cash/View/Public/datetimepicker/css/datetimepicker.css" rel="stylesheet" type="text/css">
     <script src="/SmartOrder/Application/Cash/View/Public/js/jquery-1.10.2.js"></script> 
@@ -63,8 +66,31 @@
                         </div>
                     </div>
                 </li>
+                <li id="manage">
+                    <div class="text">管理</div>
+                    <div class="nav-bar">
+                    	<a href="../manage/index">桌号管理</a><br />
+                    	<a href="../manage/member">会员管理</a><br />
+                    	<a href="../manage/employee">员工管理</a>
+                    </div>
+                    <div class="left">
+                        <div class="cricle">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="cricle">
+                            <div></div>
+                        </div>
+                    </div>
+                </li>
                 <li id="other">
-                    <div class="text">杂项</div>
+                    <div class="text">查询</div>
+                    <div class="nav-bar">
+                    	<a href="../other/index">账单查看</a><br />
+                    	<a href="../other/menulist">菜单查看</a><br />
+                    	<a href="../other/adslist">广告查看</a>
+                    </div>
                     <div class="left">
                         <div class="cricle">
                             <div></div>
@@ -83,14 +109,50 @@
     
     <!-- 其他 -->
     <div class="other">
+        <div class="waitPay">
+            <div class="otherHeader">
+                当前待支付账单
+            </div>
+            <div class="otherBody waitPayBody">
+                <table class="table table-hover waitPayTable">
+                    <thead>
+                        <tr>
+                            <th>结账时间</th>
+                            <th>桌号</th>
+                            <th>金额</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                        <td>
+                            <div class="paybtn"><a href="<?php echo U('orderList');?>?oid=<?php echo ($wo_res["oid"]); ?>&tid=<?php echo ($wo_res["table_id"]); ?>">结账</a></div>
+                        </td>
+                    </tr>
+                    <tbody>
+                        <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$wo_res): $mod = ($i % 2 );++$i;?><tr>
+                                <td><?php echo ($wo_res["pay_time"]); ?></td>
+                                <td><?php echo ($wo_res["table_name"]); ?></td>
+                                <td><?php echo ($wo_res["real_money"]); ?></td>
+                                <td>
+                                    <div class="paybtn"><a href="<?php echo U('orderList');?>?oid=<?php echo ($wo_res["oid"]); ?>&tid=<?php echo ($wo_res["table_id"]); ?>">结账</a></div>
+                                </td>
+                            </tr>
+                    </tbody><?php endforeach; endif; else: echo "" ;endif; ?>
+                </table>
+            </div>
+        </div>
         <div class="income">
             <div class="otherHeader">
-                本日收入
+                今日收入
             </div>
             <div class="otherBody incomeBody">
-                <form class="form-inline" action="searchIncome"> 
-                    <!--input type="search" placeholder="请输入查询日期"-->
-                    <input type="search" value="<?php echo ($date==''?date('Y-m-d'):$date); ?>" class="time-start" name="incomeDay" placeholder="请输入查询日期"/>
+                <form class="form-inline" action="searchIncome">
+                    <!-- input type="search" placeholder="请输入查询日期" -->
+                    <input type="search" value="<?php echo ($date==''?date('Y-m-d'):$date); ?>" class="time-start" name="incomeDay" placeholder="请输入查询日期" />
                     <button type="submit" class="btn btn-default">查询</button>
                 </form>
                 <table class="table table-hover incomeTable">
@@ -101,33 +163,77 @@
                             <th>金额</th>
                         </tr>
                     </thead>
-                    <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><tr>
-                            <td><?php echo ($res["pay_time"]); ?></td>
-                            <td><?php echo ($res["table_name"]); ?></td>
-                            <td><?php echo ($res["real_money"]); ?></td>
-                        </tr><?php endforeach; endif; else: echo "" ;endif; ?> 
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tr>
+                        <td>now</td>
+                        <td>你的桌</td>
+                        <td>100000.98</td>
+                    </tr>
+                    <tbody>
+                        <?php if(is_array($result)): $i = 0; $__LIST__ = $result;if( count($__LIST__)==0 ) : echo "" ;else: foreach($__LIST__ as $key=>$res): $mod = ($i % 2 );++$i;?><tr>
+                                <td><?php echo ($res["pay_time"]); ?></td>
+                                <td><?php echo ($res["table_name"]); ?></td>
+                                <td><?php echo ($res["real_money"]); ?></td>
+                            </tr><?php endforeach; endif; else: echo "" ;endif; ?>
+                    </tbody>
                 </table>
             </div>
         </div>
-        <div class="membership">
-            <div class="otherHeader">
-                会员管理
-            </div>
-            <div class="otherBody memberBody">
-                <button type="submit" class="btn btn-default">办卡</button>
-                <button type="submit" class="btn btn-default">充值</button>
-                <button type="submit" class="btn btn-default">退款</button>
-                <br>
-                <button type="submit" class="btn btn-default">查询</button>
-                <button type="submit" class="btn btn-default">挂失</button>
-                <button type="submit" class="btn btn-default">解挂</button>
-                <br>
-                <button type="submit" class="btn btn-default">注销</button>
-                <button type="submit" class="btn btn-default">换卡</button>
-                <button type="submit" class="btn btn-default">积分</button>
-                <br>
-            </div>
-        </div>
+
     </div>
     <!-- /其他 -->
     <!-- 办卡 -->
@@ -343,7 +449,7 @@
     </div> -->
     <!-- /查询 -->
     <!-- 挂失 、解挂、注销、积分-->
-<!--  
+    <!--  
     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
@@ -374,7 +480,7 @@
     <!-- 弹出alert框询问确认挂失、解挂、显示积分-->
     <!-- /挂失、解挂、注销、积分 -->
     <!-- 换卡 -->
-<!--     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
+    <!--     <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
@@ -405,13 +511,13 @@
                         <div class="form-group">
                             <label for="recipient-name" class="control-label">确认密码:</label>
                             <input type="password">
-                        </div>
+                        </div>   
                     </form>
                 </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
                     <button type="button" class="btn btn-primary">确认</button>
-                </div>
+                </div>    
             </div>
         </div>
     </div> -->

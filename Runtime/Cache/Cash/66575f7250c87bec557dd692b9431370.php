@@ -4,6 +4,9 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <title><?php echo ($meta_title); ?></title>
     <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/1.css">
+    <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/2.css">
+    <!--<link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/module.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/style.css">-->
     <link rel="stylesheet" type="text/css" href="/SmartOrder/Application/Cash/View/Public/css/bootstrap.min.css">
     <link href="/SmartOrder/Application/Cash/View/Public/datetimepicker/css/datetimepicker.css" rel="stylesheet" type="text/css">
     <script src="/SmartOrder/Application/Cash/View/Public/js/jquery-1.10.2.js"></script> 
@@ -63,8 +66,31 @@
                         </div>
                     </div>
                 </li>
+                <li id="manage">
+                    <div class="text">管理</div>
+                    <div class="nav-bar">
+                    	<a href="../manage/index">桌号管理</a><br />
+                    	<a href="../manage/member">会员管理</a><br />
+                    	<a href="../manage/employee">员工管理</a>
+                    </div>
+                    <div class="left">
+                        <div class="cricle">
+                            <div></div>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <div class="cricle">
+                            <div></div>
+                        </div>
+                    </div>
+                </li>
                 <li id="other">
-                    <div class="text">杂项</div>
+                    <div class="text">查询</div>
+                    <div class="nav-bar">
+                    	<a href="../other/index">账单查看</a><br />
+                    	<a href="../other/menulist">菜单查看</a><br />
+                    	<a href="../other/adslist">广告查看</a>
+                    </div>
                     <div class="left">
                         <div class="cricle">
                             <div></div>

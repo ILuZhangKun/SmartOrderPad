@@ -18,6 +18,7 @@ $(document).ready(function() {
 		$(this).addClass("active");
 		$(this).siblings().removeClass("active");
 		var id = $(this).attr("id");
+//		alert(id);
 		console.log(id);
 		switch(id){
 			case "table":
@@ -29,6 +30,9 @@ $(document).ready(function() {
 		  	case "reservation":
 		  		window.location.href="../book/index";
 		  	break;
+		  	case "manage":
+		  		window.location.href="../manage/index";
+		  	break;
 		  	case "other":
 		  		window.location.href="../other/index";
 		  	break;
@@ -36,6 +40,7 @@ $(document).ready(function() {
 		  		window.location.href="../table/index";
 		}
 	});
+	
 	/*小标签动态显示*/
 	$("#menu2 li a").wrapInner( '<span class="out"></span>' );
 	$("#menu2 li a").each(function() {
