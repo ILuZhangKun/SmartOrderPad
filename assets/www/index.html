@@ -1,0 +1,990 @@
+<!doctype html>
+<html class="no-js">
+<head>
+    <meta charset="utf-8"
+    >
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>欢迎使用SmartOrder</title>
+    <!-- Set render engine for 360 browser -->
+    <meta name="renderer" content="webkit">
+    <!-- No Baidu Siteapp-->
+    <meta http-equiv="Cache-Control" content="no-siteapp" />
+    <!-- Add to homescreen for Chrome on Android -->
+    <meta name="mobile-web-app-capable" content="yes">
+    <!-- Add to homescreen for Safari on iOS -->
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
+    <meta name="apple-mobile-web-app-title" content="Amaze UI" />
+    <!-- Tile icon for Win8 (144x144 + tile color) -->
+    <meta name="msapplication-TileColor" content="#0e90d2">
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/amazeui.min.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/minimal.css">
+    <link rel="stylesheet" href="css/summernote-bs3.css">
+    <link rel="stylesheet" href="css/user.css">
+    <link rel="stylesheet" type="text/css" href="css/shoppingcart.css">
+    <link rel="stylesheet" type="text/css" href="css/evaluation.css">
+
+    <!-- li -->
+    <link href="css/zns_style.css" rel="stylesheet" type="text/css" />
+    <!--<script type="text/javascript" src="js/zns.js"></script>-->
+
+    <!-- wu-->
+    <link href="css/1.css" rel="stylesheet">
+    <script src="js/jquery-1.11.2.js"></script>
+    <link href="bootstrap-3.3.6/bootstrap-3.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="bootstrap-3.3.6-dist/bootstrap-3.3.6-dist/js/bootstrap.min.js" ></script>
+
+
+   <!-- 引入PhoneGap核心控制JS-->
+    <script type="text/javascript" src="cordova.js"></script>
+    <script type="text/javascript" src="cordova_plugins.js"></script>
+    <!-- 引入公共控制JS -->
+    <script type="text/javascript" src="./js/config.js"></script>
+    <script type="text/javascript" src="js/Common/jquery.js"></script>
+    <script type="text/javascript" src="js/Common/touch.min.js"></script>
+    <script type="text/javascript" src="js/Common/jquery.nicescroll.js"></script>
+    <script type="text/javascript" src="js/Common/quo.js"></script>
+    <script type="text/javascript" src="js/Common/json2.js"></script>
+    <script type="text/javascript" src="js/Common/jquery.md5.js"></script>
+    <script type="text/javascript" src="js/Common/amazeui.min.js"></script>
+    <script type="text/javascript" src="js/Common/inherit.js"></script>
+    <script type="text/javascript" src="js/Common/somefunction.js"></script>
+    <!-- 引入Avalon-->
+    <script type="text/javascript" src="js/Avalon/avalon.modern.js"></script>
+    <script type="text/javascript" src="js/Common/newPromise.js"></script>
+    <!--script type="text/javascript" src="js/Avalon/mobile.js"></script-->
+
+    <!-- 引入点菜系统逻辑控制JS -->
+    <script type="text/javascript" src="./js/Model/DbModel.js"></script>
+    <script type="text/javascript" src="./js/Model/OrderModel.js"></script>
+    <script type="text/javascript" src="./js/Model/SysDataModel.js"></script>
+    <script type="text/javascript" src="./js/Model/AdsModel.js"></script>
+    <script type="text/javascript" src="./js/Model/PageModel.js"></script>
+    <script type="text/javascript" src="./js/Model/TableModel.js"></script>
+    <script type="text/javascript" src="./js/Model/RingModel.js"></script>
+    <script type="text/javascript" src="./js/Model/CommentModel.js"></script>
+    <!-- 引入广告模块控制JS -->
+    <script type="text/javascript" src="./js/Model/AD_Db.js"></script>
+    <script type="text/javascript" src="./js/Model/avalonController.js"></script>
+
+    <!-- 引入点餐系统入口控制JS(总体流程控制) -->
+    <script type="text/javascript" src="./js/InitSystem.js"></script>
+
+
+
+<style type="text/css">
+    #show{display: block;  position: absolute;  top: -50px;  left: 0px;  width: 100%;  height: 107%;  padding: 0px;  border: 8px solid #E8E9F7;  background-color: white;  z-index:1000000000;  overflow: auto;}
+</style>
+
+
+<script type="text/javascript">
+//触屏前后的位置比较
+    var startX_bef = 0;
+    var startX_aft = 0;
+    var startY_bef = 0;
+    var startY_aft = 0;
+
+        function showad_move(){
+            if(startX_aft == startX_bef && startY_aft == startY_bef)
+            {
+                openadshow();
+                n = window.clearInterval(n);
+            }
+            else
+            {
+                // alert("10秒内有触屏");
+                startX_bef = startX_aft;
+                startY_bef = startY_aft;
+            }
+        }
+
+        var n = self.setInterval("showad_move()",1000000);
+
+</script>
+    <script>
+    function closeadshow()
+    {
+        document.getElementById('show').style.display = "none";
+        n = setInterval("showad_move()",1000000);
+    }
+    function openadshow()
+    {
+        document.getElementById('show').style.display = "block";
+        adData.showLunBoAds();
+    }
+    function show_big(img_name)
+    {
+        document.getElementById('show').style.display = "none";
+        document.getElementById('show_big').style.display = "block";
+        document.getElementById('show_big_img').src = img_name;
+        adData.showDetailAds();
+    }
+    function close_big()
+    {
+        // document.getElementById('bg').style.display = "block";
+        //document.getElementById('show').style.display = "block";
+        document.getElementById('show_big').style.display = "none";
+    }
+    function close_ads()
+    {
+        document.getElementById('adsMenu').style.display = "none";
+    }
+
+
+    function close_er()
+    {
+        document.getElementById('erweima').style.display = "none";
+    }
+    function show_er()
+    {
+        document.getElementById('erweima').style.display = "block";
+    }
+    function adsClose () {
+        var adsMenu = document.getElementId("adsMenu");
+        adsMenu.style.display="none";
+    }
+</script>
+
+
+
+
+
+</head>
+
+<body class="bg-1" style="overflow-x: hidden;" ms-controller="avalonCon">
+
+ <!-- 轮播广告模块 -->
+ <!--<div id="bg"></div>-->
+
+<!--<div id="show" >-->
+    <!--<input type="button" value="关闭" onclick="closeadshow()" style="z-index:1000000010;position:absolute;top:0px;right:0px;width:100px;height:55px;font-size:20px;border:2px solid gray;border-radius:5px;">-->
+    <!--<div class="roll" id="roll">-->
+        <!--<a href="javascript:void(0);" class="btn_left"><span class="glyphicon glyphicon-triangle-left" aria-hidden="true"></span></a>-->
+        <!--<a href="javascript:void(0);" class="btn_right"><span class="glyphicon glyphicon-triangle-right" aria-hidden="true"></span></a>-->
+        <!--<div class="wrap" >-->
+            <!--<ul id="wrap">-->
+      <!---->
+            <!--</ul>-->
+        <!--</div>-->
+    <!--</div>-->
+<!--</div>-->
+<!--所有广告展示模块-->
+ <div id="adsMenu" style="display:none;position:fixed;left:0px;top:50px;height:100%;width:100%;z-index:1000000001;background:white;overflow:scroll;">
+    <div>
+        <div style="height: 40px; width:100%;background:#EDEDED;color:#8FBC8F;text-align:left;padding-left:30px;font-weight:bold;line-height:40px;font-size:20px;">广告榜单：<span onclick="close_ads()" style="position:absolute;right:15px;top:0px;"><img src="Images/ch.png" width="25px" height="25px"></span></div>
+        <div class="adsAll">
+            <!--<div ms-repeat="adsArrMenu">{{el.adtext}}</div>-->
+            <ul  ms-repeat="adsArrMenu">
+                <li>
+                    <div>
+                        <div style="float:left;margin-left:80px;">
+                            <img ms-src="{{el.adpic}}" width="300px" height="200px" style="border-radius:10px;" />
+                        </div>
+                        <div style="float:left;margin-left:40px;padding-top:10px;">
+                            <p><span class="adsName">广告名称：</span><span class="adsTitle"> {{el.adname}}</span></p>
+                            <p><span class="adsName">广告内容：</span><span class="adsContent"> {{el.adtext}}</span></p>
+                            <P><span class="adsName">商家地址：</span><span  class="adsContent">{{el.address}}</span></P>
+                            <p><span class="adsName">联系方式：</span><span class="adsContent">{{el.phone}}</span></p>
+                            <p><span class="adsName">活动： </span><span class="adsActivity">{{el.activity}}</span></p>
+                        </div>
+                        <div ms-click="adData.showDetailAds(el.adnum)" style="display:block;width:100px;height:40px;background:#8FBC8F;color:white;float:right;margin-right:20px;margin-top:128px;text-align:center;line-height:40px;font-size:18px;font-weight:bold;border-radius:10px;">查看详情</div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </div>
+ </div>
+
+<!-- 广告展示模块 -->
+
+<div id="show_big" style="display:none;position:absolute;left:0px;top:0px;height:100%;width:100%;z-index:1000000001;background:white;">
+   <div>
+    <div id="head"><!-- /head -->
+     <div class="row">
+        <div class="col-xs-6 col-md-11" id="name"><span style="font-weight:bold;">商品详情</div>
+        <div class="col-xs-6 col-md-1" id="star" onclick="close_big()"><img src="Images/ch.png" width="25px" height="25px"></div>
+      </div>
+    </div>
+    <div id="conment"><!-- /conment -->
+
+      <div id="left"><!-- /left -->
+       <div class="media">
+          <div class="media-left">
+            <a href="#">
+              <img id="show_big_img" class="media-object" src="Images/1.jpg" alt="..." class="img-thumbnail" style="margin-left:10px;width:520px;border-radius:10px;height:520px;!important">
+            </a>
+          </div>
+        </div>
+      </div>
+      <div class="media-body" style="height:518px;margin-left:-10px;">
+        <h4 class="media-heading">店铺详情如下</h4>
+        <div class="panel-group" id="accordion" role="tablist" aria-multiselectable="true">
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingOne">
+              <h4 class="panel-title">
+                <a role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  店铺介绍（历史 类型 菜品）
+                </a>
+              </h4>
+            </div>
+            <div id="collapseOne" class="panel-collapse collapse in" role="tabpanel" aria-labelledby="headingOne">
+              <div class="panel-body" id="content1">
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingTwo">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                 最新活动
+                </a>
+              </h4>
+            </div>
+            <div id="collapseTwo" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingTwo">
+              <div class="list-group" id="content2">
+              </div>
+            </div>
+          </div>
+          <div class="panel panel-default">
+            <div class="panel-heading" role="tab" id="headingThree">
+              <h4 class="panel-title">
+                <a class="collapsed" role="button" data-toggle="collapse" data-parent="#accordion" href="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  地址以及电话
+                </a>
+              </h4>
+            </div>
+            <div id="collapseThree" class="panel-collapse collapse" role="tabpanel" aria-labelledby="headingThree">
+              <div class="list-group" id="content3">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="foot"><!-- /footer -->
+      <div class="row">
+  <div  class="col-xs-6 col-md-10" style="padding:0;margin:0;">
+    <div class="input-group">
+      <div class="input-group-btn" >
+        <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">发送地址至手机<span class="caret"></span></button>
+        <ul class="dropdown-menu">
+          <li><a href="#" onclick="show_er()"><div id="Qrcode">二维码获取地址</div></a></li>
+        </ul>
+      </div><!-- /btn-group -->
+      <input type="text" class="form-control" aria-label="..." style="width:100%;height:100%；padding:0;margin:0;border:1px solid black;">
+    </div><!-- /input-group -->
+ </div><!-- /.col-lg-6 -->
+<div  class="col-xs-6 col-md-2" style="padding:0;margin:0;">
+<button type="submit" class="btn btn-primary" style="width:100%;height:100%；padding:0;margin:0;">提交</button>
+</div>
+ </div><!-- /.row -->
+   </div>
+  </div>
+<!-- 页脚 -->
+<div class="footer-content-info">
+<div id="copyright-info">
+<div class="site-info">
+<span class="copyright">©</span>2017&nbsp;linkurl&nbsp;<a href="http://www.miitbeian.gov.cn" class="link" target="_blank">京ICP证030173号</a>&nbsp;<a href="/pcindex/main/about/openinfo">营业执照信息</a>
+</div>
+</div>
+
+<div class="footer-policeinfo">
+    <a target="_blank" href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11000002000001" style="display:inline-block;text-decoration:none;height:20px;line-height:20px;"><img src="Images/police.jpg" style="float:left;width:20px;height:20px;"><p style="float:left;height:20px;line-height:20px;margin: 0px 0px 0px 5px; color:#939393;">京公网安备 11000002000001号</p></a>
+</div>
+</div>
+</div>
+</div>
+
+
+
+ <!--二维码 -->
+<div id="erweima" style="position:absolute;width:400px;height:350px;top:30%;left:30%;z-index:1000000002; padding: 8px;  border: 8px solid #E8E9F7;  background-color: white;display:none;">
+    <input type="button" value="关闭" style="position:relative;float:right;" onclick="close_er()">
+    <img src="Images/二维码.png" style="position:relative;float:right;margin-top:20px;">
+</div>
+
+    <!--Page one-->
+    <div data-role="page" id="pageone">
+        <!-- topbar -->
+        <div class="am-topbar am-topbar-fixed-top mynav">
+
+            <marquee  id="ads" direction="left" behavior="scroll" scrollamount="5" loop="-1" scrolldelay="20">
+                <a href="javascript:;" ms-repeat="adsArr" style='color:white' ms-click="adData.showDetailAds(el.adnum)">{{el.adname}}: {{el.adtext}}&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</a>
+            </marquee>
+            <!--<strong style="text-align:center;"><h2>{{restaurantName}}</h2></strong>-->
+        </div>
+        <!-- /topbar -->
+        <!-- left bar -->
+        <div class="am-u-sm-3 leftNav" style="margin-top:30px;">
+            <!--<input type="text" class="am-form-field am-round Csearch" placeholder="搜索..." style="height:45px;line-height:45px; margin-top:50px;font-size:1.3em;" />-->
+            <ul class="am-nav">
+                <li class="mark am-active" id="recommend" ms-click="changeTab('今日推荐')">
+                    <strong>&nbsp;今日推荐</strong>
+                </li>
+                <li id="feature" class="mark" ms-repeat="styleArr" ms-click="changeTab(el)">
+                    <strong>&nbsp;{{el}}</strong>
+                </li>
+            </ul>
+            <div class="footerTag">&nbsp;&nbsp;
+                <span class="btn UserBtn" id="callWaiter" onclick="$('#waiterMenu').show()" style="position:absolute;bottom:135px;float:left;left:20px;">
+                    呼叫服务
+                </span>
+                <!--<span class="btn UserBtn" ms-visible="0" id="stopCall" ms-click="stopCallWaiter">-->
+                    <!--停止呼叫-->
+                <!--</span>-->
+                <span class="btn UserBtn" ms-click="showShoppingCart" style="position:absolute;bottom:135px;left:140px;">
+                    已点菜品
+                </span>
+                <span class="btn UserBtn" id="cashCall" ms-click="cashEvent" style="position:absolute;bottom:83px;float:left;">
+                    结账服务
+                </span>
+                <span class="btn UserBtn" ms-click="adData.showTopAds" style="position:absolute;bottom:83px;left:140px;">
+                    广告详情
+                </span>
+            </div>
+        </div>
+
+        <!--结账服务-->
+        <!--结账界面-->
+        <div class="modal fade in introductionPosi" id="cash" tabindex="-1">
+            <div class="modal-dialog menuIntro">
+                <!-- /.modal-content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="modalConfirmLabel" style="font-size:35px;text-align:center;border-bottom:3px solid rgba(111,140,109,0.9);">消费账单</div>
+                    </div>
+                    <div class="modal-body" id="scroll-cart" style="overflow:auto;">
+                        <ul style="list-style-type:none;">
+                            <li  ms-repeat-el="upDishArr">
+                                <div class="headB col-lg-6 col-md-6 col-sm-6 col-xs-6" style="float:left;font-size:16px;">{{el.name}}</div>
+                                <div class="headB col-lg-4 col-md-4 col-sm-4 col-xs-4" style="float:right;font-size:14px;">￥{{el.price}}元</div>
+                            </li>
+                        </ul>
+                        <p></p>
+                            <ul style="list-style-type:none;">
+                                <li  ms-repeat="notUpDishArr">
+                                    <div class="headB col-lg-6 col-md-6 col-sm-6 col-xs-6" style="float:left;font-size:16px;">{{el.name}}</div>
+                                    <div class="headB col-lg-4 col-md-4 col-sm-4 col-xs-4" style="float:right;font-size:14px;">￥{{el.price}}元</div>
+                                </li>
+                            </ul>
+                            <div>
+                        </div>
+                        <div class="Ffont col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            合计：￥{{hasOrderTotleMoney}}元
+                        </div>
+                        <div class="Ffont col-lg-3 col-md-3 col-sm-3 col-xs-3">
+                            道数：{{hasOrderTotleNum}}
+                        </div>
+                        <div class="Ffont col-lg-8 col-md-8 col-sm-8 col-xs-8">
+                            餐台：{{table}}
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="am-btn am-btn-danger am-round" ms-click='cash' style="margin-right:7px;">结账</span>
+                        <span class="am-btn am-btn-success am-round" onclick='$("#cash").hide()'>取消</span>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+
+        <!--结账授权-->
+        <!--提交结账授权-->
+        <div class="modal fade in" id="cashPrompt" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-bottom:0;">
+                        <h3 class="modal-title" id="cashmodalConfirm"><strong>呼叫服务员结账</strong></h3>
+                    </div>
+                    <div class="modal-body" style="height:200px;" id="cash-scroll-cart">
+                        <div style="width:80%;margin:0 auto;">
+                            <div class="am-form-group" ms-visible="paramOfSetTable">
+                                <label>输入密码：</label>
+                                <input class="am-input-lg" type="password" id="cashPassword" placeholder="密码">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer" ms-visible="paramOfSetTable">
+                        <span type="button" class="am-btn am-btn-success am-round" style="margin-right:10px;" ms-click="commitCash">提交</span>
+                        <span type="button" class="am-btn am-btn-danger am-round" onclick="$('#cashPrompt').hide();">取消</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- /left bar -->
+        <!--right content-->
+        <div class="am-u-sm-9 rightContent" id="menuContent">
+            <!-- first model -->
+            <div class="order" id="model1">
+                <div id="model1-first" ms-click="showIntroduce">
+                    <img class="image" src="" alt="">
+                    <div class="twoStyle">
+                        <img class="newImage" src="Images/two5-2-1.jpg" alt="">
+                        <span class="myWord"><strong class="Nword">菜名</strong><br/><small class="Pword">&nbsp;单价</small> </span>
+                    </div>
+                </div>
+                <div id="model1-second" style="margin-top:25px;visibility:;">
+                    <div class="twoStyle">
+                        <img class="newImage" src="Images/two5-2-2.jpg" alt="">
+                        <span class="myWord2"><strong class="Nword"> </strong><br/><small class="Pword"> &nbsp;</small></span>
+                    </div>
+                    <img class="image" src=" " alt="">
+                </div>
+            </div>
+            <!-- /first model -->
+            <!-- second model -->
+            <div class="order" id="model2" style="margin-top:30px;">
+                <img class="bgfour" src="Images/new5-1.png" alt="">
+                <div class="leftCon" id="leftCon" ms-click="showIntroduce">
+                    <img class="fourImage" id="leftfourImage" src="" alt="">
+                    <div class="Nword fourWord">
+                        <strong></strong>&nbsp;
+                        <small></small>
+                    </div>
+                </div>
+                <div class="RigCon" id="RigCon" ms-click="showIntroduce">
+                    <img class="fourImage" id="RigfourImage" src="" alt="">
+                    <div class="Nword fourWord">
+                        <strong></strong>&nbsp;
+                        <small></small>
+                    </div>
+                </div>
+                <img class="bgfour" src="Images/new4.png" alt="">
+            </div>
+            <!-- /second model -->
+            <!-- third model -->
+            <div class="order" id="model3">
+                <div class="leftContainer" id="leftContainer" ms-click="showIntroduce">
+                    <img class="threeImage" id="threeImage" src="" alt="">
+                    <span class="threeWord1"><strong>hshs</strong>&nbsp;&nbsp;<small>dsds</small>&nbsp;</span>
+                </div>
+                <div class="rightContainer">
+                    <div ms-click="showIntroduce">
+                        <div class="topfood">
+                            <img class="threeImage2" id="threeImage2" src="" alt="">
+                        </div>
+                        <img src="Images/new4-1.png" alt="" class="bgThree">
+                        <div class="Nword" id="Nword">
+                            <strong>haha1</strong>&nbsp;&nbsp;<small>sasa1</small>
+                        </div>
+                    </div>
+                    <div style="width:100%;" id="Image3" ms-click="showIntroduce">
+                        <img class="threeImage2" src="" alt="">
+                        <span class="Nword"><strong>haha2</strong>&nbsp;&nbsp;<small>sasa2</small></span>
+                    </div>
+                </div>
+            </div>
+            <!-- /third model -->
+        </div>
+        <!--/right content-->
+        <!-- other content -->
+        <!--显示座位号-->
+        <div class="seat" onclick="$('#setTablePrompt').show();">
+            <div class="seatNum" style="width:"><strong>{{table}}</strong>
+            </div>
+            <img src="Images/site3.png" id="doc-prompt-toggle">
+        </div>
+        <!--设置桌号-->
+        <div class="modal fade in" id="setTablePrompt" tabindex="-1">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header" style="padding-bottom:0;">
+                        <h3 class="modal-title" id="modalConfirmLabel"><strong>设置界面</strong></h3>
+                    </div>
+                    <div class="modal-body" style="height:200px;" id="scroll-cart">
+                        <div style="width:80%;margin:0 auto;">
+                            <div class="am-form-group">
+                                <label>输入密码：</label>
+                                <input class="am-input-lg" type="password" id="pw" placeholder="密码">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <span type="button" class="am-btn am-btn-success am-round" style="margin-right:10px;" ms-click="loginc">验证</span>
+                        <span type="button" class="am-btn am-btn-danger am-round" onclick="$('#setTablePrompt').hide();">取消</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--桌号展示-->
+        <div class="modal fade in callPosi" ms-visible="!paramOfSetTable" style="z-index:10000;position:absolution;top:40px;">
+          <div class="modal-dialog" style="width:80%;">
+            <div class="modal-content" style="width:100%;height:600px;">
+                <div class="modal-header" style="padding-top:18px;">
+                    <div class="mycall" style="border-bottom: 3px solid rgba(111, 140, 109, 0.9);text-align:center;">
+                       请选择桌号</div>
+                </div>
+                <div class="modal-body" id="scroll-cart">
+                    <div style="width:100%;margin:0 auto;display:block;">
+                        <div class="tableNum am-form-group">
+                            <div id="menu2" class="menu2">
+                                <ul ms-repeat="hallArr">
+                                    <li class="nav4" ms-attr-type="$index==0" >
+                                        <a href="javascript:;" ms-class="{{el.name}}"ms-click="hallChange">{{el.name}}</a>
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="numBoard" ms-repeat="hallArr" ms-attr-id="{{el.id}}"  ms-attr-type="{{el.name}}"
+                                 ms-visible="$index==0">
+                                <button ms-attr-class="btn {{item.type}}" ms-repeat-item="el.table" ms-attr-id="{{item.id}}"
+                                        ms-click="setTable">
+                                {{item.table_name}}
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="am-btn am-btn-success am-round" onclick='modelCon.paramOfSetTable=true;'>取消</span>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+        <!--菜品介绍-->
+        <div class="modal fade in introductionPosi" id="modalConfirm" tabindex="-1">
+            <div class="modal-dialog menuIntro">
+                <!-- /.modal-content -->
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title" id="modalConfirmLabel" style="font-size:35px;text-align:center;border-bottom:3px solid rgba(111,140,109,0.9);">菜品介绍</div>
+                    </div>
+                    <div class="modal-body" id="scroll-cart">
+                        <div class="Chead">
+                            <div class="row">
+                                <div class="col-md-6 myIntroduction" style="padding-left:20px;" id="cookname"><strong>菜品名称</strong>
+                                </div>
+                                <div class="col-md-2">
+                                </div>
+                                <div class="col-md-4">
+                                    <div class="am-input-group Cgroup">
+                                        <span class="mBtn" ms-click="reduceNum" style="padding-left:11px;padding-right:11px;width:100px;height:100px;">-</span>
+                                        <input id="num" value="1" style="line-height:20px;">
+                                        <span class="mBtn" ms-click="addNum">+</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <form class="am-form am-form-horizontal contain" style="float:left;margin:1%">
+                            <div class="am-form-group" style="margin-top:10px;">
+                                <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">简介：</label>
+                                <span class="am-u-sm-9" style="padding:0;" id="introduce">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </span>
+                            </div>
+                            <div class="am-form-group">
+                                <label for="doc-ipt-3" class="am-u-sm-3 am-form-label">要求：</label>
+                                <span class="am-u-sm-9 ckbox" style="padding:0;">
+                                        <div class="am-form-group">
+                                          <div class="am-checkbox" style="padding:0;">
+                                              <div class="am-u-sm-4" ms-repeat-el="menuIntrOption">
+                                                <input type="checkbox" ms-duplex-checked="el.checked">{{el.option}}
+                                              </div>
+                                          </div>
+                                        </div>
+                                </span>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="modal-footer">
+                        <span class="am-btn am-btn-danger am-round" ms-click="makeOrder" style="margin-right:7px;">点菜</span>
+                        <span class="am-btn am-btn-success am-round" onclick='$("#modalConfirm").hide()'>取消</span>
+                    </div>
+                </div>
+                <!-- /.modal-content -->
+            </div>
+        </div>
+        <!-- /other content -->
+    </div>
+    <!--/Page one-->
+    <!-- Page Two -->
+    <div id="pagetwo" style="display:none">
+        <div class="mm-page">
+            <div id="wrap">
+                <!-- Make page fluid -->
+                <div class="row">
+                    <!-- nav bar -->
+                    <div class="navbar navbar-default navbar-fixed-top navbar-transparent-black mm-fixed-top">
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin-top:3px;">
+                            <span class="btn UserBtn" style="color:rgba(20,20,20,0.6); font-weight: bold;margin-left:10px;" ms-click="reback">返回</span>
+                        </div>
+                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5" style="margin-top:3px;">
+                            <ul class="nav nav-tabs">
+                                <li role="presentation" ms-class="active:currentIndex===0" ms-click="changeAlreadyAndNotYet(0)"><a href="#">未下单</a>
+                                </li>
+                                <li role="presentation" ms-class="active:currentIndex===1" ms-click="changeAlreadyAndNotYet(1)"><a href="#">已下单</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="col-lg-2 col-md-2 col-sm-2 col-xs-2" style="margin-top:3px;">
+                            <span class="btn UserBtn" id="callWaiter" style="color:rgba(20,20,20,0.6); font-weight: bold;" onclick="$('#waiterMenu').show()">呼叫</span>
+                            <span class="btn UserBtn" id="stopCall" ms-click="stopCallWaiter" ms-visible="0" style="color:rgba(20,20,20,0.6); font-weight: bold;">
+                                停止呼叫
+                            </span>
+                        </div>
+                    </div>
+                    <!-- /nav bar -->
+                    <!-- not yet page content -->
+                    <div class="container" id="notYet" ms-if-loop="currentIndex==0" style="width:97%;margin:0 auto;overflow-x:hidden;overflow-y:auto;-webkit-overflow-scrolling : touch;height:700px;">
+                        <div >
+                            <!-- header -->
+                            <div class="row Chead">
+                                <div class=" col-lg-7 col-md-7 col-sm-7 col-xs-7" style="padding:0;">
+                                    <div class="headB col-lg-4 col-md-4 col-sm-4 col-xs-4">&nbsp;&nbsp;&nbsp;菜品名称</div>
+                                    <div class="headB col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        &nbsp;单价
+                                    </div>
+                                    <div class="headB col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        &nbsp;&nbsp;数量
+                                    </div>
+                                    <div class="headB col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;功能
+                                    </div>
+                                </div>
+                                <div class="headB col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center;">
+                                    要求
+                                </div>
+                            </div>
+                            <!-- /header -->
+                            <!-- body -->
+                            <div class="containTable row" ms-repeat-el="orderArr">
+                                <div class="row col-lg-7 col-md-7 col-sm-7 col-xs-7">
+                                    <div class="Nshoppingcart col-lg-4 col-md-4 col-sm-4 col-xs-4 color-red priority" id="">
+                                        {{el.name}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-4">
+                                        ¥{{el.price}}
+                                    </div>
+                                    <div class="piece col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        <span class="Obtn" ms-click="shoppindReduceNum($index)">
+                                        -
+                                        </span> &nbsp;{{el.num}}
+                                        <span class="Obtn" ms-click="shoppingAddNum($index)">
+                                        +
+                                        </span>
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                        <span class="Cbtn btn" ms-click="deletMenu($index)">删</span>
+                                        <span class="Cbtn btn" ms-click="changeMenu($index)">改</span>
+                                        <span class="Cbtn btn" ms-click="waitMenu($index)">等</span>
+                                    </div>
+                                </div>
+                                <div class="Dshoppingcart col-lg-5 col-md-5 col-sm-5 col-xs-5">
+                                    &nbsp;&nbsp;&nbsp;{{el.taste}}
+                                </div>
+                            </div>
+                            <!-- /body -->
+                            <!-- footer -->
+                            <div class="row" >
+                                <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    <div class="Ffont col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        合计：{{totleMoney}}
+                                    </div>
+                                    <div class="Ffont col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        道数：{{totleNum}}
+                                    </div>
+                                    <div class="Ffont col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                        餐台：{{table}}
+                                    </div>
+                                </div>
+                                <div class="row" style="margin-top:20px;">
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                    </div>
+                                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                        </div>
+                                        <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                            <span class="btn Bsure" ms-click="$('#logincPrompt').show()">  确定
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- /footer -->
+                        </div>
+                        <div class="row" style="margin-top:20px;"></div>
+                    </div>
+                    <!-- /not yet page content -->
+                    <!-- 未上菜 -->
+                    <!-- already page content -->
+                    <div ms-if-loop="currentIndex==1" style="height:610px;">
+                        <div class="SCnote" id="notAlreadyUpDish" ms-visible="notUpDish" style="margin-top:10px;">
+                            未上菜
+                        </div>
+                        <div class="container" id="notAlreadyUpDish" ms-visible="notUpDish" style="overflow:auto;-webkit-overflow-scrolling : touch;height:280px;">
+                            <div style="width:97%;margin:0 auto;">
+                                <div class="row Chead">
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">菜品名称</div>
+                                    <div class="headB2 col-lg-1 col-md-1 col-sm-1 col-xs-1">单价</div>
+                                    <div class="headB2 col-lg-1 col-md-1 col-sm-1 col-xs-1">
+                                        数量
+                                    </div>
+                                    <div class="headB2 col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center;">
+                                        要求
+                                    </div>
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        &nbsp;评价
+                                    </div>
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        &nbsp;长按上菜
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="hold" style="width:97%;margin:0 auto;">
+                                <div class="row containTable" ms-repeat-el="notUpDishArr">
+                                    <div class="Nshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-2 color-red priority" id="" style="text-align:center;">
+                                        {{el.name}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center;">
+                                        &nbsp;&nbsp; ¥{{el.price}}
+                                    </div>
+                                    <div class="piece col-lg-1 col-md-1 col-sm-1 col-xs-1" style="text-align:center;">
+                                        {{el.num}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center;">
+                                        {{el.taste}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:center;">
+                                        <span class="Dbtn btn" style="color:rgba(111, 142, 109, 1);font-weight: bold;" ms-click="showComment($index)">
+                                            评价
+                                        </span>
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:center;">
+                                    </div>
+                                </div>
+                            </div>
+                            &nbsp;
+                        </div>
+                        <!-- /already page content -->
+                        <!-- 未上菜 -->
+                        <!-- 已上菜 -->
+                        <div class="SCnote" id="alreadyUpDish" ms-visible="upDish">
+                            已上菜
+                        </div>
+                        <div class="container" id="alreadyUpDish" ms-visible="upDish" style="overflow:auto;-webkit-overflow-scrolling : touch;height:210px;">
+                            <div style="width:97%;margin:0 auto;">
+                                <div class="row Chead">
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">菜品名称</div>
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">单价</div>
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        数量
+                                    </div>
+                                    <div class="headB2 col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center;">
+                                        要求
+                                    </div>
+                                    <div class="headB2 col-lg-2 col-md-2 col-sm-2 col-xs-2">
+                                        &nbsp;评价
+                                    </div>
+                                </div>
+                            </div>
+                            <div style="width:97%;margin:0 auto;">
+                                <div class="row containTable" ms-repeat-el="upDishArr">
+                                    <div class="Nshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-2 color-red priority" id="" style="text-align:center;">
+                                        {{el.name}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:center;">
+                                        &nbsp;&nbsp; ¥{{el.price}}
+                                    </div>
+                                    <div class="piece col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:center;">
+                                        {{el.num}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-4 col-md-4 col-sm-4 col-xs-4" style="text-align:center;">
+                                        {{el.taste}}
+                                    </div>
+                                    <div class="Pshoppingcart col-lg-2 col-md-2 col-sm-2 col-xs-2" style="text-align:center;">
+                                        <span class="Dbtn btn" style="color:rgba(111, 142, 109, 1);font-weight: bold;" ms-click="showComment($index)">
+                                            评价
+                                        </span>
+                                    </div>
+                                </div>
+                            </div>
+                            &nbsp;
+                        </div>
+                        <!-- /已上菜 -->
+                    </div>
+                    <!-- 合计 -->
+                    <div class="container" id="already" ms-if-loop="currentIndex==1">
+                        <!-- footer -->
+                        <div class="row" style="margin-top:15px;margin-bottom:15px;">
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                            </div>
+                            <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6">
+                                <div class="Ffont col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    合计：{{hasOrderTotleMoney}}
+                                </div>
+                                <div class="Ffont col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    道数：{{hasOrderTotleNum}}
+                                </div>
+                                <div class="Ffont col-lg-4 col-md-4 col-sm-4 col-xs-4">
+                                    餐台：{{table}}
+                                </div>
+                            </div>
+                        </div>
+                        <!-- /footer -->
+                    </div>
+                    <!-- /合计 -->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /Page Two -->
+    <!--呼叫服务员选项-->
+    <div class="modal fade in callPosi" id="waiterMenu" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="padding-top:18px;">
+                    <div class="mycall" style="border-bottom: 3px solid rgba(111, 140, 109, 0.9);text-align:center;">
+                        呼&nbsp;叫 </div>
+                </div>
+                <div class="modal-body" style="height:260px;" id="scroll-cart">
+                    <div style="width:80%;margin:0 auto;">
+                        <div class="am-form-group">
+                            <div class="am-checkbox ">
+                                <!-- <input type="checkbox" ms-duplex-checked="el.checked" /> {{el.option}} -->
+                                <div class="row">
+                                    <div class="col-md-6 callback" ms-repeat-el="callWaiterOption">
+                                        <input type="checkbox" ms-duplex-checked="el.checked" style="width：30px;height:30px;"> {{el.option}}
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span class="am-btn am-btn-success am-round" ms-click="callWaiter" style="margin-right:10px;">确定</span>
+                    <span class="am-btn am-btn-danger am-round" onclick="$('#waiterMenu').hide()">关闭</span>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!--提交订单授权-->
+    <div class="modal fade in" id="logincPrompt" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="padding-bottom:0;">
+                    <h3 class="modal-title" id="modalConfirmLabel"><strong>呼叫服务员下单</strong></h3>
+                </div>
+                <div class="modal-body" style="height:200px;" id="scroll-cart">
+                    <div style="width:80%;margin:0 auto;">
+                        <div class="am-form-group" ms-visible="paramOfSetTable">
+                            <label>输入密码：</label>
+                            <input class="am-input-lg" type="password" id="password" placeholder="密码">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer" ms-visible="paramOfSetTable">
+                    <span type="button" class="am-btn am-btn-success am-round" style="margin-right:10px;" ms-click="commitMenu">验证</span>
+                    <span type="button" class="am-btn am-btn-danger am-round" onclick="$('#logincPrompt').hide();">取消</span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/提交订单授权-->
+    <!-- 弹框通知 -->
+    <div class="am-modal am-modal-prompt" tabindex="-1" ms-visible="alert">
+        <div class="am-modal-dialog">
+            <div class="am-modal-hd">{{attention}}</div>
+        </div>
+    </div>
+    <!-- /弹框通知 -->
+    <!--系统设置-->
+    <div class="modal fade in" id="setServerPrompt" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="padding-bottom:0;">
+                    <h3 class="modal-title" id="modalConfirmLabel"><strong>系统设置界面</strong></h3>
+                </div>
+                <div class="modal-body" style="height:200px;" id="scroll-cart">
+                    <div style="width:80%;margin:0 auto;">
+                        <div class="am-form-group">
+                            <label>服务器IP：</label>
+                            <input class="am-input-lg" type="text" id="server" placeholder="IP地址">
+                        </div>
+                        <div class="am-form-group">
+                            <label>饭店名称：</label>
+                            <input class="am-input-lg" type="text" id="restaurantName" placeholder="某某饭店">
+                        </div>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <span type="button" class="am-btn am-btn-success am-round" style="margin-right:10px;" ms-click="setServer">设置</span>
+                    <span type="button" class="am-btn am-btn-danger am-round" onclick="$('#setServerPrompt').hide();">
+                            取消
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--/系统设置-->
+    <!-- 评价 -->
+    <div class="modal fade in callPosi" id="comment" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header" style="padding-bottom:0;">
+                    <div style="border-bottom: 3px solid rgba(111, 140, 109, 0.9);text-align:center;">
+                        <h1>{{currentCommentName}}</h1>
+                    </div>
+                </div>
+                <div class="modal-body comment" style="height:200px;" id="scroll-cart">
+                    <label>评价:</label>
+                        <div id="www_zzjs_net" star_width="14">
+                            <p>口感：</p>
+                            <ul class="star_rating">
+                                <li style="display:none;">
+                                    <input type="text" id="texture" value="" />
+                                </li>
+                                <li class="current_rating">default level</li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="1 of 5 stars" class="one_star">1</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="2 of 5 stars" class="two_stars">2</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="3 of 5 stars" class="three_stars">3</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="4 of 5 stars" class="four_stars">4</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="5 of 5 stars" class="five_stars">5</a></li>
+                            </ul>
+                            <p>色泽：</p>
+                            <ul class="star_rating">
+                                <li style="display:none;">
+                                    <input type="text" id="color" value="" />
+                                </li>
+                                <li class="current_rating">default level</li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="1 of 5 stars" class="one_star">1</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="2 of 5 stars" class="two_stars">2</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="3 of 5 stars" class="three_stars">3</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="4 of 5 stars" class="four_stars">4</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="5 of 5 stars" class="five_stars">5</a></li>
+                            </ul>
+                            <!--p>综合：</p>
+                            <ul class="star_rating">
+                                <li style="display:none;">
+                                    <input type="text" is="multiple" value="" />
+                                </li>
+                                <li class="current_rating">default level</li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="1 of 5 stars" class="one_star">1</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="2 of 5 stars" class="two_stars">2</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="3 of 5 stars" class="three_stars">3</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="4 of 5 stars" class="four_stars">4</a></li>
+                                <li><a href="#" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" rel="external nofollow" title="5 of 5 stars" class="five_stars">5</a></li>
+                            </ul-->
+                        </div>
+                    <label>您的建议：</label>
+                    <input type="text" id="otherComment">
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="am-btn am-btn-success am-round" style="margin-right:10px;" ms-click="comment">确定</button>
+                    <button type="button" class="am-btn am-btn-danger am-round" onclick="$('#comment').hide()">关闭</button>
+                </div>
+            </div>
+            <!-- /.modal-content -->
+        </div>
+        <!-- /.modal-dialog -->
+    </div>
+    <!-- /评价 -->
+
+</body>
+
+
+
+<html>

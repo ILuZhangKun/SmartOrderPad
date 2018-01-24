@@ -1,0 +1,48 @@
+/*****************************************/
+/************* MAIN SETTINGS *************/
+/*****************************************/
+
+html, body {
+    height: 100%;
+}
+html {
+    padding-top: 45px;
+    padding-bottom: 0;
+    /* overflow: hidden;*/
+}
+body {
+    font-family: "Roboto", "Arial", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    -webkit-font-smoothing: antialiased;
+}
+body.bg-1 {
+    padding: 0;
+    background: rgba(200, 200, 200, 0.1);
+    background-repeat: repeat, no-repeat;
+    background-position: left top;
+    background-size: auto, cover;
+    background-attachment: fixed;
+}
+h1 {
+    font-family: "Roboto Slab", serif;
+    -webkit-font-smoothing: antialiased;
+    font-size: 3rem;
+}
+.Obtn {
+    width: 100%;
+    background: rgba(111, 140, 109, 0.8);
+    font-weight: bold;
+    margin: 10px 0;
+    height: 80px;
+    font-size: 2.5rem;
+    color: #FAFAFA;
+}
+.btn1 {
+    margin-top: 35px;
+    border-radius: 10px;
+    background: rgba(51, 153, 102, 0.8);
+    color: white;
+    font-size: 3rem;
+    height: 70px;
+}
