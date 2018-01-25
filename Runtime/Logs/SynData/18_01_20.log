@@ -1,0 +1,140 @@
+[ 2018-01-20T13:42:19+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000446s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000648s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000703s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516426938' WHERE ( conf="adSynVersion" ) [ RunTime:0.0448s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0043s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0003s ]
+SQL: INSERT INTO `so_ads` (`adnum`,`starttime`,`endtime`,`adname`,`adtext`,`adremark`,`adpic`,`adhref`,`adtitle`,`adtype`,`introduction`,`activity`,`phone`,`vehicle`,`is_delete`,`adverify_time`,`ad_hotel`) VALUES ('83','2018-01-20','2018-02-15','陕西羊肉泡馍','啊实打实','第一次发放','/cloud/Data/Uploads/Images/','www.sougou.com','挑战你的味觉','1','啊实打实的','买一送一','18888888888','1','0','1516426938','11,12,13') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000581s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001864s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002504s ]
+
+[ 2018-01-20T13:42:35+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000391s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000588s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000624s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0061s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516426955' WHERE ( conf="adSynVersion" ) [ RunTime:0.0412s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0042s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0004s ]
+SQL: UPDATE `so_ads` SET `starttime`='2018-01-20',`endtime`='2018-02-15',`adname`='陕西羊肉泡馍',`adtext`='啊实打实',`adremark`='第一次发放',`adpic`='/cloud/Data/Uploads/Images/',`adhref`='www.sougou.com',`adtitle`='挑战你的味觉',`adtype`='1',`introduction`='啊实打实的',`activity`='买一送一',`phone`='18888888888',`vehicle`='1',`is_delete`='0',`adverify_time`='1516426955',`ad_hotel`='11,12,13' WHERE `adnum` = 83 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000675s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002414s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003159s ]
+
+[ 2018-01-20T13:42:38+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001965s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000563s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000601s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516426958' WHERE ( conf="adSynVersion" ) [ RunTime:0.0428s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `so_ads` SET `starttime`='2018-01-20',`endtime`='2018-02-15',`adname`='陕西羊肉泡馍',`adtext`='啊实打实',`adremark`='第一次发放',`adpic`='/cloud/Data/Uploads/Images/',`adhref`='www.sougou.com',`adtitle`='挑战你的味觉',`adtype`='1',`introduction`='啊实打实的',`activity`='买一送一',`phone`='18888888888',`vehicle`='1',`is_delete`='0',`adverify_time`='1516426958',`ad_hotel`='11,12,13' WHERE `adnum` = 83 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000585s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001744s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002383s ]
+
+[ 2018-01-20T13:43:09+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000008s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000314s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002478s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002535s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516426988' WHERE ( conf="adSynVersion" ) [ RunTime:0.0470s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0022s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `so_ads` SET `starttime`='2018-01-20',`endtime`='2018-02-15',`adname`='陕西羊肉泡馍',`adtext`='啊实打实',`adremark`='第一次发放',`adpic`='/cloud/Data/Uploads/Images/',`adhref`='www.sougou.com',`adtitle`='挑战你的味觉',`adtype`='1',`introduction`='啊实打实的',`activity`='买一送一',`phone`='18888888888',`vehicle`='1',`is_delete`='0',`adverify_time`='1516426988',`ad_hotel`='11,12,13' WHERE `adnum` = 83 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002527s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001890s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004490s ]
+
+[ 2018-01-20T13:45:27+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000356s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000496s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0023s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516427126' WHERE ( conf="adSynVersion" ) [ RunTime:0.0334s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `so_ads` SET `starttime`='2018-01-20',`endtime`='2018-02-15',`adname`='陕西羊肉泡馍',`adtext`='啊实打实',`adremark`='第一次发放',`adpic`='/cloud/Data/Uploads/Images/',`adhref`='www.sougou.com',`adtitle`='挑战你的味觉',`adtype`='1',`introduction`='啊实打实的',`activity`='买一送一',`phone`='18888888888',`vehicle`='1',`is_delete`='0',`adverify_time`='1516427126',`ad_hotel`='11,12,13' WHERE `adnum` = 83 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000630s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003538s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004285s ]
+
+[ 2018-01-20T13:46:00+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000371s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000904s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000967s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0021s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516427159' WHERE ( conf="adSynVersion" ) [ RunTime:0.0272s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0002s ]
+SQL: INSERT INTO `so_ads` (`adnum`,`starttime`,`endtime`,`adname`,`adtext`,`adremark`,`adpic`,`adhref`,`adtitle`,`adtype`,`introduction`,`activity`,`phone`,`vehicle`,`is_delete`,`adverify_time`,`ad_hotel`) VALUES ('83','2018-01-20','2018-02-15','陕西羊肉泡馍','啊实打实','第一次发放','/cloud/Data/Uploads/Images/','www.sougou.com','挑战你的味觉','1','啊实打实的','买一送一','18888888888','1','0','1516427159','11,12,13') [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000634s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002182s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002881s ]
+
+[ 2018-01-20T13:46:05+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/updateAd
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000478s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000743s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000795s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'adSynVersion' LIMIT 1   [ RunTime:0.0001s ]
+SQL: UPDATE `so_config` SET `val`='1516427165' WHERE ( conf="adSynVersion" ) [ RunTime:0.0346s ]
+SQL: SHOW COLUMNS FROM `so_ads` [ RunTime:0.0140s ]
+SQL: SELECT * FROM `so_ads` WHERE `adnum` = 83 LIMIT 1   [ RunTime:0.0003s ]
+SQL: UPDATE `so_ads` SET `starttime`='2018-01-20',`endtime`='2018-02-15',`adname`='陕西羊肉泡馍',`adtext`='啊实打实',`adremark`='第一次发放',`adpic`='/cloud/Data/Uploads/Images/',`adhref`='www.sougou.com',`adtitle`='挑战你的味觉',`adtype`='1',`introduction`='啊实打实的',`activity`='买一送一',`phone`='18888888888',`vehicle`='1',`is_delete`='0',`adverify_time`='1516427165',`ad_hotel`='11,12,13' WHERE `adnum` = 83 [ RunTime:0.0002s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000693s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.004315s ]
+INFO: [ app_end ] --END-- [ RunTime:0.005083s ]
+

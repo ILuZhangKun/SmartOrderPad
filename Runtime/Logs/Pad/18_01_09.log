@@ -1,0 +1,91 @@
+[ 2018-01-09T15:25:51+08:00 ] ::1 /smartorder/index.php/pad/SynVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000362s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000476s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000510s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:28:29+08:00 ] ::1 /smartorder/pad
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000520s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000569s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:28:35+08:00 ] ::1 /smartorder/pad/SynVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000346s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000427s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000462s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:29:14+08:00 ] ::1 /smartorder/Pad/SynVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000342s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000371s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000403s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:29:23+08:00 ] ::1 /smartorder/Pad/SynVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000477s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000375s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000411s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:29:31+08:00 ] ::1 /smartorder/index.php/Pad/SynVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000420s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002255s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002312s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:30:14+08:00 ] ::1 /smartorder/pad.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000421s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000597s ]
+ERR: 非法操作:index
+
+[ 2018-01-09T15:40:02+08:00 ] ::1 /smartorder/Pad/SynVersion/CompareVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000351s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000440s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000472s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0175s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0004s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'ServerIP' LIMIT 1   [ RunTime:0.0002s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' D:\xampp\htdocs\SmartOrder\Application\Pad\Model\SysDataModel.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant neq - assumed 'neq' D:\xampp\htdocs\SmartOrder\Application\Pad\Model\SysDataModel.class.php 第 36 行.
+SQL: SELECT cm.id, cm.cookname, cm.introduce, cm.price, cm.standard, cm.picture, cm.edit_time, cs.stylename, cs.is_delete FROM so_cookmenu cm INNER JOIN so_cookstyle cs ON cm.styleid = cs.c_id  WHERE 0 < cm.edit_time <= 1505913528 [ RunTime:0.0007s ]
+
+[ 2018-01-09T16:46:38+08:00 ] ::1 /smartorder/Pad/SynVersion/CompareVersion
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000376s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000591s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000638s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0104s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'ServerIP' LIMIT 1   [ RunTime:0.0001s ]
+NOTIC: [8] Use of undefined constant between - assumed 'between' D:\xampp\htdocs\SmartOrder\Application\Pad\Model\SysDataModel.class.php 第 35 行.
+NOTIC: [8] Use of undefined constant neq - assumed 'neq' D:\xampp\htdocs\SmartOrder\Application\Pad\Model\SysDataModel.class.php 第 36 行.
+SQL: SELECT cm.id, cm.cookname, cm.introduce, cm.price, cm.standard, cm.picture, cm.edit_time, cs.stylename, cs.is_delete FROM so_cookmenu cm INNER JOIN so_cookstyle cs ON cm.styleid = cs.c_id  WHERE 0 < cm.edit_time <= 1515487454 [ RunTime:0.0171s ]
+

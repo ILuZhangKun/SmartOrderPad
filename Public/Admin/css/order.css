@@ -1,0 +1,134 @@
+/*支付方式、结账按钮、返回上一级按钮*/
+.cash-button{
+	width: 85px;
+	height: 35px;
+	line-height: 35px;
+	border-radius: 5px;
+	cursor: pointer;
+	margin: 5px 2px 10px 10px;
+	padding: 2px 3px 2px 3px;
+	border: 0px;
+	/*background-color: darkgreen;*/
+	background: url(../images/123.jpg);
+	color: white;
+}
+.cash-submit{
+	width: 80px;
+	height: 35px;
+	border-radius: 10px;
+	margin-right: 30px;
+	font-size: 16px;
+	cursor: pointer;
+	border: 0px;
+	/*background: url(../images/123.jpg);*/
+	background-color: darkgreen;
+	color: white;
+}
+.cash-back{
+	width: 75px;
+	height: 25px;
+	border: 0px;
+	background-color: #353535;
+	color: white;
+}
+
+
+/*结账表格*/
+.data-table th,td{
+	text-align: center;
+}
+.data-table thead tr th,
+.data-table tbody tr td {
+    white-space: nowrap;
+    text-align: center;
+}
+
+.data-table thead tr th {
+    text-align: center;
+    height: 30px;
+    line-height: 30px;
+    padding: 2px 5px;
+}
+
+.data-table tbody tr td {
+    padding: 5px;
+    height: 30px;
+    font-weight: 400;
+}
+
+.order-table {
+    position: relative;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.order-table thead,
+.order-table tbody tr {
+    display: table;
+    width: 100%;
+    table-layout: fixed;
+}
+
+.order-table tbody {
+    display: block;
+    overflow-y: scroll;
+    height: 100%;
+    margin-bottom: 8px;
+    max-height: 200px;
+}
+
+/*Kun:更多详情展示*/
+
+.moreDetailShow {
+    display: none;
+}
+
+.checkMoreDetail:hover .moreDetailShow {
+    display: block !important;
+    z-index: 2;
+    position: absolute;
+    top: 110px;
+    right: 7%;
+    width: 500px;
+    height: 350px;
+    line-height: 40px;
+    overflow: auto;
+    /*margin-top: -60px;
+    margin-left: -90px;*/
+    padding: 20px 15px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 10px;
+}
+
+.checkMoreDetail:hover .moreDetailShow p {
+    border-bottom: 1px solid silver;
+}
+
+.checkMoreDetail:hover .moreDetailShow img {
+    width: 50%;
+    height: 50%;
+}
+
+.moreDetailShow{
+	display: none;
+    z-index: 2;
+    position: absolute;
+    top: 50px;
+    right: 7%;
+    width: 500px;
+    height: 450px;
+    line-height: 40px;
+    overflow: auto;
+    /*margin-top: -60px;
+    margin-left: -90px;*/
+    padding: 20px 15px 10px 20px;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    text-align: left;
+    font-size: 14px;
+    border-radius: 10px;
+}
+::-webkit-scrollbar{width:0px}

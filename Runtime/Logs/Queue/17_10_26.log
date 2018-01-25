@@ -1,0 +1,23 @@
+[ 2017-10-26T14:48:31+08:00 ] ::1 /smartorder1/queue/queue/getGlobalEmptyTables
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000880s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' /Applications/XAMPP/xamppfiles/htdocs/SmartOrder1/Application/Queue/Conf/config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000645s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000683s ]
+SQL: SELECT count(*) as empty_tables , num FROM so_table where is_leave = 1 group by num [ RunTime:0.0010s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000497s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001411s ]
+INFO: [ app_end ] --END-- [ RunTime:0.001951s ]
+
+[ 2017-10-26T14:48:37+08:00 ] ::1 /smartorder1/queue/queue/getEmptyTableBynum
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000294s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' /Applications/XAMPP/xamppfiles/htdocs/SmartOrder1/Application/Queue/Conf/config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000260s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000283s ]
+

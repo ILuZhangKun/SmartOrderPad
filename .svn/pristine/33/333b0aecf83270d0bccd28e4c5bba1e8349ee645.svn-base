@@ -1,0 +1,29 @@
+<extend name ="Common:base"/>
+    <block name="body">
+        <form action="{:U('/Admin/UserManage/ResetPassword','','')}" method="post" class="form-horizontal">
+            <div class="form-item">
+            <label class="item-label">您正在修改"{$info.RealName}"的用户密码<span class="check-tips"></span></label>
+                <div class="controls">
+                    <p>{$info.username}</p>
+                </div>
+            </div>
+                        <div class="form-item">
+            <label class="item-label">请输入密码<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="password" class="text input-mid" name="PassWord1" value=""/>
+                    <input type="password" style="display:none"  name="id" value="{$info.id}"/>
+                </div>
+            </div>
+                        <div class="form-item">
+            <label class="item-label">请再次输入密码<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="password" class="text input-mid" name="PassWord2" value=""/>
+                </div>
+            </div>
+           
+            <div class="form-item">
+                <button class="btn submit-btn"  type="submit" >确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </form>
+    </block>

@@ -1,0 +1,1582 @@
+[ 2015-12-03T21:52:29+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 21:52:29
+[ 2015-12-03T21:52:29+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T21:52:29+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: syn_key不能为空
+[ 2015-12-03T21:52:29+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:sys_menu Runat 2015-12-03 21:52:29 Use 0.038002 s
+
+[ 2015-12-03T21:52:29+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019002s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019002s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.044002s ]
+INFO: [ app_end ] --END-- [ RunTime:0.046002s ]
+
+[ 2015-12-03T21:56:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 21:56:17
+[ 2015-12-03T21:56:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T21:56:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T21:56:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: syn_key不能为空
+[ 2015-12-03T21:56:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:sys_menu Runat 2015-12-03 21:56:17 Use 0.053003 s
+
+[ 2015-12-03T21:56:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0020s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.057004s ]
+INFO: [ app_end ] --END-- [ RunTime:0.058004s ]
+
+[ 2015-12-03T21:59:59+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 21:59:59
+[ 2015-12-03T21:59:59+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T21:59:59+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T21:59:59+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:0 Runat 2015-12-03 21:59:59 Use 0.186011 s
+
+[ 2015-12-03T21:59:59+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.020001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.020001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0890s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.192011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.194011s ]
+
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:00:00
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:00:00
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:0 Runat 2015-12-03 22:00:00 Use 0.164010 s
+Cron:0 Runat 2015-12-03 22:00:00 Use 0.000000 s
+
+[ 2015-12-03T22:00:00+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0820s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.286016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.287016s ]
+
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:00:05
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:00:05
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:0 Runat 2015-12-03 22:00:05 Use 0.124007 s
+Cron:0 Runat 2015-12-03 22:00:05 Use 0.000000 s
+
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.219013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.220013s ]
+
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:00:05
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:00:05
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:0 Runat 2015-12-03 22:00:05 Use 0.105006 s
+Cron:0 Runat 2015-12-03 22:00:05 Use 0.000000 s
+
+[ 2015-12-03T22:00:05+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.204012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.205012s ]
+
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:06
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:06
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:00:06 Use 0.110006 s
+Cron:0 Runat 2015-12-03 22:00:06 Use 0.000000 s
+
+[ 2015-12-03T22:00:06+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.198012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.200012s ]
+
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: 这里是定时任务测试！2015-12-03 22:00:17
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: synKeyqqq
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: 这里是定时任务测试！2015-12-03 22:00:17
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: synKeyqqq
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+ERR: Cron:0 Runat 2015-12-03 22:00:17 Use 0.130007 s
+Cron:0 Runat 2015-12-03 22:00:17 Use 0.000000 s
+
+[ 2015-12-03T22:00:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='100',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449150705' WHERE `c_id` = 36 [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.223013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.224013s ]
+
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:50
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:50
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:00:50 Use 0.182011 s
+Cron:0 Runat 2015-12-03 22:00:50 Use 0.000000 s
+
+[ 2015-12-03T22:00:50+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0890s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.294017s ]
+INFO: [ app_end ] --END-- [ RunTime:0.295017s ]
+
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:52
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:52
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:00:52 Use 0.114006 s
+Cron:0 Runat 2015-12-03 22:00:52 Use -0.001000 s
+
+[ 2015-12-03T22:00:52+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.015600s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.209012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.210012s ]
+
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:53
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:00:53 Use 0.102006 s
+
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.107006s ]
+INFO: [ app_end ] --END-- [ RunTime:0.108006s ]
+
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:53
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:53
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:00:53 Use 0.088005 s
+Cron:0 Runat 2015-12-03 22:00:53 Use 0.000000 s
+
+[ 2015-12-03T22:00:53+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.017001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0280s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.184010s ]
+INFO: [ app_end ] --END-- [ RunTime:0.185011s ]
+
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:56
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:00:56
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:00:56 Use 0.107006 s
+Cron:0 Runat 2015-12-03 22:00:56 Use 0.000000 s
+
+[ 2015-12-03T22:00:56+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0340s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.204012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.205012s ]
+
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:01:01
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 这里是定时任务测试！2015-12-03 22:01:01
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: synKeyqqq
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+ERR: Cron:0 Runat 2015-12-03 22:01:01 Use 0.099006 s
+Cron:0 Runat 2015-12-03 22:01:01 Use 0.000000 s
+
+[ 2015-12-03T22:01:01+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/ModifyCookMenu/MenuId/16
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/ModifyCookMenu%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookmenu` WHERE `id` = 16 LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\dd83d7a340b1308cb38c24e324232c48.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0240s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.187011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.188011s ]
+
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:07
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:07
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:07 Use 0.120007 s
+Cron:0 Runat 2015-12-03 22:01:07 Use 0.000000 s
+
+[ 2015-12-03T22:01:07+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Index/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002001s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Index/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0050s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.208012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.210012s ]
+
+[ 2015-12-03T22:01:08+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:08
+[ 2015-12-03T22:01:08+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:08+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:08+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:08
+[ 2015-12-03T22:01:08+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:08+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:08 Use 0.114006 s
+Cron:0 Runat 2015-12-03 22:01:09 Use 0.000000 s
+
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0020s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0020s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\3c7f6c15843b813090faa90a45856594.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0040s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0230s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.194011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.195011s ]
+
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:09
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:09
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:09 Use 0.119007 s
+Cron:0 Runat 2015-12-03 22:01:09 Use 0.000000 s
+
+[ 2015-12-03T22:01:09+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Table/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 76 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号设置' AND `pid` = 76 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Admin\Model\TableModel::Add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0020s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php on line 38 and defined D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1765 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1773 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1776 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1784 行.
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 4  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 5  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001001s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001001s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.023001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.023001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0450s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0510s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.232013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.233013s ]
+
+[ 2015-12-03T22:01:10+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Menu/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:10
+[ 2015-12-03T22:01:10+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Menu/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:10+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Menu/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:10+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Menu/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:10 Use 0.113007 s
+
+[ 2015-12-03T22:01:10+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Menu/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Menu/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 4 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 4  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 4 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜单设置' AND `pid` = 4 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`title` FROM `so_menu`  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`title`,`pid`,`sort`,`url`,`hide`,`tip`,`group`,`is_dev`,`status` FROM `so_menu` WHERE `pid` = 0 ORDER BY sort asc,id asc  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.119007s ]
+INFO: [ app_end ] --END-- [ RunTime:0.121007s ]
+
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:11
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:11
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:11 Use 0.125007 s
+Cron:0 Runat 2015-12-03 22:01:11 Use 0.000000 s
+
+[ 2015-12-03T22:01:11+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0040s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Table/index%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 76  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 76 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号设置' AND `pid` = 76 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Admin\Model\TableModel::Add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0040s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php on line 38 and defined D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1765 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1773 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1776 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1784 行.
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 1  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 4  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 5  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.024001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.024001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0020s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0330s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0310s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.211012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.212012s ]
+
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:15
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:15
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:15 Use 0.126007 s
+Cron:0 Runat 2015-12-03 22:01:15 Use 0.000000 s
+
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/UserManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%UserManage/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 3 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 3 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '用户管理' AND `pid` = 3 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_user` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_user`  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_position` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_position`  [ RunTime:0.0010s ]
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+NOTIC: [8] Undefined index: Position D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\UserManageController.class.php 第 19 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: meta_title D:\xampp\htdocs\SmartOrder\Runtime\Cache\Admin\3c7f6c15843b813090faa90a45856594.php 第 5 行.
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001001s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0060s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0350s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0380s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.241013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.243013s ]
+
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:15
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/index.html
+ERR: Cron:0 Runat 2015-12-03 22:01:15 Use 0.089005 s
+
+[ 2015-12-03T22:01:15+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 3 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 4 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `styleid` = 12 LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.022001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.022001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.092005s ]
+INFO: [ app_end ] --END-- [ RunTime:0.094005s ]
+
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:17
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:17
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+ERR: Cron:0 Runat 2015-12-03 22:01:17 Use 0.107006 s
+Cron:0 Runat 2015-12-03 22:01:17 Use 0.000000 s
+
+[ 2015-12-03T22:01:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookStyle.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/addCookStyle%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+NOTIC: [8] Undefined variable: CookStyle D:\xampp\htdocs\SmartOrder\Application\Admin\Controller\MenuManageController.class.php 第 23 行.
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.016001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.016001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.1210s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.284016s ]
+INFO: [ app_end ] --END-- [ RunTime:0.285017s ]
+
+[ 2015-12-03T22:01:18+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:18
+[ 2015-12-03T22:01:18+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:18+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:19
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:0 Runat 2015-12-03 22:01:19 Use 0.114007 s
+Cron:0 Runat 2015-12-03 22:01:19 Use 0.000000 s
+
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.019001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0270s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0200s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.211012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.212012s ]
+
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:19
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:19
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+ERR: Cron:0 Runat 2015-12-03 22:01:19 Use 0.116007 s
+Cron:0 Runat 2015-12-03 22:01:19 Use 0.000000 s
+
+[ 2015-12-03T22:01:19+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/addCookMenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001001s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/addCookMenu%' ) LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_cookstyle`  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.001000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.001000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0410s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.227013s ]
+INFO: [ app_end ] --END-- [ RunTime:0.228013s ]
+
+[ 2015-12-03T22:01:21+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:21
+[ 2015-12-03T22:01:21+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:21+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:22+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 这里是定时任务测试！2015-12-03 22:01:22
+[ 2015-12-03T22:01:22+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: synKeyqqq
+[ 2015-12-03T22:01:22+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:01:22+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+ERR: Cron:0 Runat 2015-12-03 22:01:22 Use 0.122007 s
+Cron:0 Runat 2015-12-03 22:01:22 Use 0.000000 s
+
+[ 2015-12-03T22:01:22+08:00 ] 127.0.0.1 /SmartOrder/admin.php/MenuManage/cookmenu.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%MenuManage/cookmenu%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 2 LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 2 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜系管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '菜品管理' AND `pid` = 2 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT `cookname`,`stylename`,so_cookmenu.id,`price`,`standard`,`recommend` FROM `so_cookmenu` INNER JOIN so_cookstyle on so_cookmenu.styleid=so_cookstyle.id  WHERE `is_delete` <> 1  [ RunTime:0.0010s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.018001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001001s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0320s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0010s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.207011s ]
+INFO: [ app_end ] --END-- [ RunTime:0.209012s ]
+
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:02:17
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 这里是定时任务测试！2015-12-03 22:02:17
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: synKeyqqq
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: 我是URLhttp://127.0.0.1/Cloud/index.php/Home/GetSys/getMenu
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+ERR: Cron:0 Runat 2015-12-03 22:02:17 Use 0.116006 s
+Cron:0 Runat 2015-12-03 22:02:17 Use 0.000000 s
+
+[ 2015-12-03T22:02:17+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Table/index%' ) LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_menu` WHERE `id` = 76 LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT DISTINCT  `group` FROM `so_menu` WHERE `group` <> '' AND `pid` = 76  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`url` FROM `so_menu` WHERE `pid` = 76 AND `hide` = 0 AND `is_dev` = 0  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`pid`,`title`,`url`,`tip` FROM `so_menu` WHERE `group` = '桌号设置' AND `pid` = 76 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0010s ]
+NOTIC: [2048] Declaration of Admin\Model\TableModel::Add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0030s ]
+NOTIC: [2] Missing argument 1 for Think\Model::where(), called in D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php on line 38 and defined D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1765 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1773 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1776 行.
+NOTIC: [8] Undefined variable: where D:\xampp\htdocs\SmartOrder\ThinkPHP\Library\Think\Model.class.php 第 1784 行.
+SQL: SELECT * FROM `so_hall`  [ RunTime:0.0010s ]
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 1  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 2  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 3  [ RunTime:0.0000s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 4  [ RunTime:0.0010s ]
+SQL: SELECT `id`,`table_name` FROM `so_table` WHERE `hall_id` = 5  [ RunTime:0.0000s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000000s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000000s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.021001s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021001s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0030s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SHOW COLUMNS FROM `so_cookmenu` [ RunTime:0.0030s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0010s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0370s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0010s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 LIMIT 1   [ RunTime:0.0000s ]
+SQL: UPDATE `so_cookmenu` SET `c_id`='36',`styleid`='2',`cookname`='老醋花生',`introduce`='是的发送到发送到收费的丰盛的防守打法',`price`='50',`standard`='盘',`recommend`='推荐',`picture`='/SmartOrder/Data/Uploads/Images/565ff71e24485.png',`is_delete`='0',`edit_time`='1449151235' WHERE `c_id` = 36 [ RunTime:0.0300s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `so_cookmenu` WHERE `c_id` = 36 AND `picture` = '/SmartOrder/Data/Uploads/Images/565ff71e24485.png' LIMIT 1   [ RunTime:0.0000s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.211012s ]
+INFO: [ app_end ] --END-- [ RunTime:0.212012s ]
+
+[ 2015-12-03T22:02:21+08:00 ] 127.0.0.1 /SmartOrder/admin.php/Table/edit
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000000s ]
+INFO: [ app_init ] --END-- [ RunTime:0.001000s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001000s ]
+SQL: SHOW COLUMNS FROM `so_menu` [ RunTime:0.0030s ]
+SQL: SELECT `id`,`title`,`url` FROM `so_menu` WHERE `pid` = 0 AND `hide` = 0 AND `is_dev` = 0 ORDER BY sort asc  [ RunTime:0.0000s ]
+SQL: SELECT `pid` FROM `so_menu` WHERE ( pid !=0 AND url like '%Table/edit%' ) LIMIT 1   [ RunTime:0.0000s ]
+NOTIC: [2048] Declaration of Admin\Model\TableModel::Add() should be compatible with Think\Model::add($data = '', $options = Array, $replace = false) D:\xampp\htdocs\SmartOrder\Application\Admin\Model\TableModel.class.php 第 93 行.
+SQL: SHOW COLUMNS FROM `so_table` [ RunTime:0.0030s ]
+SQL: SHOW COLUMNS FROM `so_hall` [ RunTime:0.0020s ]
+SQL: UPDATE `so_hall` SET `name`='11111' WHERE `id` = 5 [ RunTime:0.0340s ]
+

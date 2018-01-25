@@ -2,8 +2,12 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
+<<<<<<< HEAD
       <module fileurl="file://$PROJECT_DIR$/CordovaLib/CordovaLib.iml" filepath="$PROJECT_DIR$/CordovaLib/CordovaLib.iml" />
       <module fileurl="file://$PROJECT_DIR$/SmartOrder.iml" filepath="$PROJECT_DIR$/SmartOrder.iml" />
+=======
+      <module fileurl="file://$PROJECT_DIR$/.idea/SmartOrder.iml" filepath="$PROJECT_DIR$/.idea/SmartOrder.iml" />
+>>>>>>> 8d626c7fd12bc33067a6d7cab127ca33fffa9266
     </modules>
   </component>
 </project>

@@ -1,0 +1,369 @@
+[ 2017-11-19T11:05:50+08:00 ] ::1 /smartorder/queue/queue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000710s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000879s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000929s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.2250s ]
+SQL: select begin_time from so_queue order by begin_time asc limit 1 [ RunTime:0.0004s ]
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 20 行.
+SQL: TRUNCATE so_queue [ RunTime:0.4732s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000124s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.167653s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.167731s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.011847s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.011892s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001495s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.066107s ]
+INFO: [ app_end ] --END-- [ RunTime:0.067738s ]
+
+[ 2017-11-19T11:05:51+08:00 ] ::1 /smartorder/queue/getGlobalEmptyTables
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000519s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000552s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000602s ]
+ERR: 无法加载控制器:GetGlobalEmptyTables
+
+[ 2017-11-19T11:05:51+08:00 ] ::1 /smartorder/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000426s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000514s ]
+ERR: 无法加载控制器:GetQueue
+
+[ 2017-11-19T11:05:51+08:00 ] ::1 /smartorder/queue/getTableDisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000439s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000457s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000497s ]
+ERR: 无法加载控制器:GetTableDisplay
+
+[ 2017-11-19T11:06:00+08:00 ] ::1 /smartorder/queue/queue/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000037s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000430s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000366s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0444s ]
+SQL: select begin_time from so_queue order by begin_time asc limit 1 [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 20 行.
+SQL: TRUNCATE so_queue [ RunTime:0.7240s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000088s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000136s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007633s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007676s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000271s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000300s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000518s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002449s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003073s ]
+
+[ 2017-11-19T11:06:00+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001035s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001157s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0005s ]
+NOTIC: [8] Undefined variable: que D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 120 行.
+
+[ 2017-11-19T11:06:00+08:00 ] ::1 /smartorder/queue/queue/getGlobalEmptyTables
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000405s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001730s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001835s ]
+SQL: SELECT count(*) as empty_tables , num FROM so_table where is_leave = 1 group by num [ RunTime:0.2404s ]
+
+[ 2017-11-19T11:06:00+08:00 ] ::1 /smartorder/queue/queue/getTableDisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000352s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000793s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000870s ]
+SQL: SELECT t.id, concat(h.name,t.table_name) as name, t.is_leave, t.num FROM so_table t LEFT JOIN so_hall h on h.id = t.hall_id order by num asc,hall_id asc,t.id asc [ RunTime:0.1610s ]
+SQL: select distinct num from so_table order by num asc [ RunTime:0.0005s ]
+
+[ 2017-11-19T11:06:10+08:00 ] ::1 /smartorder/queue/queue/insertQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000387s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000509s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000551s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0058s ]
+SQL: SELECT * FROM `so_queue` WHERE `tel` = '18811100322' AND `num` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `so_queue` (`num`,`tel`,`begin_time`) VALUES ('2','18811100322','1511060770') [ RunTime:0.2309s ]
+
+[ 2017-11-19T11:06:11+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000583s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000764s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000875s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0006s ]
+
+[ 2017-11-19T11:06:15+08:00 ] ::1 /smartorder/queue/queue/delQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000024s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000728s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001099s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001216s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0251s ]
+SQL: select * from so_queue [ RunTime:0.0003s ]
+SQL: TRUNCATE TABLE so_queue [ RunTime:0.2922s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000571s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001989s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002662s ]
+
+[ 2017-11-19T11:06:15+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000033s ]
+INFO: [ app_init ] --END-- [ RunTime:0.002853s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000656s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000737s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: que D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 120 行.
+
+[ 2017-11-19T11:06:23+08:00 ] ::1 /smartorder/queue/queue/insertQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000278s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000705s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000803s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0231s ]
+SQL: SELECT * FROM `so_queue` WHERE `tel` = '18811100322' AND `num` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `so_queue` (`num`,`tel`,`begin_time`) VALUES ('2','18811100322','1511060783') [ RunTime:0.1011s ]
+
+[ 2017-11-19T11:06:24+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000719s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000750s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000849s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0003s ]
+
+[ 2017-11-19T11:06:27+08:00 ] ::1 /smartorder/queue/queue/delQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000015s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000397s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000402s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0028s ]
+SQL: select * from so_queue [ RunTime:0.0010s ]
+SQL: TRUNCATE TABLE so_queue [ RunTime:0.3263s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000570s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002172s ]
+
+[ 2017-11-19T11:06:27+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000407s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000495s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0006s ]
+NOTIC: [8] Undefined variable: que D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 120 行.
+
+[ 2017-11-19T11:07:22+08:00 ] ::1 /smartorder/queue/queue/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000426s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000492s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0366s ]
+SQL: select begin_time from so_queue order by begin_time asc limit 1 [ RunTime:0.0003s ]
+NOTIC: [8] Undefined offset: 0 D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 20 行.
+SQL: TRUNCATE so_queue [ RunTime:0.2818s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000073s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000118s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.007041s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.007160s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000467s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000521s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000808s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.002269s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003181s ]
+
+[ 2017-11-19T11:07:22+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000498s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000523s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000576s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0004s ]
+NOTIC: [8] Undefined variable: que D:\xampp\htdocs\SmartOrder\Application\Queue\Controller\QueueController.class.php 第 120 行.
+
+[ 2017-11-19T11:07:22+08:00 ] ::1 /smartorder/queue/queue/getGlobalEmptyTables
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.004295s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.001048s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001112s ]
+SQL: SELECT count(*) as empty_tables , num FROM so_table where is_leave = 1 group by num [ RunTime:0.0005s ]
+
+[ 2017-11-19T11:07:22+08:00 ] ::1 /smartorder/queue/queue/getTableDisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000462s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000801s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000871s ]
+SQL: SELECT t.id, concat(h.name,t.table_name) as name, t.is_leave, t.num FROM so_table t LEFT JOIN so_hall h on h.id = t.hall_id order by num asc,hall_id asc,t.id asc [ RunTime:0.0014s ]
+SQL: select distinct num from so_table order by num asc [ RunTime:0.0008s ]
+
+[ 2017-11-19T11:07:28+08:00 ] ::1 /smartorder/queue/queue/insertQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000334s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000364s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000398s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0025s ]
+SQL: SELECT * FROM `so_queue` WHERE `tel` = '18811100322' AND `num` = 6 LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `so_queue` (`num`,`tel`,`begin_time`) VALUES ('6','18811100322','1511060848') [ RunTime:0.0769s ]
+
+[ 2017-11-19T11:07:29+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000043s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000745s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.002808s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.003062s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0005s ]
+
+[ 2017-11-19T11:08:05+08:00 ] ::1 /smartorder/queue/queue/index.html
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000013s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000365s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000406s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0258s ]
+SQL: select begin_time from so_queue order by begin_time asc limit 1 [ RunTime:0.0004s ]
+INFO: [ view_parse ] --START--
+INFO: [ template_filter ] --START--
+INFO: Run Behavior\ContentReplaceBehavior [ RunTime:0.000076s ]
+INFO: [ template_filter ] --END-- [ RunTime:0.000114s ]
+INFO: Run Behavior\ParseTemplateBehavior [ RunTime:0.006046s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.006095s ]
+INFO: [ view_filter ] --START--
+INFO: Run Behavior\WriteHtmlCacheBehavior [ RunTime:0.000258s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000289s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000554s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001684s ]
+INFO: [ app_end ] --END-- [ RunTime:0.002349s ]
+
+[ 2017-11-19T11:08:06+08:00 ] ::1 /smartorder/queue/queue/getGlobalEmptyTables
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000464s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000678s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000730s ]
+SQL: SELECT count(*) as empty_tables , num FROM so_table where is_leave = 1 group by num [ RunTime:0.0006s ]
+
+[ 2017-11-19T11:08:06+08:00 ] ::1 /smartorder/queue/queue/getTableDisplay
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000475s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000751s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000811s ]
+SQL: SELECT t.id, concat(h.name,t.table_name) as name, t.is_leave, t.num FROM so_table t LEFT JOIN so_hall h on h.id = t.hall_id order by num asc,hall_id asc,t.id asc [ RunTime:0.0007s ]
+SQL: select distinct num from so_table order by num asc [ RunTime:0.0004s ]
+
+[ 2017-11-19T11:08:06+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000016s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000457s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000735s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000806s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0005s ]
+
+[ 2017-11-19T11:08:11+08:00 ] ::1 /smartorder/queue/queue/insertQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000014s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000372s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000485s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000530s ]
+SQL: SHOW COLUMNS FROM `so_queue` [ RunTime:0.0040s ]
+SQL: SELECT * FROM `so_queue` WHERE `tel` = '18811100322' AND `num` = 2 LIMIT 1   [ RunTime:0.0004s ]
+SQL: INSERT INTO `so_queue` (`num`,`tel`,`begin_time`) VALUES ('2','18811100322','1511060891') [ RunTime:0.1424s ]
+
+[ 2017-11-19T11:08:13+08:00 ] ::1 /smartorder/queue/queue/getQueue
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000021s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000599s ]
+NOTIC: [8] Use of undefined constant Queue - assumed 'Queue' D:\xampp\htdocs\SmartOrder\Application\Queue\Conf\config.php 第 7 行.
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000586s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000655s ]
+SQL: select * from so_queue order by num asc, begin_time asc  [ RunTime:0.0004s ]
+

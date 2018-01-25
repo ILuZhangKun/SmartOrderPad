@@ -1,0 +1,66 @@
+<extend name ="Public/base"/>
+<block name="body">
+    <div class="tab-wrap">
+        <div class="main-title">
+            <h2>添加菜品名称</h2>
+        </div>
+            <form action="{:U('/MenuManage/addCookMenu','','')}" method="post" class="form-horizontal">
+                <div class="form-item">
+                    <label class="item-label">选择菜系<span class="check-tips"></span></label>
+                    <div class="controls">
+                    <select name="styleid">
+                        <foreach name="CookStyle" item="v">
+                        <option value="{$v.id}" >{$v.stylename}</option>
+                        </foreach>      
+                    </select>  
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">菜名<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <input type="text" class="text input" name="cookname" value=""/>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">单价<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <input type="text" class="text input" name="price" value=""/>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">规格<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <select name="standard">
+                            <option value="盘">盘</option>
+                            <option value="碗">碗</option>
+                            <option value="罐">罐</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-item">
+                    <label class="item-label">推荐<span class="check-tips"></span></label>
+                    <div class="controls">
+                        <select name="recommend">
+                            <option value="普通">普通</option>
+                            <option value="推荐">推荐</option>
+                        </select>
+                    </div>
+                </div>
+                        <div class="form-item">
+                    <label class="item-label">简介<span class="check-tips"></span></label>
+                    <div class="controls">
+                    <label class="textarea input-large">
+                        <textarea name="introduce"></textarea>
+                    </label>                
+                    </div>
+
+                </div>
+
+               
+                <div class="form-item">
+                    <button class="btn submit-btn"  type="submit" >确 定</button>
+                    <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+                </div>
+            </form>
+    </div>
+</block>

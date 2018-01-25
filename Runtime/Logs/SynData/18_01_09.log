@@ -1,0 +1,250 @@
+[ 2018-01-09T16:24:51+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 这里是定时任务测试！2018-01-09 16:24:51
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 1
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 1111111111111
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 我是RET:0
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 22222222222
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 333333333:Array
+[ 2018-01-09T16:24:52+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000324s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000464s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000511s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0026s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0033s ]
+SQL: UPDATE `so_cookstyle` SET `edit_time`='1515486291',`is_delete`='0',`remark`='主打大同刀削',`stylename`='山西面食' WHERE `c_id` = 13 [ RunTime:0.0008s ]
+SQL: INSERT INTO `so_cookstyle` (`edit_time`,`is_delete`,`remark`,`stylename`,`c_id`) VALUES ('1515486291','0','主打大同刀削','山西面食','13') [ RunTime:0.0470s ]
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\SmartOrder\Application\SynData\Controller\UpdateController.class.php 第 68 行.
+SQL: UPDATE `so_config` SET `val`='1515486291' WHERE `conf` = 'SynVersion' [ RunTime:0.0452s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.002223s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.001610s ]
+INFO: [ app_end ] --END-- [ RunTime:0.003904s ]
+
+[ 2018-01-09T16:35:17+08:00 ] ::1 /smartorder/SynData/updata/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000325s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000473s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000504s ]
+ERR: 无法加载控制器:Updata
+
+[ 2018-01-09T16:35:37+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 这里是定时任务测试！2018-01-09 16:35:37
+[ 2018-01-09T16:35:37+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:35:37+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:35:37+08:00 ] ::1 /smartorder/SynData/Update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000349s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000494s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000534s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0019s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-09T16:44:14+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 这里是定时任务测试！2018-01-09 16:44:14
+[ 2018-01-09T16:44:14+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:44:14+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:44:14+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000019s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000573s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000686s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000729s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0016s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-09T16:46:15+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 这里是定时任务测试！2018-01-09 16:46:15
+[ 2018-01-09T16:46:15+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:46:15+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:46:15+08:00 ] ::1 /smartorder/SynData/Update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000018s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000472s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000502s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0018s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0007s ]
+
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 这里是定时任务测试！2018-01-09 16:46:36
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 1
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 1111111111111
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 我是RET:0
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 22222222222
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+ERR: 333333333:Array
+[ 2018-01-09T16:46:36+08:00 ] ::1 /smartorder/SynData/Update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000012s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000433s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000544s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000577s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0036s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0026s ]
+SQL: UPDATE `so_cookstyle` SET `edit_time`='1515487454',`is_delete`='0',`remark`='羊肉类',`stylename`='陕西羊肉泡' WHERE `c_id` = 14 [ RunTime:0.0002s ]
+SQL: INSERT INTO `so_cookstyle` (`edit_time`,`is_delete`,`remark`,`stylename`,`c_id`) VALUES ('1515487454','0','羊肉类','陕西羊肉泡','14') [ RunTime:0.0474s ]
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\SmartOrder\Application\SynData\Controller\UpdateController.class.php 第 67 行.
+SQL: UPDATE `so_config` SET `val`='1515487454' WHERE `conf` = 'SynVersion' [ RunTime:0.0343s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.000697s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.003526s ]
+INFO: [ app_end ] --END-- [ RunTime:0.004311s ]
+
+[ 2018-01-09T16:46:38+08:00 ] ::1 /smartorder/SynData/updata/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000358s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000448s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000480s ]
+ERR: 无法加载控制器:Updata
+
+[ 2018-01-09T16:46:47+08:00 ] ::1 /smartorder/SynData/updata/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000020s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000361s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000480s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000522s ]
+ERR: 无法加载控制器:Updata
+
+[ 2018-01-09T16:50:12+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 这里是定时任务测试！2018-01-09 16:50:12
+[ 2018-01-09T16:50:12+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:50:12+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:50:12+08:00 ] 127.0.0.1 /SmartOrder/SynData/Update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000010s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000382s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000514s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000546s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0295s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0517s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-09T16:50:41+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 这里是定时任务测试！2018-01-09 16:50:41
+[ 2018-01-09T16:50:41+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:50:41+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:50:41+08:00 ] ::1 /smartorder/SynData/update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000344s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.000463s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000494s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0281s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0002s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-09T16:52:10+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 这里是定时任务测试！2018-01-09 16:52:10
+[ 2018-01-09T16:52:10+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:52:10+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:52:10+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 1
+[ 2018-01-09T16:52:10+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 1111111111111
+[ 2018-01-09T16:52:10+08:00 ] ::1 /smartorder/SynData/update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000009s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000283s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.016015s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.016075s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0001s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0002s ]
+
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 这里是定时任务测试！2018-01-09 16:58:49
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: synKey3ChvkTZq8Aa7RMUHYpOy0tw24XoidQES
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 我是URLhttp://127.0.0.1/Cloud/SynData/Menu/synMenu
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 1
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 1111111111111
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 我是RET:0
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 22222222222
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+ERR: 333333333:Array
+[ 2018-01-09T16:58:49+08:00 ] ::1 /smartorder/SynData/update/index
+INFO: [ app_init ] --START--
+INFO: Run Behavior\BuildLiteBehavior [ RunTime:0.000011s ]
+INFO: [ app_init ] --END-- [ RunTime:0.000386s ]
+INFO: [ app_begin ] --START--
+INFO: Run Behavior\ReadHtmlCacheBehavior [ RunTime:0.014491s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.014610s ]
+SQL: SHOW COLUMNS FROM `so_config` [ RunTime:0.0044s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'cloud_ip' LIMIT 1   [ RunTime:0.0006s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'synKey' LIMIT 1   [ RunTime:0.0003s ]
+SQL: SELECT * FROM `so_config` WHERE `conf` = 'SynVersion' LIMIT 1   [ RunTime:0.0005s ]
+SQL: SHOW COLUMNS FROM `so_cookstyle` [ RunTime:0.0015s ]
+SQL: UPDATE `so_cookstyle` SET `edit_time`='1515487812',`is_delete`='0',`remark`='烧烤类',`stylename`='烧烤大戏' WHERE `c_id` = 15 [ RunTime:0.0002s ]
+SQL: INSERT INTO `so_cookstyle` (`edit_time`,`is_delete`,`remark`,`stylename`,`c_id`) VALUES ('1515487812','0','烧烤类','烧烤大戏','15') [ RunTime:0.0480s ]
+NOTIC: [8] Array to string conversion D:\xampp\htdocs\SmartOrder\Application\SynData\Controller\UpdateController.class.php 第 69 行.
+SQL: UPDATE `so_config` SET `val`='1515487812' WHERE `conf` = 'SynVersion' [ RunTime:0.0222s ]
+INFO: [ app_end ] --START--
+INFO: Run Behavior\ShowPageTraceBehavior [ RunTime:0.001349s ]
+INFO: Run Common\Behavior\CronRunBehavior [ RunTime:0.011863s ]
+INFO: [ app_end ] --END-- [ RunTime:0.013367s ]
+

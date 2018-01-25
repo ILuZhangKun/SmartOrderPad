@@ -1,0 +1,50 @@
+<extend name ="Public/base"/>
+    <block name="body">
+        <form action="{:U('/MenuManage/ModifyCookMenu','','')}" method="post" class="form-horizontal">
+            <div class="form-item">
+                <label class="item-label">选择菜系{$info.cookname}<span class="check-tips"></span></label>
+                <div class="controls" {$styleid = $info.styleid}>
+                <select name="styleid">
+                    <foreach name="CookStyle" item="v">
+                    <option value="{$v.id}" <if condition="($v.id eq $styleid)">selected="selected"</if>>{$v.stylename}</option>
+                    </foreach>      
+                </select>  
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">菜名<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input" name="cookname" value="{$info.cookname}"/>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">单价<span class="check-tips"></span></label>
+                <div class="controls">
+                    <input type="text" class="text input" name="price" value="{$info.price}"/>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">推荐<span class="check-tips"></span></label>
+                <div class="controls">
+                    <select name="recommend">
+                        <option value="普通">普通</option>
+                        <option value="推荐">推荐</option>
+                    </select>
+                </div>
+            </div>
+            <div class="form-item">
+                <label class="item-label">简介<span class="check-tips"></span></label>
+                <div class="controls">
+                <label class="textarea input-large">
+                    <textarea name="introduce">{$info.introduce}</textarea>
+                    <input type="text" class="text input" style="display:none" name="cookid" value="{$info.id}"/>
+                </label>                
+                </div>
+            </div>
+            <div class="form-item">
+                <button class="btn submit-btn"  type="submit" >确 定</button>
+                <button class="btn btn-return" onclick="javascript:history.back(-1);return false;">返 回</button>
+            </div>
+        </form>
+    </block>
+   
