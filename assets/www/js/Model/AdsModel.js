@@ -31,7 +31,7 @@ var Ads = Common.extend({
                     for(var i=0;i<count;i++){
                         var param=result.rows.item(i).adtext;
                         var adnum =result.rows.item(i).adnum;
-                        var address=result.rows.item(i).address;
+//                        var address=result.rows.item(i).address;//新版数据库已删此字段
                         var phone =result.rows.item(i).phone;
                         var adpic =  result.rows.item(i).adpic;
                         var adname = result.rows.item(i).adname;
@@ -39,7 +39,7 @@ var Ads = Common.extend({
                         if(result.rows.item(i).is_delete = '0'){
                             modelCon.adsArr.push({adnum:adnum,adtext:param,adname:adname});
                             console.log(modelCon.adsArr);
-                            modelCon.adsArrMenu.push({adnum:adnum,adtext:param,phone:phone,address:address,adname:adname,activity:activity,adpic:adpic});
+                            modelCon.adsArrMenu.push({adnum:adnum,adtext:param,phone:phone,adname:adname,activity:activity,adpic:adpic});
                             console.log(modelCon.adsArrMenu);
                         }
                     }
@@ -66,8 +66,9 @@ var Ads = Common.extend({
                         $("#content1").html(param.introduction);
                         //最新活动
                         $("#content2").html(param.activity);
-                        //地址以及电话
-                        $("#content3").html('店铺地址' + param.address + '&nbsp;' + '店铺电话' + param.phone);
+                        //地址以及电话//地址字段已删
+//                        $("#content3").html('店铺地址' + param.address + '&nbsp;' + '店铺电话' + param.phone);
+                        $("#content3").html('店铺电话' + param.phone);
                     }
                 }
             };

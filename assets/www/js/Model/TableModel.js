@@ -28,6 +28,13 @@
 	 	} 
  		
  	},
+ 	checkTable:function(tableId,tableType,tableName){
+ 	    if(tableType=="0"){
+ 	        setTableId(tableId,tableName);
+ 	    }else{
+ 	        removeTableId(tableId,tableName);
+ 	    }
+ 	},
  	setTableId:function(tableId,tableName){ 
  		var data={uuId:tableObj.uuId,tableId:encodeURI(tableId),action:"set"};
  		console.log(tableObj.uuId);
@@ -101,12 +108,11 @@
                     modelCon.paramOfSetTable=true;
                     tableObj.adjustTableId(tableName);
     //                modelCon.showAlert(true,data);
-                    modelCon.showAlert(true,"确定结账！");
+                    modelCon.showAlert(true,"请确认结账！");
                 }
                 else {
                     modelCon.showAlert(true,"解绑失败，稍后再试！");
                 }
-
             }
             this.ajaxRequest(data,this.dealTableUrl,fun);
      	},
