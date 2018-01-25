@@ -256,8 +256,15 @@ ul {
     background: rgba(0, 153, 255, 0.7);
 }
 
+
+/*新加 用于标识当前绑定桌名*/
+
 .numBoard .lock {
     background: rgba(255, 51, 102, 0.7);
+}
+
+.numBoard .thislock {
+    background: #FF6600;
 }
 
 .numBoard .book {

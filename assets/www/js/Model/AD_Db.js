@@ -9,16 +9,16 @@ var Dp = Class.extend({
     init: function() {
         //构造函数
         this.dp = window.openDatabase('MyDB', '1.0', '存储广告信息', 5242880);
-        // this.sqlAdInsert="INSERT INTO ads (adnum,starttime,endtime,adname,adtext,adremark,adpic,adhref,adtitle,adtype,adshowcount,introduction,activity,address,phone,vehicle,detail,is_delete) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        // this.sqlAdUpdate="UPDATE `ads` SET `adnum` = ?, `starttime` = ?, `endtime` = ?, `adname` = ?, `adtext` = ?, `adremark` = ?, `adpic` = ? ,`adhref` = ? ,`adtitle`= ? `adtype` = ?, `adshowcount` = ?,`introduction` = ?, `activity` = ? ,`address` = ? ,`phone`= ? ,`vehicle` = ? ,`detail`= ? ,`is_delete`= ?   WHERE `adnum` =?";
-        // this.sqlAdCreate='CREATE TABLE IF NOT EXISTS ads(adnum, starttime, endtime ,adname, adtext, adremark, adpic, adhref, adtitle, adtype, adshowcount, introduction,activity, address, phone,vehicle,detail,is_delete)';
+         this.sqlAdInsert="INSERT INTO ads (adnum,starttime,endtime,adname,adtext,adremark,adpic,adhref,adtitle,adtype,adshowcount,introduction,activity,address,phone,vehicle,detail,is_delete) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+         this.sqlAdUpdate="UPDATE `ads` SET `adnum` = ?, `starttime` = ?, `endtime` = ?, `adname` = ?, `adtext` = ?, `adremark` = ?, `adpic` = ? ,`adhref` = ? ,`adtitle`= ? `adtype` = ?, `adshowcount` = ?,`introduction` = ?, `activity` = ? ,`address` = ? ,`phone`= ? ,`vehicle` = ? ,`detail`= ? ,`is_delete`= ?   WHERE `adnum` =?";
+         this.sqlAdCreate='CREATE TABLE IF NOT EXISTS ads(adnum, starttime, endtime ,adname, adtext, adremark, adpic, adhref, adtitle, adtype, adshowcount, introduction,activity, address, phone,vehicle,detail,is_delete)';
 
         /*数据库字段增减：去掉adshowcount，address,detail,添加adverify_time,ad_hotel*/
 
-        this.sqlAdInsert = "INSERT INTO ads (adnum,starttime,endtime,adname,adtext,adremark,adpic,adhref,adtitle,adtype,introduction,activity,phone,vehicle,is_delete,adverify,adverify_time,ad_hotel) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
-        this.sqlAdUpdate = "UPDATE `ads` SET `adnum` = ?, `starttime` = ?, `endtime` = ?, `adname` = ?, `adtext` = ?, `adremark` = ?, `adpic` = ? ,`adhref` = ? ,`adtitle`= ? `adtype` = ?,`introduction` = ?, `activity` = ?,`phone`= ? ,`vehicle` = ?  ,`is_delete`= ? , `adverify_time`=?,`ad_hotel`= ?   WHERE `adnum` =?";
-        this.sqlAdCreate = 'CREATE TABLE IF NOT EXISTS ads(adnum, starttime, endtime ,adname, adtext, adremark, adpic, adhref, adtitle, adtype, introduction,activity, phone,vehicle,is_delete,adverify_time,ad_hotel)';
-        console.log("字段最新");
+//        this.sqlAdInsert = "INSERT INTO ads (adnum,starttime,endtime,adname,adtext,adremark,adpic,adhref,adtitle,adtype,introduction,activity,phone,vehicle,is_delete,adverify,adverify_time,ad_hotel) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
+//        this.sqlAdUpdate = "UPDATE `ads` SET `adnum` = ?, `starttime` = ?, `endtime` = ?, `adname` = ?, `adtext` = ?, `adremark` = ?, `adpic` = ? ,`adhref` = ? ,`adtitle`= ? `adtype` = ?,`introduction` = ?, `activity` = ?,`phone`= ? ,`vehicle` = ?  ,`is_delete`= ? , `adverify_time`=?,`ad_hotel`= ?   WHERE `adnum` =?";
+//        this.sqlAdCreate = 'CREATE TABLE IF NOT EXISTS ads(adnum, starttime, endtime ,adname, adtext, adremark, adpic, adhref, adtitle, adtype, introduction,activity, phone,vehicle,is_delete,adverify_time,ad_hotel)';
+//        console.log("字段最新");
         this.tableAdExist = this.newAdTable(this.sqlAdCreate);
     },
     //创建数据表executeDB
@@ -43,19 +43,19 @@ var Dp = Class.extend({
         console.log(data);
 
 
-        // var paramAdArr=[
-        // 	data.adnum,data.starttime,data.endtime,data.adname,data.adtext,
-        // 	data.adremark,data.adpic,data.adhref,data.adtitle,data.adtype,
-        // 	data.adshowcount,data.introduction,data.activity,data.address,data.phone,data.vehicle,data.detail, data.is_delete
-        // ];
+         var paramAdArr=[
+         	data.adnum,data.starttime,data.endtime,data.adname,data.adtext,
+         	data.adremark,data.adpic,data.adhref,data.adtitle,data.adtype,
+         	data.adshowcount,data.introduction,data.activity,data.address,data.phone,data.vehicle,data.detail, data.is_delete
+         ];
 
         /*数据库字段增减：去掉adshowcount，address,detail,添加adverify_time,ad_hotel*/
-        var paramAdArr = [
-            data.adnum, data.starttime, data.endtime, data.adname, data.adtext,
-            data.adremark, data.adpic, data.adhref, data.adtitle, data.adtype,
-            data.introduction, data.activity, data.phone, data.vehicle, data.is_delete,
-            data.adverify_time, data.ad_hotel
-        ];
+//        var paramAdArr = [
+//            data.adnum, data.starttime, data.endtime, data.adname, data.adtext,
+//            data.adremark, data.adpic, data.adhref, data.adtitle, data.adtype,
+//            data.introduction, data.activity, data.phone, data.vehicle, data.is_delete,
+//            data.adverify_time, data.ad_hotel
+//        ];
         var sqlAdSelect = 'SELECT * FROM ads where adnum="' + data.adnum + '"';
         adDb.dp.transaction(function(t) {
             t.executeSql(sqlAdSelect, [],

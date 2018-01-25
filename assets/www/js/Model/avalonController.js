@@ -114,7 +114,6 @@
              tableObj.removeTableId(table, tableName);
              //console.log("解绑");
          }
-
      },
      //得到菜系名称
      getStyleName: function(tx, result) {

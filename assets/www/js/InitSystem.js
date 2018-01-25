@@ -106,6 +106,7 @@ $(document).ready(function(){
 				modelCon.notUpDish=0;
 			}
 			console.log(temp);
+			
 			orderObj.upDish(temp); 
 		} 
 		
