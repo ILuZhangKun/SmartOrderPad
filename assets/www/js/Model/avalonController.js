@@ -108,11 +108,11 @@
          console.log(tableType);
          //根据桌子空闲指定绑定解绑事件
          if (tableType == "btn nomal") {
-             //console.log("绑定桌号");
+             console.log("绑定桌号");
              tableObj.setTableId(table, tableName);
          } else if (tableType = 'btn lock') {
              tableObj.removeTableId(table, tableName);
-             //console.log("解绑");
+             console.log("解绑");
          }
 
      },
