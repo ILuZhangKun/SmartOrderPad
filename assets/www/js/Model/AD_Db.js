@@ -18,7 +18,7 @@ var Dp = Class.extend({
         this.sqlAdInsert = "INSERT INTO ads (adnum,starttime,endtime,adname,adtext,adremark,adpic,adhref,adtitle,adtype,introduction,activity,phone,vehicle,is_delete,adverify,adverify_time,ad_hotel) VALUES (?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?,?)";
         this.sqlAdUpdate = "UPDATE `ads` SET `adnum` = ?, `starttime` = ?, `endtime` = ?, `adname` = ?, `adtext` = ?, `adremark` = ?, `adpic` = ? ,`adhref` = ? ,`adtitle`= ? `adtype` = ?,`introduction` = ?, `activity` = ?,`phone`= ? ,`vehicle` = ?  ,`is_delete`= ? , `adverify_time`=?,`ad_hotel`= ?   WHERE `adnum` =?";
         this.sqlAdCreate = 'CREATE TABLE IF NOT EXISTS ads(adnum, starttime, endtime ,adname, adtext, adremark, adpic, adhref, adtitle, adtype, introduction,activity, phone,vehicle,is_delete,adverify_time,ad_hotel)';
-
+        console.log('数据库字段已修改');
         this.tableAdExist = this.newAdTable(this.sqlAdCreate);
     },
     //创建数据表executeDB
