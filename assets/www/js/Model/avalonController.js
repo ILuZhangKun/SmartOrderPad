@@ -96,7 +96,6 @@
          modelCon.attention = str;
          setTimeout("modelCon.alert=false;", 2000);
      },
-
      //设置桌号
      setTable: function() {
          // var table=$('#table').val();
@@ -155,6 +154,7 @@
      },
      //呼叫服务员
      callWaiter: function() {
+         console.log('avalonController.js:callWaiter');
          ringObj.callWaiter(modelCon.callWaiterOption);
      },
      //停止呼叫
@@ -509,6 +509,7 @@
          $("#cash").show();
          orderObj.read();
      },
+
 
      //系统设置
      setServer: function() {

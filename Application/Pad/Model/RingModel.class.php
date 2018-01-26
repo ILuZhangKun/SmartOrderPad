@@ -13,7 +13,7 @@ Class RingModel extends Model{
 	 * 呼叫
 	 */
 	function addRing($tableId,$ringType){
-		$ret = M("temp")->where(array("talbe_id"=>$tableId))->getField("holding");
+		$ret = M("temp")->where(array("table_id"=>$tableId))->getField("holding");
 		$allRing = object_array(json_decode($ret));
 		$this->allRing = empty($allRing)?array($ringType):array_merge($allRing,array($ringType));
 		$data["holding"] = json_encode($this->allRing);

@@ -707,8 +707,6 @@ body.no-bg {
 }
 .numBoard .nomal{background: rgba(0, 153, 255, 0.7);}
 .numBoard .lock{background: rgba(255, 51, 102, 0.7);}
-
-.numBoard .thislock{background: #FF6600;}
 .numBoard .book{background: rgba(51, 204, 153, 0.9);position: relative;}
 
 .mm{position: relative;float: left;}
